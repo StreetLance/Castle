@@ -1,0 +1,170 @@
+<template>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar ">
+
+    <div class="container ">
+
+      <!-- Navbar brand -->
+      <div class="row items-center w-30">
+        <a href="#info"><img src="../statics/Header_Logo.svg"></a>
+        <div class="pl-3 pt-3 lang"><p>en</p></div>
+      </div>
+      <!-- Collapse button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                     aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse justify-center pl-6" id="basicExampleNav">
+        <!-- Links -->
+        <div class="row navbar-nav smooth-scroll w-100 justify-around items-center ">
+          <div class="col-sm"><a class="nav-link fw-300 text-white" href="#best-features">Info</a></div>
+          <div class="col-sm "> <a class="nav-link fw-300 text-white" href="#seond-features">Gallery</a></div>
+          <div class="col-sm "><a class="nav-link fw-300  text-white" href="#forth-features">Outline</a></div>
+          <div class="col-sm "><a class="nav-link fw-300 text-white" href="#six-features">History</a></div>
+          <div class="col-sm "><a class="nav-link fw-300 text-white" href="#fifth-features">Place</a></div>
+          <div class="col-sm "><a class="nav-link fw-300 text-white" href="#footer">Contacts</a></div>
+          <div class="col"></div>
+          <div class="col-sm "><a class="nav-link " data-toggle="modal" data-target="#exampleModalCenter"><img src="../statics/Header_key.svg"></a></div>
+        </div>
+        <!-- Links -->
+        <!-- Social Icon  -->
+      </div>
+      <!-- Collapsible content -->
+    </div>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <img  src="../statics/Header_key.svg">
+          <h5 class="text-black text-center">Want to know more?</h5>
+          <form class="text-center pt-0 pb-4 pl-4" action="#!">
+            <input type="email" class="form-control" placeholder="Enter your secret code">
+          </form>
+          <p  id="popuptext" class="text-black  text-center">if you do not have a secret code, contact us</p>
+          <p id="popuptext2" class="text-black">наш адрес, <br>
+            email,<br>
+            телефон.<br>
+          </p>
+          <button id="btn" class="btn  my-4 waves-effect  smoll-button" type="button" data-dismiss="modal">Send code</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--/.Navbar-->
+</template>
+
+<script>
+export default {
+  // name: 'ComponentName',
+  data () {
+    return {}
+  }
+}
+</script>
+<style scoped>
+  h5{
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .modal-content {
+    padding-top: 21px;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width:60%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+  }
+  #popuptext2{
+    margin-left: 10%;
+    margin-bottom: 0;
+  }
+  #btn{
+    margin-left: 26%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    /*line-height: 36px;*/
+    letter-spacing: 0.1px;
+  }
+  #popuptext,#popuptext2{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 26px;
+    letter-spacing: 0.1px;
+  }
+  form{
+    width: 100%;
+  }
+  input{
+    font-size: 12px;
+    width: 90%;
+    padding-top: 0;
+    border: none;
+    border-bottom: 1px solid #DF7856;
+  }
+  .smoll-button{
+width: 50%;
+    border-radius: 40px;
+    background-color: #DF7856;;
+  }
+  .fw-300{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  @media (max-width: 769px) {
+    .lang{
+position: absolute;
+      top: 20px;
+      left: 35%;
+    }
+  }
+  /*.key{*/
+  /*  position: absolute;*/
+  /*  right: 90px;*/
+  /*}*/
+  .pl-6{
+    padding-left: 4rem!important;
+  }
+  .w-30 {
+    width: 20%!important;
+  }
+  @media (min-width: 700px){
+    .navbar.scrolling-navba{
+      padding-top: 15px;
+      padding-bottom: 12px;
+      -webkit-transition: background 0.5s ease-in-out,padding 0.5s ease-in-out;
+      transition: background 0.5s ease-in-out,padding 0.5s ease-in-out;
+    }
+  }
+
+  p,a{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+    color: #FBFBFE;
+  }
+  img{
+    float:left;
+  }
+</style>

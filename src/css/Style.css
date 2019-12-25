@@ -1,0 +1,26 @@
+@import "fonts/montserrat.css";
+#intro {
+  height: 100vh;
+}
+
+#intro {
+  background: url("../statics/img/castle.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.top-nav-collapse {
+  background: #151518;
+}
+@media (max-width: 768px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #151518;
+  }
+}
+@media (min-width: 800px) and (max-width: 850px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #151518;
+  }
+}
