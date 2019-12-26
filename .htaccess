@@ -1,0 +1,6 @@
+#header always set x-frame-options "SAMEORIGIN"
+<httpProtocol>
+    <customHeaders>
+      <add name="X-Frame-Options" value="*" />
+    </customHeaders>
+  </httpProtocol>

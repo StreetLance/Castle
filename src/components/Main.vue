@@ -41,8 +41,9 @@
             <input type="email" class="form-control" placeholder="Enter your secret code">
           </form>
           <p  id="popuptext" class="text-black  text-center">if you do not have a secret code, contact us</p>
-          <p id="popuptext2" class="text-black">наш адрес, <br>
-            email,<br>
+          <p id="popuptext2" class="text-black">
+            наш адрес, <br>
+           <span>email,<br></span>
             телефон.<br>
           </p>
           <button id="btn" class="btn  my-4 waves-effect  smoll-button" type="button" data-dismiss="modal">Send code</button>
@@ -86,10 +87,7 @@ export default {
     border-radius: .3rem;
     outline: 0;
   }
-  #popuptext2{
-    margin-left: 10%;
-    margin-bottom: 0;
-  }
+
   #btn{
     margin-left: 26%;
     font-family: Montserrat;
@@ -107,6 +105,18 @@ export default {
     line-height: 26px;
     letter-spacing: 0.1px;
   }
+  #popuptext2{
+    margin-left: 7%;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 34px;
+    letter-spacing: 0.5px;
+  }
+  #popuptext2>span{
+    /*margin-left: 10%;*/
+    margin-bottom: 0;
+    font-size: 11px;
+  }
   form{
     width: 100%;
   }
@@ -116,6 +126,7 @@ export default {
     padding-top: 0;
     border: none;
     border-bottom: 1px solid #DF7856;
+    letter-spacing: 0.9px;
   }
   .smoll-button{
 width: 50%;
