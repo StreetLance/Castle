@@ -16,7 +16,7 @@
             <span><p class="ref2 text-white mt-0">Interior Design: <span class="text-grey lite-text"> Andreas Pacher | Igor Petrychenko</span></p></span>
           </div>
         </div>
-        <div class="col-sm-6 fix">
+        <div class="col-sm-5 fix">
           <!--          <div class="ref" id="castle"></div>-->
           <img class="castle2" src="../statics/Chertejnew1.png" alt=""></div>
       </div>
@@ -36,11 +36,12 @@
   .castle2 {
     position: relative;
     top: 5%;
-    right: 25%;
+    right: 0%;
   }
 
   .fix {
     max-height: 100vh;
+    width: 49%;
   }
 
   .lite-text {
@@ -91,15 +92,15 @@
   }
 
   .main {
-    margin-top: 18%;
+    margin-top: 9%;
     padding-right: 70%;
-    margin-left: -34%;
+    margin-left: 8%;
   }
 
   .main2 {
     margin-top: 17%;
-    padding-right: 53%;
-    margin-left: -15%;
+    padding-right: 17%;
+    margin-left: 14%;
     padding-bottom: 1px;
   }
 
@@ -119,6 +120,6 @@
   }
 
   .container {
-    max-height: 100vh;
+    max-height: 100%;
   }
 </style>

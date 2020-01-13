@@ -8,7 +8,7 @@
 
         <div class="row d-flex justify-content-center text-center">
 
-          <div class="col-md-10">
+          <div class="col-md-12">
             <img src="../statics/full_logo.svg">
           </div>
 

@@ -12,15 +12,15 @@
 }
 
 .top-nav-collapse {
-  background: #151518;
+  background: #201e1f;
 }
 @media (max-width: 768px) {
   .navbar:not(.top-nav-collapse) {
-    background: #151518;
+    background: #201e1f;
   }
 }
 @media (min-width: 800px) and (max-width: 850px) {
   .navbar:not(.top-nav-collapse) {
-    background: #151518;
+    background: #201e1f;
   }
 }

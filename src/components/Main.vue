@@ -1,14 +1,15 @@
 <template>
   <!--Navbar-->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar ">
-
+    <div class="row items-center w-30 pl-4">
+      <a href="#info"><img src="../statics/Header_Logo.svg"></a>
+      <div class="pl-3 pt-3 lang"><p>{{lang}}<img src="../statics/larng_shewron.svg"  class=" d-flex justify-center fl" alt=""  @click="show"></p>
+      </div>
+    </div>
     <div class="container ">
 
       <!-- Navbar brand -->
-      <div class="row items-center w-30">
-        <a href="#info"><img src="../statics/Header_Logo.svg"></a>
-        <div class="pl-3 pt-3 lang"><p>en</p></div>
-      </div>
+
       <!-- Collapse button -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
                      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,40 +18,60 @@
       <!-- Collapsible content -->
       <div class="collapse navbar-collapse justify-center pl-6" id="basicExampleNav">
         <!-- Links -->
-        <div class="row navbar-nav smooth-scroll w-100 justify-around items-center ">
-          <div class="col-sm"><a class="nav-link fw-300 text-white" href="#best-features">Info</a></div>
+        <div class="row navbar-nav smooth-scroll w-100 justify-around items-center text-center">
+          <div class="col-sm"><a class="nav-link fw-300 text-white" href="#best-features">Data/Facts</a></div>
           <div class="col-sm "> <a class="nav-link fw-300 text-white" href="#seond-features">Gallery</a></div>
-          <div class="col-sm "><a class="nav-link fw-300  text-white" href="#forth-features">Outline</a></div>
-          <div class="col-sm "><a class="nav-link fw-300 text-white" href="#six-features">History</a></div>
-          <div class="col-sm "><a class="nav-link fw-300 text-white" href="#fifth-features">Place</a></div>
-          <div class="col-sm "><a class="nav-link fw-300 text-white" href="#footer">Contacts</a></div>
+          <div class="col-sm "><a class="nav-link fw-300  text-white" href="#forth-features">Plans Floorplans</a></div>
+          <div class="col-sm "><a class="nav-link fw-300 text-white" href="#six-features">Information</a></div>
+          <div class="col-sm "><a class="nav-link fw-300 text-white" href="#fifth-features">Location</a></div>
           <div class="col"></div>
-          <div class="col-sm "><a class="nav-link " data-toggle="modal" data-target="#exampleModalCenter"><img src="../statics/Header_key.svg"></a></div>
         </div>
         <!-- Links -->
         <!-- Social Icon  -->
+        <div v-if="hower" @mouseover="mousehower" class=" d-flex justify-end padding-right-fix"><a class="nav-link " data-toggle="modal" data-target="#exampleModalCenter">
+          <img src="../statics/grayKey.svg">
+        </a></div>
+        <div v-else  @mouseout="mousehower" class=" d-flex justify-end padding-right-fix"><a class="nav-link " data-toggle="modal" data-target="#exampleModalCenter">
+          <img src="../statics/Key2.svg">
+        </a></div>
       </div>
       <!-- Collapsible content -->
     </div>
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-dialog modal-dialog-centered d-flex justify-center" role="document">
         <div class="modal-content">
           <img  src="../statics/Header_key.svg">
           <h5 class="text-black text-center">Want to know more?</h5>
           <form class="text-center pt-0 pb-4 pl-4" action="#!">
-            <input type="email" class="form-control" placeholder="Enter your secret code">
+            <label class="text-dark">Login: <input type="email" class="form-control" placeholder="Login"></label>
+
+            <label class="text-dark">Password: <input type="email" class="form-control" placeholder="Password"></label>
           </form>
-          <p  id="popuptext" class="text-black  text-center">if you do not have a secret code, contact us</p>
-          <p id="popuptext2" class="text-black">
-            наш адрес, <br>
-           <span>email,<br></span>
-            телефон.<br>
-          </p>
+          <p  id="popuptext" class="text-black  text-center">Do not have one? Please contact us:</p>
+          <div class="jumbotron bg-gray">
+            <span id="popuptext2" class="text-black ">
+              <span class="psl">TIROX GmbH</span><br>
+              Tuchlauben 7a/7<br>
+              1010 Wien<br>
+              Telefon: +43 1 413 0000<br>
+              E-Mail:<span> office@tiroxgroup.com</span><br>
+            </span>
+          </div>
+          <!--<p id="popuptext2" class="text-black">-->
+            <!--наш адрес, <br>-->
+           <!--<span>email,<br></span>-->
+            <!--телефон.<br>-->
+          <!--</p>-->
           <button id="btn" class="btn  my-4 waves-effect  smoll-button" type="button" data-dismiss="modal">Send code</button>
         </div>
       </div>
     </div>
+    <ul class="language" v-show="showlang">
+    <li @click="languege('ru')"><a >ru</a></li>
+    <li @click="languege('en')"><a >en</a></li>
+  </ul>
   </nav>
+
   <!--/.Navbar-->
 </template>
 
@@ -58,12 +79,69 @@
 export default {
   // name: 'ComponentName',
   data () {
-    return {}
+    return {
+      lang: 'en',
+      showlang: false,
+      hower: true
+    }
+  },
+  methods: {
+    show: function () {
+      this.showlang = !this.showlang
+    },
+    languege: function (value) {
+      this.lang = value
+      this.show()
+    },
+    mousehower:function () {
+      this.hower = !this.hower
+    }
   }
 }
 </script>
 <style scoped>
-  h5{
+  .modal-backdrop.show {
+    opacity: 0;
+  }
+  ul{
+    list-style: none;
+  }
+  .language{
+    color: white;
+   position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+  .fl{
+    padding-top:10px ;
+    padding-left:5px ;
+    float: right;
+  }
+  .psl{
+    position: relative;
+    left: -20px;
+  }
+  .jumbotron {
+    padding: 0.5rem;
+    padding-left: 1rem;
+     margin-bottom: 0;
+  }
+  .bg-gray{
+    background-color: lightgray;
+  }
+  .padding-right-fix{
+    position: absolute;
+    right: 0;
+    padding-right: 0;
+  }
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+     margin-right: 0;
+    margin-left: 0;
+  }
+  .text-style,h5{
     margin-top: 40px;
     margin-bottom: 30px;
     font-family: Montserrat;
@@ -108,14 +186,14 @@ export default {
   #popuptext2{
     margin-left: 7%;
     margin-bottom: 0;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 34px;
     letter-spacing: 0.5px;
   }
   #popuptext2>span{
     /*margin-left: 10%;*/
     margin-bottom: 0;
-    font-size: 11px;
+    font-size: 16px;
   }
   form{
     width: 100%;

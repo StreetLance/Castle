@@ -1,9 +1,9 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+    <header>
 <Main></Main>
 
-    </q-header>
+    </header>
     <first-section></first-section>
 <second-section></second-section>
     <therdte-section></therdte-section>
