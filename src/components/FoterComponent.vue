@@ -75,7 +75,8 @@ export default {
     }
     .child2 {
       position: absolute;
-      left:65%
+      left:65%;
+      max-width: 34%;
     }
     .child4{
       margin-top: 40px;
