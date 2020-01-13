@@ -75,7 +75,7 @@ export default {
     line-height: 20px;
   }
   .pt-tabs{
-    padding-top: 27% ;
+    padding-top: 27%;
   }
   #best-features{
     font-family: Montserrat;
@@ -117,7 +117,7 @@ export default {
       font-size: 14px;
       line-height: 20px;
 
-      height: 100vh;
+      height: 130vh;
       background: #201E1F;
     }
     .pl-4-new{

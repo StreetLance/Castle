@@ -2,7 +2,7 @@
   <!--Navbar-->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar ">
     <div class="row items-center w-30 pl-4">
-      <a href="#info"><img src="../statics/Header_Logo.svg"></a>
+      <a href="#info"><img class="logos" src="../statics/Header_Logo.svg"></a>
       <div class="pl-3 pt-3 lang"><p>{{lang}}<img src="../statics/larng_shewron.svg"  class=" d-flex justify-center fl" alt=""  @click="show"></p>
       </div>
     </div>
@@ -20,10 +20,15 @@
         <!-- Links -->
         <div class="row navbar-nav smooth-scroll w-100 justify-around items-center text-center">
           <div class="col-sm"><a class="nav-link fw-300 text-white" href="#best-features">Data/Facts</a></div>
+          <hr class="separator">
           <div class="col-sm "> <a class="nav-link fw-300 text-white" href="#seond-features">Gallery</a></div>
+          <hr class="separator">
           <div class="col-sm "><a class="nav-link fw-300  text-white" href="#forth-features">Plans Floorplans</a></div>
+          <hr class="separator">
           <div class="col-sm "><a class="nav-link fw-300 text-white" href="#six-features">Information</a></div>
+          <hr class="separator">
           <div class="col-sm "><a class="nav-link fw-300 text-white" href="#fifth-features">Location</a></div>
+          <hr class="separator">
           <div class="col"></div>
         </div>
         <!-- Links -->
@@ -93,13 +98,17 @@ export default {
       this.lang = value
       this.show()
     },
-    mousehower:function () {
+    mousehower: function () {
       this.hower = !this.hower
     }
   }
 }
 </script>
 <style scoped>
+  .logos{
+    height: 100%;
+    width: 100%;
+  }
   .modal-backdrop.show {
     opacity: 0;
   }
@@ -242,6 +251,20 @@ position: absolute;
       -webkit-transition: background 0.5s ease-in-out,padding 0.5s ease-in-out;
       transition: background 0.5s ease-in-out,padding 0.5s ease-in-out;
     }
+
+  }
+  @media (max-width: 988px) {
+    .navbar-toggler{
+      position: fixed;
+      right: 0;
+      top: 6px;
+    }
+    .lang{
+      position: absolute;
+      top: 20px;
+      left: 35%;
+      display: none;
+    }
   }
 
   p,a{
@@ -255,5 +278,20 @@ position: absolute;
   }
   img{
     float:left;
+  }
+  @media (max-width: 978px) {
+    .padding-right-fix{
+      height: 100vh;
+      position: relative;
+      right: 45%;
+      top: 60px;
+    }
+  }
+  @media (max-width: 978px) {
+    .separator{
+      background-color: white;
+      height: 0.2px;
+      width: 100%;
+    }
   }
 </style>

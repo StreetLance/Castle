@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row w-100 fix ">
         <div class="col-sm-6 fix">
-          <div class="main"><img src="../statics/2021.svg" alt=""></div>
+          <div class="main"><img  class="twetytwenty2" src="../statics/2021.svg" alt=""></div>
           <div class="main2 " align="left">
             <span class="text-white"><h4>LOREM IPSUM</h4></span>
             <hr align="left">
@@ -36,7 +36,8 @@
   .castle2 {
     position: relative;
     top: 5%;
-    right: 0%;
+    width: 81vh;
+    right: 1%;
   }
 
   .fix {
@@ -103,7 +104,10 @@
     margin-left: 14%;
     padding-bottom: 1px;
   }
-
+  .twetytwenty2{
+    height: 100%;
+    width: 30vh;
+  }
   /*#castle{*/
   /*  margin-top: 12%;*/
   /*  height: 90vh;*/
@@ -121,5 +125,57 @@
 
   .container {
     max-height: 100%;
+  }
+  @media (max-width: 568px) {
+
+    .main2{
+      margin-top: 17%;
+      padding-right: 17%;
+      margin-left: 4%;
+      padding-bottom: 1px;
+      width: 222px;
+    }
+    .castle2{
+      display: none;
+    }
+    p {
+      margin-top: 7%;
+      text-align: left;
+      width: 170%;
+      color: gray;
+      font-family: Montserrat;
+      font-style: normal;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 17px;
+      letter-spacing: 0.2em;
+    }
+    h4 {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 38px;
+      letter-spacing: 0.2em;
+
+    }
+    #six-features {
+      height: 150vh;
+      background-color: #201e1f;
+      /*-webkit-background-size: cover;*/
+      /*-moz-background-size: cover;*/
+      /*-o-background-size: cover;*/
+      /*background-size: cover;*/
+    }
+    .ref2 {
+      margin-top: 2%;
+      margin-bottom: 0;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.3em;
+    }
   }
 </style>

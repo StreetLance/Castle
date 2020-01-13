@@ -2,15 +2,16 @@
   <section id="forth-features" class="text-center">
     <div class="container">
   <div id="castle" class="d-flex justify-content-center items-start">
-    <div class="FF" align="left"><img  src="../statics/First_floor.svg" alt=""></div>
-    <img src="../statics/Chert22.jpg" alt="">
+    <div class="FF" align="left"><img class="Ffloor"  src="../statics/First_floor.svg" alt=""></div>
+    <img class="FCflor" src="../statics/Chert22.jpg" alt="">
+    <img src="../statics/Rotator.svg" alt="" class="Rotator">
   </div>
       <div class="eye1"> <img  src="../statics/Eye.svg" alt=""></div>
       <div class="eye2"> <img  src="../statics/Eye.svg" alt=""></div>
       <div class="eye3"> <img  src="../statics/Eye.svg" alt=""></div>
       <div class="eye4"> <img  src="../statics/Eye.svg" alt=""></div>
       <div class="HowerEye5"> <img  src="../statics/Hower_eye.png" alt=""></div>
-      <div class="row mt-tab" >
+      <div class="row mt-tab mobile-secret" >
         <div class="col">
           <span class="text-grey"><p class="text-left fw-300 mb-0">Lobby 19.49 m2</p></span>
           <span class="text-grey"><p class="text-left fw-300 mb-0">Wardrobe 4.46 m2</p></span>
@@ -50,6 +51,20 @@
   }
 </script>
 <style scoped>
+  .Rotator{
+    position: relative;
+    top: 60px;
+    right: 50%;
+    display: none;
+  }
+  .Ffloor{
+    height: 100%;
+    width: 100%;
+  }
+  .FCflor{
+    height: 100%;
+    width: 100%;
+  }
   .text-secial{
    color: #E08C5A;
   }
@@ -61,7 +76,7 @@
     line-height: 24px;
   }
   .mt-tab{
-    margin-top: 7rem;
+    margin-top: 3rem;
   }
   .eye1{
     position: relative;
@@ -114,5 +129,38 @@ img{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+  }
+  .eye1,.eye2,.eye3,.eye4,.HowerEye5{
+    display: none;
+  }
+  @media (max-width: 680px) {
+    .eye1,.eye2,.eye3,.eye4,.HowerEye5{
+      display: none;
+    }
+    .Ffloor{
+      height: 100%;
+      width: 70%;
+    }
+    .FCflor{
+      position: relative;
+      top: 20vh;
+      left: 10%;
+      height: 100%;
+      width: 100%;
+    }
+    .FF{
+      margin-top: -13%;
+      position: absolute;
+      left: 4%;
+    }
+    .Rotator{
+      position: relative;
+      top: 35vh;
+      right: 47%;
+      display: block;
+    }
+    .mobile-secret{
+      display: none;
+    }
   }
 </style>
