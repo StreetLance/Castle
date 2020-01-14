@@ -178,4 +178,12 @@
       letter-spacing: 0.3em;
     }
   }
+  @media (min-width: 1500px) {
+    .castle2 {
+      position: relative;
+      top: 5%;
+      width: 78vh;
+      right: 30%;
+    }
+  }
 </style>
