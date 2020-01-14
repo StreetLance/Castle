@@ -36,8 +36,8 @@
   .castle2 {
     position: relative;
     top: 5%;
-    width: 81vh;
-    right: 1%;
+    width: 78vh;
+    right: 0%;
   }
 
   .fix {

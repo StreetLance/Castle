@@ -1,6 +1,6 @@
 <template>
   <!--Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar ">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar " :class="{bgstyle: bg}">
     <div class="row items-center w-30 pl-4">
       <a href="#info"><img class="logos" src="../statics/Header_Logo.svg"></a>
       <div class="pl-3 pt-3 lang"><p>{{lang}}<img src="../statics/larng_shewron.svg"  class=" d-flex justify-center fl" alt=""  @click="show"></p>
@@ -12,45 +12,52 @@
 
       <!-- Collapse button -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-                     aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                     aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation"
+                    @click="clickcollaps"
+      >
       <span class="navbar-toggler-icon"></span>
     </button>
       <!-- Collapsible content -->
       <div class="collapse navbar-collapse justify-center pl-6" id="basicExampleNav">
         <!-- Links -->
         <div class="row navbar-nav smooth-scroll w-100 justify-around items-center text-center">
-          <div class="col-sm"><a class="nav-link fw-300 text-white" href="#best-features">Data/Facts</a></div>
+          <div class="col-sm" ><a class="nav-link fw-300 text-white" href="#best-features">Data/Facts</a></div>
           <hr class="separator">
-          <div class="col-sm "> <a class="nav-link fw-300 text-white" href="#seond-features">Gallery</a></div>
+          <div class="col-sm" > <a class="nav-link fw-300 text-white" href="#seond-features">Gallery</a></div>
           <hr class="separator">
-          <div class="col-sm "><a class="nav-link fw-300  text-white" href="#forth-features">Plans Floorplans</a></div>
+          <div class="col-sm" ><a class="nav-link fw-300  text-white" href="#forth-features">Plans Floorplans</a></div>
           <hr class="separator">
-          <div class="col-sm "><a class="nav-link fw-300 text-white" href="#six-features">Information</a></div>
+          <div class="col-sm" ><a class="nav-link fw-300 text-white" href="#six-features">Information</a></div>
           <hr class="separator">
-          <div class="col-sm "><a class="nav-link fw-300 text-white" href="#fifth-features">Location</a></div>
+          <div class="col-sm" ><a class="nav-link fw-300 text-white" href="#fifth-features">Location</a></div>
           <hr class="separator">
+          <div class="col-sm locale"><a class="nav-link fw-300 text-white" href="#fifth-features">English</a></div>
+          <hr class="separator locale">
           <div class="col"></div>
         </div>
         <!-- Links -->
-        <!-- Social Icon  -->
         <div v-if="hower" @mouseover="mousehower" class=" d-flex justify-end padding-right-fix"><a class="nav-link " data-toggle="modal" data-target="#exampleModalCenter">
-          <img src="../statics/grayKey.svg">
-        </a></div>
+          <img class="p-l" src="../statics/grayKey.svg" align="left">
+        </a>
+          <span class="login">Log in</span>
+        </div>
         <div v-else  @mouseout="mousehower" class=" d-flex justify-end padding-right-fix"><a class="nav-link " data-toggle="modal" data-target="#exampleModalCenter">
-          <img src="../statics/Key2.svg">
-        </a></div>
+          <img class="p-l" src="../statics/Key2.svg">
+        </a>
+          <span class="login">Log in</span>
+        </div>
       </div>
       <!-- Collapsible content -->
     </div>
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered d-flex justify-center" role="document">
         <div class="modal-content">
-          <img  src="../statics/Header_key.svg">
+          <img  src="../statics/Key2.svg">
           <h5 class="text-black text-center">Want to know more?</h5>
-          <form class="text-center pt-0 pb-4 pl-4" action="#!">
-            <label class="text-dark">Login: <input type="email" class="form-control" placeholder="Login"></label>
+          <form class="text-center pt-0 pb-3 pl-5" action="#!">
+            <label class="text-dark">Login: </label><input type="email" class="form-control" placeholder="Login">
 
-            <label class="text-dark">Password: <input type="email" class="form-control" placeholder="Password"></label>
+            <label class="text-dark">Password: </label><input type="email" class="form-control" placeholder="Password">
           </form>
           <p  id="popuptext" class="text-black  text-center">Do not have one? Please contact us:</p>
           <div class="jumbotron bg-gray">
@@ -62,11 +69,6 @@
               E-Mail:<span> office@tiroxgroup.com</span><br>
             </span>
           </div>
-          <!--<p id="popuptext2" class="text-black">-->
-            <!--наш адрес, <br>-->
-           <!--<span>email,<br></span>-->
-            <!--телефон.<br>-->
-          <!--</p>-->
           <button id="btn" class="btn  my-4 waves-effect  smoll-button" type="button" data-dismiss="modal">Send code</button>
         </div>
       </div>
@@ -87,7 +89,8 @@ export default {
     return {
       lang: 'en',
       showlang: false,
-      hower: true
+      hower: true,
+      bg: false
     }
   },
   methods: {
@@ -100,17 +103,30 @@ export default {
     },
     mousehower: function () {
       this.hower = !this.hower
+    },
+    clickcollaps: function () {
+      this.bg = !this.bg
     }
   }
 }
 </script>
 <style scoped>
+  .login{
+    display: none;
+  }
+  .locale{
+    display: none;
+  }
+  label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    position: relative;
+    top: 36px;
+    right: 105px;
+  }
   .logos{
     height: 100%;
     width: 100%;
-  }
-  .modal-backdrop.show {
-    opacity: 0;
   }
   ul{
     list-style: none;
@@ -152,7 +168,7 @@ export default {
   }
   .text-style,h5{
     margin-top: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 8px;
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
@@ -164,15 +180,17 @@ export default {
     position: relative;
     display: -ms-flexbox;
     display: flex;
+    z-index: 100000;
     -ms-flex-direction: column;
     flex-direction: column;
-    width:60%;
+    width:65%;
     pointer-events: auto;
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid rgba(0,0,0,.2);
     border-radius: .3rem;
     outline: 0;
+    box-shadow: #201e1f 10px 100px;
   }
 
   #btn{
@@ -205,12 +223,13 @@ export default {
     font-size: 16px;
   }
   form{
-    width: 100%;
+    width: 77%;
   }
   input{
     font-size: 12px;
     width: 90%;
     padding-top: 0;
+    margin-left: 40px;
     border: none;
     border-bottom: 1px solid #DF7856;
     letter-spacing: 0.9px;
@@ -232,6 +251,31 @@ width: 50%;
 position: absolute;
       top: 20px;
       left: 35%;
+    }
+    .bgstyle{
+      background: #201e1f;
+    }
+    .locale{
+      display: block;
+    }
+    .login{
+      display: block;
+      position: relative;
+      top: 35px;
+      right: 10px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      /* identical to box height */
+      text-align: center;
+      color: #FBFBFE;
+    }
+    .p-l{
+      position: relative;
+      bottom: 30px;
+      left: 55px;
     }
   }
   /*.key{*/
@@ -292,6 +336,44 @@ position: absolute;
       background-color: white;
       height: 0.2px;
       width: 100%;
+    }
+  }
+  @media (max-width: 550px) {
+    .modal-content {
+      padding-top: 21px;
+      position: relative;
+      display: -ms-flexbox;
+      display: flex;
+      z-index: 100000;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      width:300px;
+      pointer-events: auto;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid rgba(0,0,0,.2);
+      border-radius: .3rem;
+      outline: 0;
+      box-shadow: #201e1f 10px 100px;
+    }
+    label[data-v-54d3a52e] {
+      display: inline-block;
+      margin-bottom: .5rem;
+      position: relative;
+      top: 36px;
+      right: 90px;
+    }
+    #popuptext2[data-v-54d3a52e] {
+      margin-left: 7%;
+      margin-bottom: 0;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.5px;
+    }
+    #popuptext2>span[data-v-54d3a52e] {
+      /* margin-left: 10%; */
+      margin-bottom: 0;
+      font-size: 14px;
     }
   }
 </style>

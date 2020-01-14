@@ -68,6 +68,7 @@ export default {
   @media (max-width: 410px) {
     .modifitext>div{
       margin-bottom: 20px;
+      margin-left: 20px;
     }
     #footer{
       height: 55vh;
@@ -75,7 +76,8 @@ export default {
     }
     .child2 {
       position: absolute;
-      left:65%;
+      left:60%;
+      margin-top: 3px;
       max-width: 34%;
     }
     .child4{

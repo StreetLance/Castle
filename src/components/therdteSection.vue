@@ -126,7 +126,7 @@ export default {
     /*background-size:230%;*/
   }
   #seond-features{
-    height: 110vh;
+    height: 100vh;
     background: #393939;
   }
   @media (max-width: 480px) {
