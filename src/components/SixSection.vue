@@ -1,6 +1,6 @@
 <template>
   <section id="six-features" class="text-center">
-    <div class="container">
+    <div class="container fixes">
       <div class="row w-100 fix ">
         <div class="col-sm-6 fix">
           <div class="main"><img  class="twetytwenty2" src="../statics/2021.svg" alt=""></div>
@@ -16,9 +16,9 @@
             <span><p class="ref2 text-white mt-0">Interior Design: <span class="text-grey lite-text"> Andreas Pacher | Igor Petrychenko</span></p></span>
           </div>
         </div>
-        <div class="col-sm-5 fix">
+        <div class="col-sm-5 fix" align="right">
           <!--          <div class="ref" id="castle"></div>-->
-          <img class="castle2" src="../statics/Chertejnew1.png" alt=""></div>
+          <img align="right" class="castle2" src="../statics/Chertejnew1.png" alt=""></div>
       </div>
     </div>
   </section>
@@ -43,6 +43,7 @@
   .fix {
     max-height: 100vh;
     width: 49%;
+    margin-right: 0;
   }
 
   .lite-text {
@@ -178,12 +179,17 @@
       letter-spacing: 0.3em;
     }
   }
-  @media (min-width: 1500px) {
+  @media (min-width: 1200px){
+    .fixes {
+      max-width: 100%;
+      padding-right: 0;
+    }
     .castle2 {
       position: relative;
       top: 5%;
       width: 78vh;
-      right: 30%;
+      left:4%;
     }
   }
+
 </style>

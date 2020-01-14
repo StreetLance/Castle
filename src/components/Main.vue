@@ -356,7 +356,7 @@ position: absolute;
       outline: 0;
       box-shadow: #201e1f 10px 100px;
     }
-    label[data-v-54d3a52e] {
+    label {
       display: inline-block;
       margin-bottom: .5rem;
       position: relative;
@@ -374,6 +374,15 @@ position: absolute;
       /* margin-left: 10%; */
       margin-bottom: 0;
       font-size: 14px;
+    }
+  }
+  @media (max-width: 292px) {
+    label {
+      display: inline-block;
+      margin-bottom: .5rem;
+      position: relative;
+      top: 36px;
+      right: 80px;
     }
   }
 </style>
