@@ -287,17 +287,17 @@
     background-color: rgb(0,0,0,0.7);
     top: 756vh;
   }
-  .eye14{
-    height: 10vh;
-    width: 4vh;
-    position: relative;
-    left: 64%;
-    z-index: 10000;
-    margin-top: -53%;
-    padding: 1%;
-    background-color: rgb(0,0,0,0.7);
-    top: 822vh;
-  }
+  /*.eye14{*/
+    /*height: 10vh;*/
+    /*width: 4vh;*/
+    /*position: relative;*/
+    /*left: 64%;*/
+    /*z-index: 10000;*/
+    /*margin-top: -53%;*/
+    /*padding: 1%;*/
+    /*background-color: rgb(0,0,0,0.7);*/
+    /*top: 822vh;*/
+  /*}*/
   .FF{
     margin-top: 4.6rem;
     position: absolute;
@@ -314,9 +314,9 @@ img{
     -o-background-size: cover;
     background-size: cover;
   }
-  /*.eye1,.eye2,.eye3,.eye4,.HowerEye5{*/
-    /*display: none;*/
-  /*}*/
+  .eye1,.eye2,.eye3,.eye4,.HowerEye5,.eye6,.eye7,.eye8,.eye9,.eye10,.eye11,.eye12,.eye13,.eye14{
+    display: none;
+  }
   @media (max-width: 680px) {
     .eye1,.eye2,.eye3,.eye4,.HowerEye5{
       display: none;

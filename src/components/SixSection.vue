@@ -101,7 +101,7 @@
 
   .main2 {
     margin-top: 17%;
-    padding-right: 17%;
+    padding-right: 40%;
     margin-left: 14%;
     padding-bottom: 1px;
   }
@@ -110,10 +110,10 @@
     width: 30vh;
   }
   /*#castle{*/
-  /*  margin-top: 12%;*/
-  /*  height: 90vh;*/
-  /*  !*width: 100vh;*!*/
-  /*  background: url("../statics/Chertejnew1.png")no-repeat center center;*/
+    /*margin-top: 12%;*/
+    /*height: 90vh;*/
+    /*!*width: 100vh;*!*/
+    /*background: url("../statics/Chertejnew1.png")no-repeat center center;*/
   /*}*/
   #six-features {
     height: 100vh;

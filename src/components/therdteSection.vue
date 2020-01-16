@@ -64,7 +64,7 @@ export default {
   }
   .Block1{
     background-image: url("../statics/Gallery/1_flor .jpg");
-
+    background-size: cover;
     background-repeat: no-repeat;
     grid-area: a;
     height: 100vh;
@@ -72,26 +72,31 @@ export default {
   }
   .Block2{
     background-image: url("../statics/Gallery/2_flor .jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     grid-area: b;
   }
   .Block3{
     background-image: url("../statics/Gallery/3_flor .jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     grid-area: c;
   }
   .Block4{
     background-image: url("../statics/Gallery/4_flor .jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     grid-area: e;
   }
   .Block5{
     background-image: url("../statics/Gallery/5_flor .jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     grid-area: d;
   }
   .Block6{
     background-image: url("../statics/Gallery/6_flor .jpg");
+    background-size: cover;
     /*background-size: 150%;*/
     background-repeat: no-repeat;
     grid-area: v;
