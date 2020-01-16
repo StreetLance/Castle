@@ -1,10 +1,10 @@
 <template>
   <section id="forth-features" class="text-center">
-    <div class="container">
-  <div id="castle" class="d-flex justify-content-center items-start">
-    <div class="FF" align="left"><img class="Ffloor"  src="../statics/First_floor.svg" alt=""></div>
-    <img class="FCflor" src="../statics/Chert22.jpg" alt="">
-    <img src="../statics/Rotator.svg" alt="" class="Rotator">
+    <div class="container d-flex justify-content-center ">
+      <div class="FF" align="left"><img class="Ffloor"  src="../statics/First_floor.svg" alt=""></div>
+      <img src="../statics/Rotator.svg" alt="" class="Rotator">
+  <div id="castle" class="d-flex justify-content-center ">
+    <img class="FCflor d-flex align-items-center" src="../statics/Chert22.jpg" alt="">
   </div>
       <div class="eye1">
         <svg width="51" height="30" viewBox="0 0 51 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -72,36 +72,36 @@
           <path d="M50.1958 15.7376L50.7113 14.8831L50.1958 14.0285C50.1144 13.8929 48.0119 10.5018 43.9426 7.11067C38.5305 2.6073 32.1416 0.219971 25.4951 0.219971C18.8485 0.219971 12.4462 2.6073 7.00685 7.11067C2.91041 10.5018 0.794371 13.8793 0.699421 14.0285L0.17041 14.8831L0.699421 15.7376C0.794371 15.8868 2.91041 19.2644 7.00685 22.6419C12.4462 27.1453 18.8485 29.5326 25.4951 29.5326C32.1552 29.5326 38.5305 27.1453 43.9426 22.6419C48.0119 19.2644 50.1009 15.8733 50.1958 15.7376ZM41.7723 20.2139C36.9027 24.2425 31.4227 26.2771 25.4951 26.2771C19.5675 26.2771 14.0603 24.2289 9.16359 20.2139C6.62705 18.1249 4.90438 16.0225 4.06338 14.8831C4.90438 13.7437 6.62705 11.6412 9.16359 9.55226C14.0739 5.52364 19.5675 3.48899 25.4951 3.48899C31.4227 3.48899 36.9027 5.52364 41.7723 9.55226C44.2953 11.6412 46.0044 13.7572 46.8318 14.8831C46.0044 16.0225 44.2953 18.1385 41.7723 20.2139Z" fill="#93959A"/>
           <path d="M25.4408 5.10327C20.0422 5.10327 15.6609 9.48456 15.6609 14.8832C15.6609 20.2818 20.0422 24.6631 25.4408 24.6631C30.8394 24.6631 35.2207 20.2818 35.2207 14.8832C35.2207 9.48456 30.8394 5.10327 25.4408 5.10327ZM25.4408 21.4076C21.8462 21.4076 18.9163 18.4777 18.9163 14.8832C18.9163 11.2886 21.8462 8.35872 25.4408 8.35872C29.0354 8.35872 31.9653 11.2886 31.9653 14.8832C31.9653 18.4777 29.0354 21.4076 25.4408 21.4076Z" fill="#93959A"/>
         </svg></div>
-      <div class="eye14 d-flex justify-center ">
-        <svg width="51" height="30" viewBox="0 0 51 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M50.1958 15.7376L50.7113 14.8831L50.1958 14.0285C50.1144 13.8929 48.0119 10.5018 43.9426 7.11067C38.5305 2.6073 32.1416 0.219971 25.4951 0.219971C18.8485 0.219971 12.4462 2.6073 7.00685 7.11067C2.91041 10.5018 0.794371 13.8793 0.699421 14.0285L0.17041 14.8831L0.699421 15.7376C0.794371 15.8868 2.91041 19.2644 7.00685 22.6419C12.4462 27.1453 18.8485 29.5326 25.4951 29.5326C32.1552 29.5326 38.5305 27.1453 43.9426 22.6419C48.0119 19.2644 50.1009 15.8733 50.1958 15.7376ZM41.7723 20.2139C36.9027 24.2425 31.4227 26.2771 25.4951 26.2771C19.5675 26.2771 14.0603 24.2289 9.16359 20.2139C6.62705 18.1249 4.90438 16.0225 4.06338 14.8831C4.90438 13.7437 6.62705 11.6412 9.16359 9.55226C14.0739 5.52364 19.5675 3.48899 25.4951 3.48899C31.4227 3.48899 36.9027 5.52364 41.7723 9.55226C44.2953 11.6412 46.0044 13.7572 46.8318 14.8831C46.0044 16.0225 44.2953 18.1385 41.7723 20.2139Z" fill="#93959A"/>
-          <path d="M25.4408 5.10327C20.0422 5.10327 15.6609 9.48456 15.6609 14.8832C15.6609 20.2818 20.0422 24.6631 25.4408 24.6631C30.8394 24.6631 35.2207 20.2818 35.2207 14.8832C35.2207 9.48456 30.8394 5.10327 25.4408 5.10327ZM25.4408 21.4076C21.8462 21.4076 18.9163 18.4777 18.9163 14.8832C18.9163 11.2886 21.8462 8.35872 25.4408 8.35872C29.0354 8.35872 31.9653 11.2886 31.9653 14.8832C31.9653 18.4777 29.0354 21.4076 25.4408 21.4076Z" fill="#93959A"/>
-        </svg></div>
-      <div class="row mt-tab mobile-secret" >
-        <div class="col">
-          <span class="text-grey"><p class="text-left fw-300 mb-0">Lobby 19.49 m2</p></span>
-          <span class="text-grey"><p class="text-left fw-300 mb-0">Wardrobe 4.46 m2</p></span>
-          <span class="text-grey"><p class="text-left fw-300 mb-0">Technical room 4.28 m2</p></span>
-          <span class="text-grey"><p class="text-left fw-300 mb-0">Lavatory 1.88 m2</p></span>
-        </div>
-        <div class="col">
-          <span class="text-secial"><p class="text-left fw-300 mb-0">Dining room 11.14 m2</p></span>
-          <span class="text-grey"><p class="text-left fw-300 mb-0">Staff kitchen 14.50 m2</p></span>
-          <span class="text-grey"><p class="text-left fw-300 mb-0">Kitchen 31.96 m2</p></span>
-          <span class="text-grey"><p class="text-left fw-300 mb-0">Hall 156.45 m2</p></span>
-        </div>
-        <div class="col">
-          <span class="text-grey"><p class="text-left fw-300 mb-0">Lobby 29.35 m2</p></span>
-          <span class="text-grey"><p class="text-left fw-300 mb-0">Office 27.95 m2</p></span>
-          <span class="text-grey"><p class="text-left fw-300 mb-0">Utility room 6.09 m2</p></span>
-          <span class="text-grey"><p class="text-left fw-300 mb-0">Lavatory 2.38 m2</p></span>
-        </div>
-        <div class="col">
-          <span class="text-grey"><p class="text-left fw-300 mb-0">Fireplace room 24.65 m2</p></span>
-          <span class="text-grey"><p class="text-left fw-300 mb-0">Library 23.32 m2</p></span>
-          <span class="text-grey"><p class="text-left fw-300 mb-0">Bar 8.26 m2</p></span>
-          <span class="text-grey"><p class="text-left fw-300 mb-0">Balcony 10.49 m2</p></span>
-        </div>
+<!--      <div class="eye14 d-flex justify-center ">-->
+<!--        <svg width="51" height="30" viewBox="0 0 51 30" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--          <path d="M50.1958 15.7376L50.7113 14.8831L50.1958 14.0285C50.1144 13.8929 48.0119 10.5018 43.9426 7.11067C38.5305 2.6073 32.1416 0.219971 25.4951 0.219971C18.8485 0.219971 12.4462 2.6073 7.00685 7.11067C2.91041 10.5018 0.794371 13.8793 0.699421 14.0285L0.17041 14.8831L0.699421 15.7376C0.794371 15.8868 2.91041 19.2644 7.00685 22.6419C12.4462 27.1453 18.8485 29.5326 25.4951 29.5326C32.1552 29.5326 38.5305 27.1453 43.9426 22.6419C48.0119 19.2644 50.1009 15.8733 50.1958 15.7376ZM41.7723 20.2139C36.9027 24.2425 31.4227 26.2771 25.4951 26.2771C19.5675 26.2771 14.0603 24.2289 9.16359 20.2139C6.62705 18.1249 4.90438 16.0225 4.06338 14.8831C4.90438 13.7437 6.62705 11.6412 9.16359 9.55226C14.0739 5.52364 19.5675 3.48899 25.4951 3.48899C31.4227 3.48899 36.9027 5.52364 41.7723 9.55226C44.2953 11.6412 46.0044 13.7572 46.8318 14.8831C46.0044 16.0225 44.2953 18.1385 41.7723 20.2139Z" fill="#93959A"/>-->
+<!--          <path d="M25.4408 5.10327C20.0422 5.10327 15.6609 9.48456 15.6609 14.8832C15.6609 20.2818 20.0422 24.6631 25.4408 24.6631C30.8394 24.6631 35.2207 20.2818 35.2207 14.8832C35.2207 9.48456 30.8394 5.10327 25.4408 5.10327ZM25.4408 21.4076C21.8462 21.4076 18.9163 18.4777 18.9163 14.8832C18.9163 11.2886 21.8462 8.35872 25.4408 8.35872C29.0354 8.35872 31.9653 11.2886 31.9653 14.8832C31.9653 18.4777 29.0354 21.4076 25.4408 21.4076Z" fill="#93959A"/>-->
+<!--        </svg></div>-->
+    </div>
+    <div class="row mt-tab mobile-secret" >
+      <div class="col">
+        <span class="text-grey"><p class="text-left fw-300 mb-0">Lobby 19.49 m2</p></span>
+        <span class="text-grey"><p class="text-left fw-300 mb-0">Wardrobe 4.46 m2</p></span>
+        <span class="text-grey"><p class="text-left fw-300 mb-0">Technical room 4.28 m2</p></span>
+        <span class="text-grey"><p class="text-left fw-300 mb-0">Lavatory 1.88 m2</p></span>
+      </div>
+      <div class="col">
+        <span class="text-secial"><p class="text-left fw-300 mb-0">Dining room 11.14 m2</p></span>
+        <span class="text-grey"><p class="text-left fw-300 mb-0">Staff kitchen 14.50 m2</p></span>
+        <span class="text-grey"><p class="text-left fw-300 mb-0">Kitchen 31.96 m2</p></span>
+        <span class="text-grey"><p class="text-left fw-300 mb-0">Hall 156.45 m2</p></span>
+      </div>
+      <div class="col">
+        <span class="text-grey"><p class="text-left fw-300 mb-0">Lobby 29.35 m2</p></span>
+        <span class="text-grey"><p class="text-left fw-300 mb-0">Office 27.95 m2</p></span>
+        <span class="text-grey"><p class="text-left fw-300 mb-0">Utility room 6.09 m2</p></span>
+        <span class="text-grey"><p class="text-left fw-300 mb-0">Lavatory 2.38 m2</p></span>
+      </div>
+      <div class="col">
+        <span class="text-grey"><p class="text-left fw-300 mb-0">Fireplace room 24.65 m2</p></span>
+        <span class="text-grey"><p class="text-left fw-300 mb-0">Library 23.32 m2</p></span>
+        <span class="text-grey"><p class="text-left fw-300 mb-0">Bar 8.26 m2</p></span>
+        <span class="text-grey"><p class="text-left fw-300 mb-0">Balcony 10.49 m2</p></span>
       </div>
     </div>
 
@@ -118,9 +118,6 @@
 </script>
 <style scoped>
   .Rotator{
-    position: relative;
-    top: 60px;
-    right: 50%;
     display: none;
   }
   .Ffloor{
@@ -128,6 +125,7 @@
     width: 100%;
   }
   .FCflor{
+    padding-top: 13%;
     height: 100%;
     width: 100%;
   }
@@ -143,6 +141,12 @@
   }
   .mt-tab{
     margin-top: 3rem;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 50px;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
   .eye1{
     height: 23vh;
@@ -307,7 +311,7 @@ img{
   border: none;
 }
   #forth-features {
-    height: 100vh;
+    /*height: 100vh;*/
     background-color: #201e1f;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -317,7 +321,7 @@ img{
   .eye1,.eye2,.eye3,.eye4,.HowerEye5,.eye6,.eye7,.eye8,.eye9,.eye10,.eye11,.eye12,.eye13,.eye14{
     display: none;
   }
-  @media (max-width: 680px) {
+  @media (max-width: 702px){
     .eye1,.eye2,.eye3,.eye4,.HowerEye5{
       display: none;
     }
@@ -326,21 +330,60 @@ img{
       width: 70%;
     }
     .FCflor{
-      position: relative;
-      top: 20vh;
-      left: 10%;
+      padding-top: 13%;
       height: 100%;
       width: 100%;
     }
     .FF{
-      margin-top: -13%;
+      margin-top: 3%;
       position: absolute;
-      left: 4%;
+      left: 9%;
     }
     .Rotator{
-      position: relative;
-      top: 35vh;
-      right: 47%;
+      display: none;
+    }
+    #forth-features {
+      /*height: 139vh;*/
+      background-color: #201e1f;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    p {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 24px;
+    }
+    /*.mt-tab {*/
+    /*  margin-top: 3rem;*/
+    /*}*/
+  }
+  @media (max-width: 600px) {
+    .eye1,.eye2,.eye3,.eye4,.HowerEye5{
+      display: none;
+    }
+    .Ffloor{
+      height: 100%;
+      width: 70%;
+    }
+    .FCflor{
+      /*position: relative;*/
+      /*top: 20vh;*/
+      /*left: 10%;*/
+      height: 100%;
+      width: 100%;
+    }
+    /*.FF{*/
+    /*  margin-top: -13%;*/
+    /*  position: absolute;*/
+    /*  left: 4%;*/
+    /*}*/
+    .Rotator{
+      position: absolute;
+      padding-top: 33%;
       display: block;
     }
     .mobile-secret{

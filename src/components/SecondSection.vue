@@ -2,7 +2,7 @@
   <section id="best-features" class="text-center">
     <div class="container">
       <div class="row w-100 h-100">
-        <div class="col-sm-6">
+        <div class="col">
           <img  src="../statics/The_New_Chapter.svg" alt="The_New_Chapter" class="pt-5 TNC">
         <br>
           <div class="data pl-4-new pt-tabs">
@@ -25,13 +25,13 @@
                   <span class="text-white"><p class="text-left fw-300 mb-2"><span class="text-grey fw-300">2021: Exclusive Estate</span></p></span>
                 </div>
               </div>
-              <span class="text-grey"><p class="text-left fw-300 mt-4">Summer 2021 - Autumn2021</p></span></div>
+              <span class="text-grey"><p class="text-left fw-300 mt-4">Summer 2021 - Autumn 2021</p></span></div>
             <span class="text-white "><p class="text-left mt-4">Prise</p></span>
-            <span class="text-grey"><p class="text-left pt-0">Upon request | <span class="color-mail ">mail@gmail.com</span></p></span>
+            <span class="text-grey"><p class="text-left pt-0">Upon request | <a href="mailto:office@tiroxgroup.com" class="color-mail ">office@tiroxgroup.com</a></p></span>
             <hr class="section2">
           </div>
         </div>
-        <div class="col-sm-6"></div>
+        <div class="col mobile-secret"></div>
       </div>
     </div>
   </section>
@@ -83,15 +83,61 @@ export default {
     font-weight: bold;
     font-size: 16px;
     line-height: 20px;
-
-    height: 100vh;
+    padding-bottom: 100px;
     background: #151518;
+  }
+  @media (max-width: 1000px) {
+    .mobile-secret{
+      display: none;
+    }
+  }
+  @media (max-width: 702px) {
+    .section2 {
+      background-color: #df8c5a;
+      height: 2px;
+      width: 130px;
+      display: block;
+    }
+
+    #right-border {
+      border-right: 0;
+    }
+
+    .pb-5-new {
+      padding-bottom: 0rem !important;
+    }
+
+    .fw-300 {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .pt-tabs {
+      padding-top: 7%;
+    }
+
+    #best-features {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 20px;
+      /*height: 200vh;*/
+      background: #201E1F;
+    }
+
+    .pl-4-new {
+      padding-left: 1rem !important;
+    }
   }
   @media (max-width: 480px) {
     .section2{
       background-color: #df8c5a;
       height:2px;
-      width: 120px;
+      width: 110px;
       display: block;
     }
     #right-border{
@@ -117,11 +163,13 @@ export default {
       font-size: 14px;
       line-height: 20px;
 
-      height: 130vh;
+      /*height: 120vh;*/
       background: #201E1F;
     }
     .pl-4-new{
       padding-left: 1rem !important;
     }
+    /**------------------------**/
   }
+
 </style>

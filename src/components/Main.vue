@@ -21,17 +21,17 @@
       <div class="collapse navbar-collapse justify-center pl-6" id="basicExampleNav">
         <!-- Links -->
         <div class="row navbar-nav smooth-scroll w-100 justify-around items-center text-center">
-          <div class="col-sm" ><a class="nav-link fw-300 text-white" href="#best-features">Data/Facts</a></div>
+          <div class="col" ><a class="nav-link fw-300 text-white" href="#best-features">Data/Facts</a></div>
           <hr class="separator">
-          <div class="col-sm" > <a class="nav-link fw-300 text-white" href="#seond-features">Gallery</a></div>
+          <div class="col" > <a class="nav-link fw-300 text-white" href="#seond-features">Gallery</a></div>
           <hr class="separator">
-          <div class="col-sm" ><a class="nav-link fw-300  text-white" href="#forth-features">Plans Floorplans</a></div>
+          <div class="col" ><a class="nav-link fw-300  text-white" href="#forth-features">Plans Floorplans</a></div>
           <hr class="separator">
-          <div class="col-sm" ><a class="nav-link fw-300 text-white" href="#six-features">Information</a></div>
+          <div class="col" ><a class="nav-link fw-300 text-white" href="#six-features">Information</a></div>
           <hr class="separator">
-          <div class="col-sm" ><a class="nav-link fw-300 text-white" href="#fifth-features">Location</a></div>
+          <div class="col" ><a class="nav-link fw-300 text-white" href="#fifth-features">Location</a></div>
           <hr class="separator">
-          <div class="col-sm locale"><a class="nav-link fw-300 text-white" href="#fifth-features">English</a></div>
+          <div class="col locale"><a class="nav-link fw-300 text-white" href="#fifth-features">English</a></div>
           <hr class="separator locale">
           <div class="col"></div>
         </div>
@@ -254,6 +254,7 @@ position: absolute;
     }
     .bgstyle{
       background: #201e1f;
+      padding-bottom: 141px;
     }
     .locale{
       display: block;
@@ -291,7 +292,7 @@ position: absolute;
   @media (min-width: 700px){
     .navbar.scrolling-navba{
       padding-top: 15px;
-      padding-bottom: 12px;
+      padding-bottom: 141px;
       -webkit-transition: background 0.5s ease-in-out,padding 0.5s ease-in-out;
       transition: background 0.5s ease-in-out,padding 0.5s ease-in-out;
     }
@@ -325,7 +326,7 @@ position: absolute;
   }
   @media (max-width: 978px) {
     .padding-right-fix{
-      height: 100vh;
+      /*height: 100vh;*/
       position: relative;
       right: 45%;
       top: 60px;
@@ -338,7 +339,12 @@ position: absolute;
       width: 100%;
     }
   }
+  @media (min-width: 600px) {
+    .bgstyle{
+      padding-bottom: 141px;}
+  }
   @media (max-width: 550px) {
+
     .modal-content {
       padding-top: 21px;
       position: relative;

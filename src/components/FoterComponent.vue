@@ -4,10 +4,15 @@
     <div class="container">
       <div class="contacts">
         <div class="row modifitext">
-          <div class="col-sm text-special">CONTACTS:</div>
-          <div class="col-sm text-white">+38 000 000 00 00</div>
-          <div class="col-sm text-white">email@gmail.com</div>
-          <div class="col-sm text-white">Addresse</div>
+          <div class="col-10 col-md-2 text-special">CONTACTS:</div>
+          <div class="col-9">
+            <div class="d-flex flex-wrap flex-lg-nowrap flex-column flex-xl-row justify-content-start justify-content-lg-between  ">
+              <div class="text-white">+43 1 413 0000</div>
+              <div class="text-white">office@tiroxgroup.com</div>
+              <div class="text-white">Obere Augartenstrasse 40</div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -34,16 +39,16 @@ export default {
 <style scoped>
   .modifitext2{
     margin-top: 5%;
-    margin-bottom: 5%;
+    /*padding-bottom: 5%;*/
     font-family: Montserrat;
     font-style: normal;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.2em;
   }
-  .modifitext{
-    margin-top: 5%;
-    margin-bottom: 5%;
+  .modifitext>div{
+    margin-top: 3%;
+    margin-bottom: 3%;
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
@@ -62,16 +67,12 @@ export default {
     opacity: 0.5;
   }
 #footer{
-  height: 30vh;
+  /*height: 30vh;*/
   background-color: #201e1f;
 }
-  @media (max-width: 410px) {
-    .modifitext>div{
-      margin-bottom: 20px;
-      margin-left: 20px;
-    }
+  @media (max-width: 568px) {
     #footer{
-      height: 55vh;
+      /*height: 55vh;*/
       background-color: #201e1f;
     }
     .child2 {
