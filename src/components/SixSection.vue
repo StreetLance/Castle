@@ -188,7 +188,7 @@
       position: relative;
       top: 5%;
       width: 78vh;
-      left:4%;
+      left:61px;
     }
   }
 
