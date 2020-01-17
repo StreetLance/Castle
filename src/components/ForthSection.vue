@@ -490,7 +490,7 @@ console.log("1")
     height: 15vh;
     width: 15vh;
     position: absolute;
-    left: 430px;
+    left: 28%;
     margin-top: 620px;
     /*background-color: rgb(0,0,0,0.7);*/
   }
@@ -499,7 +499,7 @@ console.log("1")
     height: 15vh;
     width: 15vh;
     position: absolute;
-    left: 565px;
+    left: 36%;
     margin-top: 620px;
     /*background-color: rgb(0,0,0,0.7);*/
   }
@@ -508,7 +508,7 @@ console.log("1")
     height: 15vh;
     width: 15vh;
     position: absolute;
-    right: 511px;
+    right: 32%;
     margin-top: 620px;
     /*background-color: rgb(0,0,0,0.7);*/
   }
@@ -517,8 +517,8 @@ console.log("1")
     height: 15vh;
     width: 15vh;
     position: absolute;
-    right: 34%;
-    margin-top: 25%;
+    right: 32%;
+    margin-top: 451px;
     /*background-color: rgb(0,0,0,0.7);*/
   }
 
@@ -541,6 +541,70 @@ console.log("1")
     background-size: cover;
   }
 
+  @media (max-width: 1368px) {
+    .eye3 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      left: 31%;
+      margin-top: 430px;
+    }
+    .eye4 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      left: 25%;
+      margin-top: 620px;
+      /*background-color: rgb(0,0,0,0.7);*/
+    }
+
+    .eye5 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      left: 34%;
+      margin-top: 620px;
+      /*background-color: rgb(0,0,0,0.7);*/
+    }
+  }
+  @media (max-width: 1350px) {
+    .eye6 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      right: 29%;
+      margin-top: 620px;
+
+    }
+
+    .eye7 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      right: 29%;
+      margin-top: 451px;
+
+    }
+  }
+  @media (max-width: 1264px) {
+    .eye6 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      right: 27%;
+      margin-top: 620px;
+
+    }
+
+    .eye7 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      right: 28%;
+      margin-top: 451px;
+
+    }
+  }
   @media (max-width: 1199px) {
     .eye1 {
       height: 15vh;
@@ -571,7 +635,6 @@ console.log("1")
       position: absolute;
       left: 300px;
       margin-top: 513px;
-      /*background-color: rgb(0,0,0,0.7);*/
     }
 
     .eye5 {
@@ -580,29 +643,65 @@ console.log("1")
       position: absolute;
       left: 399px;
       margin-top: 512px;
-      /*background-color: rgb(0,0,0,0.7);*/
     }
 
     .eye6 {
       height: 15vh;
       width: 15vh;
       position: absolute;
-      right: 356px;
+      right: 29%;
       margin-top: 510px;
-
-      /*background-color: rgb(0,0,0,0.7);*/
     }
 
     .eye7 {
       height: 15vh;
       width: 15vh;
       position: absolute;
-      right: 34%;
-      margin-top: 25%;
-      /*background-color: rgb(0,0,0,0.7);*/
+      right: 29%;
+      margin-top: 386px;
     }
   }
+  @media (max-width: 1126px) {
+    .eye4 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      left: 23%;
+      margin-top: 513px;
+    }
 
+    .eye5 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      left: 33%;
+      margin-top: 512px;
+    }
+  }
+  @media (max-width: 1062px){
+    .eye3 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      left: 29%;
+      margin-top: 355px;
+    }
+    .eye6 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      right: 27%;
+      margin-top: 510px;
+    }
+
+    .eye7 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      right: 27%;
+      margin-top: 386px;
+    }
+  }
   @media (max-width: 990px) {
     .eye1 {
       height: 15vh;
@@ -649,7 +748,7 @@ console.log("1")
       height: 15vh;
       width: 15vh;
       position: absolute;
-      right: 289px;
+      right: 30%;
       margin-top: 372px;
       /*background-color: rgb(0,0,0,0.7);*/
     }
@@ -658,12 +757,57 @@ console.log("1")
       height: 15vh;
       width: 15vh;
       position: absolute;
-      right: 34%;
-      margin-top: 25%;
+      right: 30%;
+      margin-top: 276px;
       /*background-color: rgb(0,0,0,0.7);*/
     }
   }
+  @media (max-width: 914px){
+    .eye6 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      right: 28%;
+      margin-top: 372px;
+    }
 
+    .eye7 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      right: 28%;
+      margin-top: 276px;
+    }
+  }
+  @media (max-width: 906px) {
+
+    .eye4 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      left: 24%;
+      margin-top: 369px;
+      /*background-color: rgb(0,0,0,0.7);*/
+    }
+
+    .eye5 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      left: 33%;
+      margin-top: 372px;
+      /*background-color: rgb(0,0,0,0.7);*/
+    }
+  }
+  @media (max-width: 880px) {
+    .eye3 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      left: 31%;
+      margin-top: 258px;
+    }
+  }
   @media (max-width: 766px) {
     .eye1 {
       height: 15vh;
@@ -710,7 +854,7 @@ console.log("1")
       height: 15vh;
       width: 15vh;
       position: absolute;
-      right: 206px;
+      right: 28%;
       margin-top: 266px;
 
       /*background-color: rgb(0,0,0,0.7);*/
@@ -720,12 +864,66 @@ console.log("1")
       height: 15vh;
       width: 15vh;
       position: absolute;
-      right: 34%;
-      margin-top: 25%;
+      right: 28%;
+      margin-top: 190px;
       /*background-color: rgb(0,0,0,0.7);*/
     }
   }
+  @media (max-width: 712px) {
+    .eye4 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      left: 24%;
+      margin-top: 269px;
+      /*background-color: rgb(0,0,0,0.7);*/
+    }
 
+    .eye5 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      left: 32%;
+      margin-top: 267px;
+      /*background-color: rgb(0,0,0,0.7);*/
+    }
+  }
+  @media (max-width: 652px) {
+    .eye4 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      left: 21%;
+      margin-top: 269px;
+      /*background-color: rgb(0,0,0,0.7);*/
+    }
+    .eye5 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      left: 30%;
+      margin-top: 267px;
+      /*background-color: rgb(0,0,0,0.7);*/
+    }
+    .eye6 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      right: 25%;
+      margin-top: 266px;
+
+      /*background-color: rgb(0,0,0,0.7);*/
+    }
+
+    .eye7 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      right: 25%;
+      margin-top: 190px;
+      /*background-color: rgb(0,0,0,0.7);*/
+    }
+  }
   @media (max-width: 702px) {
     /*.eye1, .eye2, .eye3, .eye4,.eye5, .eye6, .eye7 {*/
     /*  display: none;*/
@@ -775,7 +973,7 @@ console.log("1")
   }
 
   @media (max-width: 600px) {
-    .eye1, .eye2, .eye3, .eye4.eye6, .eye7 {
+    .eye1, .eye2, .eye3, .eye4,.eye5,.eye6, .eye7 {
       display: none;
     }
 
