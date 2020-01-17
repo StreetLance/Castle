@@ -6,7 +6,7 @@
       enter-active-class="animated fadeInLeft"
       leave-active-class="animated fadeOutLeft"
     >
-<div class="Gallery" v-show="show"  v-bind:style="{ backgroundImage: 'url(\''+ geturl +'\')'}">
+<div class="Gallery"  v-bind:style="{ backgroundImage: 'url(\''+ geturl +'\')'}"  v-show="show">
   <div @click="show=!show"  class="closer">
     <svg  width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg" >
     <path d="M10.6068 31.8201L31.82 10.6069" stroke="white" stroke-width="3" stroke-linecap="round"/>
@@ -42,13 +42,14 @@ export default {
       url: [
         { '1': '../statics/Gallery/A-full.png', '2': '../statics/Gallery/B-full.png', '3': '../statics/Gallery/C-full.png', '4': '../statics/Gallery/D-full.png', '5': '../statics/Gallery/E-full.png', '6': '../statics/Gallery/F-full.png'
         }],
-      geturl: '../statics/Gallery/A-full.png'
+      geturl: ''
     }
   },
-  methods:{
+  methods: {
     showart: function (num) {
-      this.show = !this.show
-      this.geturl = this.url[0][num]
+      new Promise((resolve, reject) => {
+        this.geturl = this.url[0][num]
+      }).then(this.show = !this.show)
     }
   }
 }
@@ -64,6 +65,7 @@ export default {
     height: 50px;
   }
   .Gallery{
+    background-color: #201E1F;
     background-size: 100%;
     height: 100vh;
     width: 100%;
@@ -225,10 +227,11 @@ export default {
       height: 110vh;
       background: #201e1f;
     }
-    .Gallery[data-v-99451c7e] {
+    .Gallery{
+      background-color: #201E1F;
       background-size: 100%;
       height: 100vh;
-      width: 90%;
+      max-width: 88%;
       position: absolute;
       z-index: 1000;
       background-repeat: no-repeat;

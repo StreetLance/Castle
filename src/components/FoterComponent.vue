@@ -3,8 +3,8 @@
     <hr>
     <div class="container">
       <div class="contacts">
-        <div class="row modifitext">
-          <div class="col-10 col-md-2 text-special">CONTACTS:</div>
+        <div class="row modifitext d-flex align-items-center">
+          <div class="col-10 col-md-2 text-special ">CONTACTS:</div>
           <div class="col-9">
             <div class="d-flex flex-wrap flex-lg-nowrap flex-column flex-xl-row justify-content-start justify-content-lg-between  ">
               <div class="text-white">+43 1 413 0000</div>
@@ -46,7 +46,7 @@ export default {
     line-height: 20px;
     letter-spacing: 0.2em;
   }
-  .modifitext>div{
+  .modifitext>div>div>div, .modifitext>div{
     margin-top: 3%;
     margin-bottom: 3%;
     font-family: Montserrat;
@@ -77,7 +77,7 @@ export default {
     }
     .child2 {
       position: absolute;
-      left:60%;
+      left: 57%;
       margin-top: 3px;
       max-width: 34%;
     }

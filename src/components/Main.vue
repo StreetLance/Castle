@@ -21,7 +21,7 @@
       <div class="collapse navbar-collapse justify-center pl-6" id="basicExampleNav">
         <!-- Links -->
         <div class="row navbar-nav smooth-scroll w-100 justify-around items-center text-center">
-          <div class="col" ><a class="nav-link fw-300 text-white" href="#best-features">Data/Facts</a></div>
+          <div class="col" ><a class="nav-link fw-300 text-white" @click="facts">Data/Facts</a></div>
           <hr class="separator">
           <div class="col" > <a class="nav-link fw-300 text-white" href="#seond-features">Gallery</a></div>
           <hr class="separator">
@@ -83,6 +83,8 @@
 </template>
 
 <script>
+  import { ScrollTo } from 'gsap/ScrollToPlugin'
+  import { gsap } from 'gsap'
 export default {
   // name: 'ComponentName',
   data () {
@@ -106,6 +108,21 @@ export default {
     },
     clickcollaps: function () {
       this.bg = !this.bg
+    },
+    facts: function () {
+      gsap.to(window, {duration: 2, scrollTo:"#best-features"});
+    },
+    Gallery:function () {
+
+    },
+    Floor:function () {
+
+    },
+    Information:function () {
+
+    },
+    Location:function () {
+
     }
   }
 }
