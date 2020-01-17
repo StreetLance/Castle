@@ -69,11 +69,11 @@
           <p id="popuptext" class="text-black  text-center">Do not have one? Please contact us:</p>
           <div class="jumbotron bg-gray">
             <span id="popuptext2" class="text-black ">
-              <span class="psl">TIROX GmbH</span><br>
+              <span class="psl"><a href="https://tiroxgroup.com/" class="text-black">TIROX GmbH</a></span><br>
               Tuchlauben 7a/7<br>
               1010 Wien<br>
-              Telefon: +43 1 413 0000<br>
-              E-Mail:<span> office@tiroxgroup.com</span><br>
+              <a href="tel:+4314130000" class="text-black">Telefon: +43 1 413 0000</a><br>
+              E-Mail:<span><a href="mailto:office@tiroxgroup.com " class="text-black">office@tiroxgroup.com</a> </span><br>
             </span>
           </div>
           <button id="btn" class="btn  my-4 waves-effect  smoll-button" type="button" data-dismiss="modal">Send code
@@ -234,7 +234,6 @@
     border: 1px solid rgba(0, 0, 0, .2);
     border-radius: .3rem;
     outline: 0;
-    box-shadow: #201e1f 10px 100px;
   }
 
   #btn {
@@ -297,7 +296,12 @@
     font-size: 16px;
     line-height: 20px;
   }
-
+@media (max-width: 1000px) {
+  .bgstyle {
+    /*background: #201e1f;*/
+    padding-bottom: 141px;
+  }
+}
   @media (max-width: 769px) {
     .lang {
       position: absolute;
@@ -306,8 +310,8 @@
     }
 
     .bgstyle {
-      background: #201e1f;
-      /*padding-bottom: 141px;*/
+      /*background: #201e1f;*/
+      padding-bottom: 141px;
     }
 
     .locale {
@@ -381,7 +385,7 @@
     }
   }
 
-  p, a {
+  p {
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
@@ -435,7 +439,6 @@
       border: 1px solid rgba(0, 0, 0, .2);
       border-radius: .3rem;
       outline: 0;
-      box-shadow: #201e1f 10px 100px;
     }
 
     label {

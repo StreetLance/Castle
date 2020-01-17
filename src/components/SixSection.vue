@@ -15,7 +15,7 @@
 </p></span>
             <hr align="left">
             <span><p class="ref2 text-white">Developer: <span
-              class="text-grey lite-text"> Tirox Group GmbH</span></p></span>
+              class="text-grey lite-text"><a href="https://tiroxgroup.com/" class="text-grey lite-text">Tirox Group GmbH</a></span></p></span>
 <!--            <span><p class="ref2 text-white">Architect: <span class="text-grey lite-text">Architectur Buro Andreas Pacher</span></p></span>-->
 <!--            <span><p class="ref2 text-white mt-0">Interior Design: <span class="text-grey lite-text"> Andreas Pacher | Igor Petrychenko</span></p></span>-->
           </div>
@@ -44,7 +44,7 @@
 
   .fix {
     position: absolute;
-    padding-top: 5%;
+    padding-top: 17%;
     right: 0;
     /*max-height: 100vh;*/
     /*width: 49%;*/
@@ -106,7 +106,7 @@
 
   .main2 {
     margin-top: 17%;
-    padding-right: 40%;
+    padding-right: 32%;
     /*margin-left: 14%;*/
     padding-bottom: 60px;
   }

@@ -7,8 +7,8 @@
           <div class="col-10 col-md-2 text-special ">CONTACTS:</div>
           <div class="col-9">
             <div class="d-flex flex-wrap flex-lg-nowrap flex-column flex-xl-row justify-content-start justify-content-lg-between  ">
-              <div class="text-white">+43 1 413 0000</div>
-              <div class="text-white">office@tiroxgroup.com</div>
+              <div class="text-white"><a href="tel:+4314130000" class="text-white">+43 1 413 0000</a></div>
+              <div ><a href="mailto:office@tiroxgroup.com " class="text-white">office@tiroxgroup.com</a></div>
               <div class="text-white"> Tuchlauben 7a/Top 7 1010 Vienna</div>
             </div>
           </div>

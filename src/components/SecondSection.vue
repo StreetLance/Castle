@@ -9,7 +9,7 @@
             <span class="text-white "><p class="text-left">Addresse</p></span>
             <span class="text-grey"><p class="text-left fw-300 pb-5-new">Obere AugartenstraBe 40, 1020 Vienna,Austria</p></span>
             <div id="right-border" >
-              <span class="text-white"><p class="text-left ">Total area: <span class="text-grey fw-300">1487 m2</span></p></span>
+              <span class="text-white"><p class="text-left ">Total area: <span class="text-grey fw-300">1487 m<sup>2</sup></span></p></span>
               <span class="text-white"><p class="text-left  mb-2">Style: <span class="text-grey fw-300">Classicism</span></p></span>
               <span class="text-white"><p class="text-left ">Number of floors: <span class="text-grey fw-300">5</span></p></span>
               <span class="text-white"><p class="text-left">Bedrooms: <span class="text-grey fw-300">7</span></p></span>
