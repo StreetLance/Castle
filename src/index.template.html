@@ -32,6 +32,51 @@
       .modal-backdrop{
         display: none;
       }
+      /* Custom width for the Scrollbar */
+      ::-webkit-scrollbar {
+        width: 14px;
+      }
+      /* Custom Track */
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px #1D1D1D;
+        /*border-radius: 10px;*/
+        background: #151518;
+      }
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #29292d;
+
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #393939;
+
+        border-radius: 10px;
+      }
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb {
+        background: #1f1f1f;
+      }
+      /* Custom Button */
+      ::-webkit-scrollbar-button:single-button {
+        background-color:none;
+        display: block;
+        border-style: solid;
+        height: 13px;
+        width: 16px;
+      }
+      /* Custom Up Direction Button */
+      ::-webkit-scrollbar-button:single-button:vertical:decrement {
+        /*border-width: 0px 8px 9px 8px;*/
+        /*border-color: transparent #151518;*/
+        /*border-radius: 10px;*/
+        background-color: #1f1f1f;
+      }
+      /* Custom Down Direction Button */
+      ::-webkit-scrollbar-button:single-button:vertical:increment {
+        /*border-radius: 10px;*/
+        background-color: #1f1f1f;
+      }
     </style>
   </head>
   <body>
@@ -46,5 +91,6 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/js/mdb.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.js"></script>
+
   </body>
 </html>

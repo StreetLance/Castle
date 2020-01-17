@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row w-100 h-100">
         <div class="col">
-          <img  src="../statics/The_New_Chapter.svg" alt="The_New_Chapter" class="pt-5 TNC">
+          <img  src="../statics/The_New_Chapter.svg" alt="The_New_Chapter" class="pt-5 mt-5 TNC">
         <br>
           <div class="data pl-4-new pt-tabs">
             <span class="text-white "><p class="text-left">Addresse</p></span>

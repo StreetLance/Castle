@@ -16,8 +16,8 @@
             <hr align="left">
             <span><p class="ref2 text-white">Developer: <span
               class="text-grey lite-text"> Tirox Group GmbH</span></p></span>
-            <span><p class="ref2 text-white">Architect: <span class="text-grey lite-text">Architectur Buro Andreas Pacher</span></p></span>
-            <span><p class="ref2 text-white mt-0">Interior Design: <span class="text-grey lite-text"> Andreas Pacher | Igor Petrychenko</span></p></span>
+<!--            <span><p class="ref2 text-white">Architect: <span class="text-grey lite-text">Architectur Buro Andreas Pacher</span></p></span>-->
+<!--            <span><p class="ref2 text-white mt-0">Interior Design: <span class="text-grey lite-text"> Andreas Pacher | Igor Petrychenko</span></p></span>-->
           </div>
         </div>
         <div class="col col-xl-6 mobile-secret" align="right"></div>

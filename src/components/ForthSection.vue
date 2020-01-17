@@ -19,7 +19,7 @@
           <path class="a" d="M3.22266 45.1709H0V55H9.94995V51.7773H3.22266V45.1709Z" fill="#E08C5A"/>
           <path class="a" d="M51.7773 51.7773H45.05V55H55V45.1709H51.7773V51.7773Z" fill="#E08C5A"/>
         </svg>
-        <svg  width="50" height="112" viewBox="0 0 50 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg id="svgLine1" width="50" height="112" viewBox="0 0 50 112" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path id="line1" d="M2.38086 1.00562L47.6188 " stroke="#E08C5A" stroke-width="3" stroke-dasharray="4 4"/>
         </svg>
       </div>
@@ -36,7 +36,7 @@
           <path class="b" d="M3.22266 45.1709H0V55H9.94995V51.7773H3.22266V45.1709Z" fill="#E08C5A"/>
           <path class="b" d="M51.7773 51.7773H45.05V55H55V45.1709H51.7773V51.7773Z" fill="#E08C5A"/>
         </svg>
-         <svg  width="50" height="112" viewBox="0 0 50 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <svg id="svgLine2"  width="50" height="112" viewBox="0 0 50 112" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path id="line2" d="M2.38086 1.00562L47.6188 " stroke="#E08C5A" stroke-width="3" stroke-dasharray="4 4"/>
         </svg>
       </div>
@@ -53,12 +53,12 @@
           <path class="c" d="M3.22266 45.1709H0V55H9.94995V51.7773H3.22266V45.1709Z" fill="#E08C5A"/>
           <path class="c" d="M51.7773 51.7773H45.05V55H55V45.1709H51.7773V51.7773Z" fill="#E08C5A"/>
         </svg>
-         <svg  width="50" height="112" viewBox="0 0 50 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <svg id="svgLine3"  width="50" height="112" viewBox="0 0 50 112" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path id="line3" d="M2.38086 1.00562L47.6188 " stroke="#E08C5A" stroke-width="3" stroke-dasharray="4 4"/>
         </svg>
       </div>
       <div  class="eye4" @click="drov4">
-        <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg  width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path id="q3"
             d="M52.0056 28.346L52.5159 27.5L52.0056 26.6541C51.925 26.5198 49.8438 23.1628 45.8154 19.8059C40.4578 15.3479 34.1333 12.9846 27.5537 12.9846C20.9741 12.9846 14.6362 15.3479 9.25171 19.8059C5.19653 23.1628 3.10181 26.5064 3.00781 26.6541L2.48413 27.5L3.00781 28.346C3.10181 28.4937 5.19653 31.8372 9.25171 35.1807C14.6362 39.6387 20.9741 42.002 27.5537 42.002C34.1467 42.002 40.4578 39.6387 45.8154 35.1807C49.8438 31.8372 51.9116 28.4802 52.0056 28.346ZM43.667 32.7771C38.8464 36.7651 33.4216 38.7793 27.5537 38.7793C21.6858 38.7793 16.2341 36.7517 11.3867 32.7771C8.87573 30.7092 7.17041 28.6279 6.33789 27.5C7.17041 26.3721 8.87573 24.2908 11.3867 22.2229C16.2476 18.2349 21.6858 16.2207 27.5537 16.2207C33.4216 16.2207 38.8464 18.2349 43.667 22.2229C46.1646 24.2908 47.8564 26.3855 48.6755 27.5C47.8564 28.6279 46.1646 30.7227 43.667 32.7771Z"
             fill="#93959A"/>
@@ -70,7 +70,7 @@
           <path class="d" d="M3.22266 45.1709H0V55H9.94995V51.7773H3.22266V45.1709Z" fill="#E08C5A"/>
           <path class="d" d="M51.7773 51.7773H45.05V55H55V45.1709H51.7773V51.7773Z" fill="#E08C5A"/>
         </svg>
-         <svg  width="50" height="112" viewBox="0 0 50 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <svg id="svgLine4" width="50" height="112" viewBox="0 0 50 112" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path id="line4" d="M2.38086 1.00562L47.6188 " stroke="#E08C5A" stroke-width="3" stroke-dasharray="4 4"/>
         </svg>
       </div>
@@ -87,7 +87,7 @@
           <path class="e" d="M3.22266 45.1709H0V55H9.94995V51.7773H3.22266V45.1709Z" fill="#E08C5A"/>
           <path class="e" d="M51.7773 51.7773H45.05V55H55V45.1709H51.7773V51.7773Z" fill="#E08C5A"/>
         </svg>
-         <svg  width="50" height="112" viewBox="0 0 50 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <svg id="svgLine5" width="50" height="112" viewBox="0 0 50 112" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path id="line5" d="M2.38086 1.00562L47.6188 " stroke="#E08C5A" stroke-width="3" stroke-dasharray="4 4"/>
         </svg>
       </div>
@@ -104,7 +104,7 @@
           <path class="f" d="M3.22266 45.1709H0V55H9.94995V51.7773H3.22266V45.1709Z" fill="#E08C5A"/>
           <path class="f" d="M51.7773 51.7773H45.05V55H55V45.1709H51.7773V51.7773Z" fill="#E08C5A"/>
         </svg>
-         <svg  width="50" height="112" viewBox="0 0 50 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <svg id="svgLine6" width="50" height="112" viewBox="0 0 50 112" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path id="line6" d="M2.38086 1.00562L47.6188 " stroke="#E08C5A" stroke-width="3" stroke-dasharray="4 4"/>
         </svg>
       </div>
@@ -121,7 +121,7 @@
           <path class="g" d="M3.22266 45.1709H0V55H9.94995V51.7773H3.22266V45.1709Z" fill="#E08C5A"/>
           <path class="g" d="M51.7773 51.7773H45.05V55H55V45.1709H51.7773V51.7773Z" fill="#E08C5A"/>
         </svg>
-         <svg  width="50" height="112" viewBox="0 0 50 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <svg id="svgLine6" width="50" height="112" viewBox="0 0 50 112" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path id="line7" d="M2.38086 1.00562L47.6188 " stroke="#E08C5A" stroke-width="3" stroke-dasharray="4 4"/>
         </svg>
       </div>
@@ -413,6 +413,11 @@ console.log("1")
 }
 </script>
 <style scoped>
+  #svgLine1,#svgLine2,#svgLine3,#svgLine4,#svgLine5,#svgLine6{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
   .a,.b,.c,.d,.e,.f,.g{
     visibility: hidden;
   }
@@ -462,8 +467,7 @@ console.log("1")
     height: 15vh;
     width: 15vh;
     position: absolute;
-    margin-top: 33%;
-    /*background-color: rgb(0,0,0,0.7);*/
+    margin-top: 595px;
 
   }
 
@@ -471,9 +475,7 @@ console.log("1")
     height: 15vh;
     width: 15vh;
     position: absolute;
-    /*margin-left: 10;*/
-    margin-top: 21%;
-    /*background-color: rgb(0,0,0,0.7);*/
+    margin-top: 400px;
   }
 
   .eye3 {
@@ -481,16 +483,15 @@ console.log("1")
     width: 15vh;
     position: absolute;
     left: 34%;
-    margin-top: 25%;
-    /*background-color: rgb(0,0,0,0.7);*/
+    margin-top: 430px;
   }
 
   .eye4 {
     height: 15vh;
     width: 15vh;
     position: absolute;
-    left: 31%;
-    margin-top: 33%;
+    left: 430px;
+    margin-top: 620px;
     /*background-color: rgb(0,0,0,0.7);*/
   }
 
@@ -498,8 +499,8 @@ console.log("1")
     height: 15vh;
     width: 15vh;
     position: absolute;
-    left: 38%;
-    margin-top: 33%;
+    left: 565px;
+    margin-top: 620px;
     /*background-color: rgb(0,0,0,0.7);*/
   }
 
@@ -507,8 +508,8 @@ console.log("1")
     height: 15vh;
     width: 15vh;
     position: absolute;
-    right: 34%;
-    margin-top: 33%;
+    right: 511px;
+    margin-top: 620px;
     /*background-color: rgb(0,0,0,0.7);*/
   }
 
@@ -540,13 +541,195 @@ console.log("1")
     background-size: cover;
   }
 
-  /*.eye1,.eye2,.eye3,.eye4,.eye6,.eye7{*/
-  /*display: none;*/
-  /*}*/
-  @media (max-width: 702px) {
-    .eye1, .eye2, .eye3, .eye4, .eye6, .eye7 {
-      display: none;
+  @media (max-width: 1199px) {
+    .eye1 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      margin-top: 495px;
+
     }
+
+    .eye2 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      margin-top: 320px;
+    }
+
+    .eye3 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      left: 32%;
+      margin-top: 355px;
+    }
+
+    .eye4 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      left: 300px;
+      margin-top: 513px;
+      /*background-color: rgb(0,0,0,0.7);*/
+    }
+
+    .eye5 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      left: 399px;
+      margin-top: 512px;
+      /*background-color: rgb(0,0,0,0.7);*/
+    }
+
+    .eye6 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      right: 356px;
+      margin-top: 510px;
+
+      /*background-color: rgb(0,0,0,0.7);*/
+    }
+
+    .eye7 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      right: 34%;
+      margin-top: 25%;
+      /*background-color: rgb(0,0,0,0.7);*/
+    }
+  }
+
+  @media (max-width: 990px) {
+    .eye1 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      margin-top: 365px;
+
+    }
+
+    .eye2 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      margin-top: 230px;
+    }
+
+    .eye3 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      left: 32%;
+      margin-top: 258px;
+    }
+
+    .eye4 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      left: 263px;
+      margin-top: 369px;
+      /*background-color: rgb(0,0,0,0.7);*/
+    }
+
+    .eye5 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      left: 322px;
+      margin-top: 372px;
+      /*background-color: rgb(0,0,0,0.7);*/
+    }
+
+    .eye6 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      right: 289px;
+      margin-top: 372px;
+      /*background-color: rgb(0,0,0,0.7);*/
+    }
+
+    .eye7 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      right: 34%;
+      margin-top: 25%;
+      /*background-color: rgb(0,0,0,0.7);*/
+    }
+  }
+
+  @media (max-width: 766px) {
+    .eye1 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      margin-top: 265px;
+
+    }
+
+    .eye2 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      margin-top: 160px;
+    }
+
+    .eye3 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      left: 30%;
+      margin-top: 185px;
+    }
+
+    .eye4 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      left: 194px;
+      margin-top: 269px;
+      /*background-color: rgb(0,0,0,0.7);*/
+    }
+
+    .eye5 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      left: 247px;
+      margin-top: 267px;
+      /*background-color: rgb(0,0,0,0.7);*/
+    }
+
+    .eye6 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      right: 206px;
+      margin-top: 266px;
+
+      /*background-color: rgb(0,0,0,0.7);*/
+    }
+
+    .eye7 {
+      height: 15vh;
+      width: 15vh;
+      position: absolute;
+      right: 34%;
+      margin-top: 25%;
+      /*background-color: rgb(0,0,0,0.7);*/
+    }
+  }
+
+  @media (max-width: 702px) {
+    /*.eye1, .eye2, .eye3, .eye4,.eye5, .eye6, .eye7 {*/
+    /*  display: none;*/
+    /*}*/
 
     .Ffloor {
       height: 100%;

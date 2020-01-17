@@ -3,7 +3,8 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar " :class="{bgstyle: bg}">
     <div class="row items-center w-30 pl-4">
       <a href="#info"><img class="logos" src="../statics/Header_Logo.svg"></a>
-      <div class="pl-3 pt-3 lang"><p>{{lang}}<img src="../statics/larng_shewron.svg"  class=" d-flex justify-center fl" alt=""  @click="show"></p>
+      <div class="pl-3 pt-3 lang"><p>{{lang}}<img src="../statics/larng_shewron.svg" class=" d-flex justify-center fl"
+                                                  alt="" @click="show"></p>
       </div>
     </div>
     <div class="container ">
@@ -12,36 +13,41 @@
 
       <!-- Collapse button -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-                     aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation"
-                    @click="clickcollaps"
+              aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation"
+              @click="clickcollaps"
       >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <!-- Collapsible content -->
-      <div class="collapse navbar-collapse justify-center pl-6" id="basicExampleNav">
+      <div class="collapse navbar-collapse justify-center pl-6" id="basicExampleNav" data-toggle="collapse"
+           data-target=".navbar-collapse">
         <!-- Links -->
         <div class="row navbar-nav smooth-scroll w-100 justify-around items-center text-center">
-          <div class="col" ><a class="nav-link fw-300 text-white" @click="facts">Data/Facts</a></div>
+          <div class="col"><a class="nav-link fw-300 text-white" @click="facts">Data/Facts</a></div>
           <hr class="separator">
-          <div class="col" > <a class="nav-link fw-300 text-white" href="#seond-features">Gallery</a></div>
+          <div class="col"><a class="nav-link fw-300 text-white" @click="Gallery">Gallery</a></div>
           <hr class="separator">
-          <div class="col" ><a class="nav-link fw-300  text-white" href="#forth-features">Plans Floorplans</a></div>
+          <div class="col"><a class="nav-link fw-300  text-white" @click="Floor">Plans Floorplans</a></div>
           <hr class="separator">
-          <div class="col" ><a class="nav-link fw-300 text-white" href="#six-features">Information</a></div>
+          <div class="col"><a class="nav-link fw-300 text-white" @click="Information">Information</a></div>
           <hr class="separator">
-          <div class="col" ><a class="nav-link fw-300 text-white" href="#fifth-features">Location</a></div>
+          <div class="col"><a class="nav-link fw-300 text-white" @click="Location">Location</a></div>
           <hr class="separator">
-          <div class="col locale"><a class="nav-link fw-300 text-white" href="#fifth-features">English</a></div>
+          <div class="col locale"><a class="nav-link fw-300 text-white">English</a></div>
           <hr class="separator locale">
           <div class="col"></div>
         </div>
         <!-- Links -->
-        <div v-if="hower" @mouseover="mousehower" class=" d-flex justify-end padding-right-fix"><a class="nav-link " data-toggle="modal" data-target="#exampleModalCenter">
+        <div v-if="hower" @mouseover="mousehower" class=" d-flex justify-end padding-right-fix"><a class="nav-link "
+                                                                                                   data-toggle="modal"
+                                                                                                   data-target="#exampleModalCenter">
           <img class="p-l" src="../statics/grayKey.svg" align="left">
         </a>
           <span class="login">Log in</span>
         </div>
-        <div v-else  @mouseout="mousehower" class=" d-flex justify-end padding-right-fix"><a class="nav-link " data-toggle="modal" data-target="#exampleModalCenter">
+        <div v-else @mouseout="mousehower" class=" d-flex justify-end padding-right-fix"><a class="nav-link "
+                                                                                            data-toggle="modal"
+                                                                                            data-target="#exampleModalCenter">
           <img class="p-l" src="../statics/Key2.svg">
         </a>
           <span class="login">Log in</span>
@@ -49,17 +55,18 @@
       </div>
       <!-- Collapsible content -->
     </div>
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered d-flex justify-center" role="document">
         <div class="modal-content">
-          <img  src="../statics/Key2.svg">
+          <img src="../statics/Key2.svg">
           <h5 class="text-black text-center">Want to know more?</h5>
           <form class="text-center pt-0 pb-3 pl-5" action="#!">
             <label class="text-dark">Login: </label><input type="email" class="form-control" placeholder="Login">
 
             <label class="text-dark">Password: </label><input type="email" class="form-control" placeholder="Password">
           </form>
-          <p  id="popuptext" class="text-black  text-center">Do not have one? Please contact us:</p>
+          <p id="popuptext" class="text-black  text-center">Do not have one? Please contact us:</p>
           <div class="jumbotron bg-gray">
             <span id="popuptext2" class="text-black ">
               <span class="psl">TIROX GmbH</span><br>
@@ -69,71 +76,80 @@
               E-Mail:<span> office@tiroxgroup.com</span><br>
             </span>
           </div>
-          <button id="btn" class="btn  my-4 waves-effect  smoll-button" type="button" data-dismiss="modal">Send code</button>
+          <button id="btn" class="btn  my-4 waves-effect  smoll-button" type="button" data-dismiss="modal">Send code
+          </button>
         </div>
       </div>
     </div>
     <ul class="language" v-show="showlang">
-    <li @click="languege('ru')"><a >ru</a></li>
-    <li @click="languege('en')"><a >en</a></li>
-  </ul>
+      <li @click="languege('ru')"><a>ru</a></li>
+      <li @click="languege('en')"><a>en</a></li>
+    </ul>
   </nav>
 
   <!--/.Navbar-->
 </template>
 
 <script>
-  import { ScrollTo } from 'gsap/ScrollToPlugin'
-  import { gsap } from 'gsap'
-export default {
-  // name: 'ComponentName',
-  data () {
-    return {
-      lang: 'en',
-      showlang: false,
-      hower: true,
-      bg: false
-    }
-  },
-  methods: {
-    show: function () {
-      this.showlang = !this.showlang
-    },
-    languege: function (value) {
-      this.lang = value
-      this.show()
-    },
-    mousehower: function () {
-      this.hower = !this.hower
-    },
-    clickcollaps: function () {
-      this.bg = !this.bg
-    },
-    facts: function () {
-      gsap.to(window, {duration: 2, scrollTo:"#best-features"});
-    },
-    Gallery:function () {
+  import {ScrollToPlugin} from 'gsap/ScrollToPlugin'
+  import {gsap} from 'gsap'
 
+  gsap.registerPlugin(ScrollToPlugin)
+  export default {
+    // name: 'ComponentName',
+    data() {
+      return {
+        lang: 'en',
+        showlang: false,
+        hower: true,
+        bg: false
+      }
     },
-    Floor:function () {
-
-    },
-    Information:function () {
-
-    },
-    Location:function () {
-
+    methods: {
+      show: function () {
+        this.showlang = !this.showlang
+      },
+      languege: function (value) {
+        this.lang = value
+        this.show()
+      },
+      mousehower: function () {
+        this.hower = !this.hower
+      },
+      clickcollaps: function () {
+        this.bg = !this.bg
+      },
+      facts: function () {
+        gsap.to(window, {duration: 2, scrollTo: "#best-features"})
+      },
+      Gallery: function () {
+        gsap.to(window, {duration: 2, scrollTo: "#seond-features"});
+      },
+      Floor: function () {
+        gsap.to(window, {duration: 2, scrollTo: "#forth-features"});
+      },
+      Information: function () {
+        gsap.to(window, {duration: 2, scrollTo: "#six-features"});
+      },
+      Location: function () {
+        gsap.to(window, {duration: 2, scrollTo: "#fifth-features"});
+      }
     }
   }
-}
 </script>
 <style scoped>
-  .login{
+  .nav-link:hover {
+    color: #E08C5A !important;
+  }
+
+  .login {
     display: none;
   }
-  .locale{
+
+  .locale {
     display: none;
   }
+
   label {
     display: inline-block;
     margin-bottom: .5rem;
@@ -141,49 +157,59 @@ export default {
     top: 36px;
     right: 105px;
   }
-  .logos{
+
+  .logos {
     height: 100%;
     width: 100%;
   }
-  ul{
+
+  ul {
     list-style: none;
   }
-  .language{
+
+  .language {
     color: white;
-   position: absolute;
+    position: absolute;
     top: 10%;
     left: 10%;
   }
-  .fl{
-    padding-top:10px ;
-    padding-left:5px ;
+
+  .fl {
+    padding-top: 10px;
+    padding-left: 5px;
     float: right;
   }
-  .psl{
+
+  .psl {
     position: relative;
     left: -20px;
   }
+
   .jumbotron {
     padding: 0.5rem;
     padding-left: 1rem;
-     margin-bottom: 0;
+    margin-bottom: 0;
   }
-  .bg-gray{
+
+  .bg-gray {
     background-color: lightgray;
   }
-  .padding-right-fix{
+
+  .padding-right-fix {
     position: absolute;
     right: 0;
     padding-right: 0;
   }
+
   .container {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
-     margin-right: 0;
+    margin-right: 0;
     margin-left: 0;
   }
-  .text-style,h5{
+
+  .text-style, h5 {
     margin-top: 40px;
     margin-bottom: 8px;
     font-family: Montserrat;
@@ -192,6 +218,7 @@ export default {
     font-size: 16px;
     line-height: 20px;
   }
+
   .modal-content {
     padding-top: 21px;
     position: relative;
@@ -200,17 +227,17 @@ export default {
     z-index: 100000;
     -ms-flex-direction: column;
     flex-direction: column;
-    width:65%;
+    width: 65%;
     pointer-events: auto;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid rgba(0,0,0,.2);
+    border: 1px solid rgba(0, 0, 0, .2);
     border-radius: .3rem;
     outline: 0;
     box-shadow: #201e1f 10px 100px;
   }
 
-  #btn{
+  #btn {
     margin-left: 26%;
     font-family: Montserrat;
     font-style: normal;
@@ -219,7 +246,8 @@ export default {
     /*line-height: 36px;*/
     letter-spacing: 0.1px;
   }
-  #popuptext,#popuptext2{
+
+  #popuptext, #popuptext2 {
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
@@ -227,22 +255,26 @@ export default {
     line-height: 26px;
     letter-spacing: 0.1px;
   }
-  #popuptext2{
+
+  #popuptext2 {
     margin-left: 7%;
     margin-bottom: 0;
     font-size: 18px;
     line-height: 34px;
     letter-spacing: 0.5px;
   }
-  #popuptext2>span{
+
+  #popuptext2 > span {
     /*margin-left: 10%;*/
     margin-bottom: 0;
     font-size: 16px;
   }
-  form{
+
+  form {
     width: 77%;
   }
-  input{
+
+  input {
     font-size: 12px;
     width: 90%;
     padding-top: 0;
@@ -251,32 +283,38 @@ export default {
     border-bottom: 1px solid #DF7856;
     letter-spacing: 0.9px;
   }
-  .smoll-button{
-width: 50%;
+
+  .smoll-button {
+    width: 50%;
     border-radius: 40px;
     background-color: #DF7856;;
   }
-  .fw-300{
+
+  .fw-300 {
     font-family: Montserrat;
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
     line-height: 20px;
   }
+
   @media (max-width: 769px) {
-    .lang{
-position: absolute;
+    .lang {
+      position: absolute;
       top: 20px;
       left: 35%;
     }
-    .bgstyle{
+
+    .bgstyle {
       background: #201e1f;
-      padding-bottom: 141px;
+      /*padding-bottom: 141px;*/
     }
-    .locale{
+
+    .locale {
       display: block;
     }
-    .login{
+
+    .login {
       display: block;
       position: relative;
       top: 35px;
@@ -290,38 +328,52 @@ position: absolute;
       text-align: center;
       color: #FBFBFE;
     }
-    .p-l{
+
+    .p-l {
       position: relative;
       bottom: 30px;
       left: 55px;
     }
   }
+
   /*.key{*/
   /*  position: absolute;*/
   /*  right: 90px;*/
   /*}*/
-  .pl-6{
-    padding-left: 4rem!important;
+  .pl-6 {
+    padding-left: 4rem !important;
   }
+
   .w-30 {
-    width: 20%!important;
+    width: 20% !important;
   }
-  @media (min-width: 700px){
-    .navbar.scrolling-navba{
+
+  @media (min-width: 700px) {
+    .navbar.scrolling-navbar {
       padding-top: 15px;
-      padding-bottom: 141px;
-      -webkit-transition: background 0.5s ease-in-out,padding 0.5s ease-in-out;
-      transition: background 0.5s ease-in-out,padding 0.5s ease-in-out;
+      /*padding-bottom: 141px;*/
+      -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+      transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    }
+
+    .navbar.scrolling-navbar:hover {
+      background-color: #201e1f;
+      padding-top: 15px;
+      /*padding-bottom: 141px;*/
+      -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+      transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
     }
 
   }
+
   @media (max-width: 988px) {
-    .navbar-toggler{
+    .navbar-toggler {
       position: fixed;
       right: 0;
       top: 6px;
     }
-    .lang{
+
+    .lang {
       position: absolute;
       top: 20px;
       left: 35%;
@@ -329,7 +381,7 @@ position: absolute;
     }
   }
 
-  p,a{
+  p, a {
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
@@ -338,28 +390,34 @@ position: absolute;
     /* identical to box height */
     color: #FBFBFE;
   }
-  img{
-    float:left;
+
+  img {
+    float: left;
   }
+
   @media (max-width: 978px) {
-    .padding-right-fix{
+    .padding-right-fix {
       /*height: 100vh;*/
       position: relative;
       right: 45%;
       top: 60px;
     }
   }
+
   @media (max-width: 978px) {
-    .separator{
+    .separator {
       background-color: white;
       height: 0.2px;
       width: 100%;
     }
   }
+
   @media (min-width: 600px) {
-    .bgstyle{
-      padding-bottom: 141px;}
+    .bgstyle {
+      /*padding-bottom: 141px;}*/
+    }
   }
+
   @media (max-width: 550px) {
 
     .modal-content {
@@ -370,15 +428,16 @@ position: absolute;
       z-index: 100000;
       -ms-flex-direction: column;
       flex-direction: column;
-      width:300px;
+      width: 300px;
       pointer-events: auto;
       background-color: #fff;
       background-clip: padding-box;
-      border: 1px solid rgba(0,0,0,.2);
+      border: 1px solid rgba(0, 0, 0, .2);
       border-radius: .3rem;
       outline: 0;
       box-shadow: #201e1f 10px 100px;
     }
+
     label {
       display: inline-block;
       margin-bottom: .5rem;
@@ -386,6 +445,7 @@ position: absolute;
       top: 36px;
       right: 90px;
     }
+
     #popuptext2[data-v-54d3a52e] {
       margin-left: 7%;
       margin-bottom: 0;
@@ -393,12 +453,14 @@ position: absolute;
       line-height: 20px;
       letter-spacing: 0.5px;
     }
-    #popuptext2>span[data-v-54d3a52e] {
+
+    #popuptext2 > span[data-v-54d3a52e] {
       /* margin-left: 10%; */
       margin-bottom: 0;
       font-size: 14px;
     }
   }
+
   @media (max-width: 292px) {
     label {
       display: inline-block;
