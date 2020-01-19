@@ -1,19 +1,18 @@
 <template>
-  <section id="forth-features" class="text-center">
+  <section id="forth-features" class="text-center" @click="anyclick">
     <div class="container d-flex justify-content-center ">
-      <div class="FF" align="left">
+      <div class="FF" align="left" @click="selectshevrone=!selectshevrone">
         <img class="Ffloor" :src="getfloor" alt="">
-        <svg @click="selectshevrone=!selectshevrone" class="ml-2 mt-3" width="19" height="11" viewBox="0 0 19 11" fill="none"
-             xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg  class="ml-2 mt-3" width="19" height="11" viewBox="0 0 19 11" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
           <path d="M1.5 1.5L9.5 8.5L17.5 1.5" stroke="#E08C5A" stroke-width="3"/>
         </svg>
       </div>
       <div class="navfloor" :class="{showing: selectshevrone}">
         <ul class="listfloor">
           <li ><span :class="{special: nav}"  @click="selectnav('0')">
-            Ground floor
-            <svg width="20" height="23" viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {{$t('section4.nav1')}}
+            <svg class="shev" width="20" height="23" viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M17 11H3C1.89543 11 1 11.8954 1 13V20C1 21.1046 1.89543 22 3 22H17C18.1046 22 19 21.1046 19 20V13C19 11.8954 18.1046 11 17 11Z"
                 stroke="#6B6B6D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -22,7 +21,7 @@
                 stroke="#6B6B6D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg></span>
           </li>
-          <li @mouseover="nav=!nav" @onmouseout="nav=!nav" @click="selectnav('1')"><span>First floor
+          <li @mouseover="nav=!nav" @onmouseout="nav=!nav" @click="selectnav('1')"><span>{{$t('section4.nav2')}}
             <svg class="block" width="20" height="23" viewBox="0 0 20 23" fill="none"
                  xmlns="http://www.w3.org/2000/svg">
               <path
@@ -33,10 +32,10 @@
                 stroke="#6B6B6D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg></span>
           </li>
-          <li @mouseover="nav=!nav" @onmouseout="nav=!nav" @click="selectnav"><span :class="{special: nav}"><a
+          <li @mouseover="nav=!nav" @onmouseout="nav=!nav" ><span :class="{special: nav}"><a
             class="nav-link "
             data-toggle="modal"
-            data-target="#exampleModalCenter">Second floor
+            data-target="#exampleModalCenter">{{$t('section4.nav3')}}
             <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M17 10H3C1.89543 10 1 10.8954 1 12V19C1 20.1046 1.89543 21 3 21H17C18.1046 21 19 20.1046 19 19V12C19 10.8954 18.1046 10 17 10Z"
@@ -46,11 +45,11 @@
                 stroke="#6B6B6D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg></a></span>
           </li>
-          <li @mouseover="nav=!nav" @onmouseout="nav=!nav" @click="selectnav"><span :class="{special: nav}"><a
+          <li @mouseover="nav=!nav" @onmouseout="nav=!nav" ><span :class="{special: nav}"><a
             class="nav-link "
             data-toggle="modal"
             data-target="#exampleModalCenter">
-            Third floor
+            {{$t('section4.nav3')}}
             <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M17 10H3C1.89543 10 1 10.8954 1 12V19C1 20.1046 1.89543 21 3 21H17C18.1046 21 19 20.1046 19 19V12C19 10.8954 18.1046 10 17 10Z"
@@ -60,11 +59,11 @@
                 stroke="#6B6B6D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg></a></span>
           </li>
-          <li @mouseover="nav=!nav" @onmouseout="nav=!nav" @click="selectnav"><span :class="{special: nav}"><a
+          <li @mouseover="nav=!nav" @onmouseout="nav=!nav"><span :class="{special: nav}"><a
             class="nav-link "
             data-toggle="modal"
             data-target="#exampleModalCenter">
-            Attic floor
+           {{$t('section4.nav4')}}
             <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M17 10H3C1.89543 10 1 10.8954 1 12V19C1 20.1046 1.89543 21 3 21H17C18.1046 21 19 20.1046 19 19V12C19 10.8954 18.1046 10 17 10Z"
@@ -76,7 +75,7 @@
           </li>
         </ul>
       </div>
-      <img src="../statics/Rotator.svg" alt="" class="Rotator">
+      <img src="../statics/Rotator.svg" alt="" class="Rotator d-flex justify-content-center align-items-center">
       <div id="castle" class="d-flex justify-content-center align-items-center">
         <img class="FCflor d-flex align-items-center " :src="getchertej" alt="" :class="{fixfloor: zerofloor}">
         <div  class="wrapper mobile-secret" :class="{showing: zerofloor}">
@@ -233,48 +232,48 @@
     <div class="row mt-tab mobile-secret" :class="{showing: zerofloor}">
       <div class="col">
         <span class="text-grey"><p
-          class="text-left fw-300 mb-0" :class="{textstspecial: rom3}">Lobby 19.49 m<sup>2</sup></p></span>
+          class="text-left fw-300 mb-0" :class="{textstspecial: rom3}" v-html="$t('section4.room1')"></p></span>
         <span class="text-grey"><p class="text-left fw-300 mb-0"
-                                   :class="{textstspecial: rom3}">Wardrobe 4.46 m<sup>2</sup></p></span>
+                                   :class="{textstspecial: rom3}" v-html="$t('section4.room2')"></p></span>
         <span class="text-grey"><p class="text-left fw-300 mb-0"
-                                   :class="{textstspecial: rom3}">Technical room 4.28 m<sup>2</sup></p></span>
+                                   :class="{textstspecial: rom3}" v-html="$t('section4.room3')"></p></span>
         <span class="text-grey"><p class="text-left fw-300 mb-0"
-                                   :class="{textstspecial: rom3}">Lavatory 1.88 m<sup>2</sup></p></span>
+                                   :class="{textstspecial: rom3}" v-html="$t('section4.room4')"></p></span>
       </div>
       <div class="col">
-        <span class="text-grey"><p class="text-left fw-300 mb-0" :class="{textstspecial: rom7}">Dining room 11.14 m<sup>2</sup></p></span>
+        <span class="text-grey"><p class="text-left fw-300 mb-0" :class="{textstspecial: rom7}" v-html="$t('section4.room5')"></p></span>
         <span class="text-grey"><p class="text-left fw-300 mb-0"
-                                   :class="{textstspecial: rom7}">Staff kitchen 14.50 m<sup>2</sup></p></span>
+                                   :class="{textstspecial: rom7}" v-html="$t('section4.room6')"></p></span>
         <span class="text-grey"><p class="text-left fw-300 mb-0"
-                                   :class="{textstspecial: rom7}">Kitchen 31.96 m<sup>2</sup></p></span>
+                                   :class="{textstspecial: rom7}" v-html="$t('section4.room7')"></p></span>
         <span class="text-grey"><p class="text-left fw-300 mb-0"
-                                   :class="{textstspecial: rom4}">Hall 156.45 m<sup>2</sup></p></span>
-      </div>
-      <div class="col">
-        <span class="text-grey"><p class="text-left fw-300 mb-0"
-                                   :class="{textstspecial: rom2}">Lobby 29.35 m<sup>2</sup></p></span>
-        <span class="text-grey"><p class="text-left fw-300 mb-0"
-                                   :class="{textstspecial: rom2}">Office 27.95 m<sup>2</sup></p></span>
-        <span class="text-grey"><p class="text-left fw-300 mb-0" :class="{textstspecial: rom2}">Utility room 6.09 m<sup>2</sup></p></span>
-        <span class="text-grey"><p class="text-left fw-300 mb-0"
-                                   :class="{textstspecial: rom2}">Lavatory 2.38 m2</p></span>
+                                   :class="{textstspecial: rom4}" v-html="$t('section4.room8')"></p></span>
       </div>
       <div class="col">
         <span class="text-grey"><p class="text-left fw-300 mb-0"
-                                   :class="{textstspecial: rom6}">Fireplace room 24.65 m<sup>2</sup></p></span>
+                                   :class="{textstspecial: rom2}" v-html="$t('section4.room9')"></p></span>
         <span class="text-grey"><p class="text-left fw-300 mb-0"
-                                   :class="{textstspecial: rom5}">Library 23.32 m<sup>2</sup></p></span>
+                                   :class="{textstspecial: rom2}" v-html="$t('section4.room10')"></p></span>
+        <span class="text-grey"><p class="text-left fw-300 mb-0" :class="{textstspecial: rom2}" v-html="$t('section4.room11')"></p></span>
         <span class="text-grey"><p class="text-left fw-300 mb-0"
-                                   :class="{textstspecial: rom5}">Bar 8.26 m<sup>2</sup></p></span>
+                                   :class="{textstspecial: rom2}" v-html="$t('section4.room12')"></p></span>
+      </div>
+      <div class="col">
         <span class="text-grey"><p class="text-left fw-300 mb-0"
-                                   :class="{textstspecial: rom4}">Balcony 10.49 m<sup>2</sup></p></span>
+                                   :class="{textstspecial: rom6}" v-html="$t('section4.room13')"></p></span>
+        <span class="text-grey"><p class="text-left fw-300 mb-0"
+                                   :class="{textstspecial: rom5}" v-html="$t('section4.room14')"></p></span>
+        <span class="text-grey"><p class="text-left fw-300 mb-0"
+                                   :class="{textstspecial: rom5}" v-html="$t('section4.room15')"></p></span>
+        <span class="text-grey"><p class="text-left fw-300 mb-0"
+                                   :class="{textstspecial: rom4}" v-html="$t('section4.room16')"></p></span>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import { gsap } from 'gsap'
+// import { gsap } from 'gsap'
 
   export default {
     // name: 'ComponentName',
@@ -298,24 +297,31 @@ import { gsap } from 'gsap'
       }
     },
     methods: {
+      anyclick: function () {
+        let target = event.target // где был клик?
+        if( target.className === 'Ffloor'){
+          this.selectshevrone = false
+        }else {
+          this.selectshevrone = true
+        }
+      },
       selectnav: function (num) {
           this.selected = true
-        console.log(this.floor)
               this.getfloor = this.floor[0][num]
               this.getchertej = this.chertej[0][num]
         this.selectshevrone = true
-        if(num === '1') {
-          this.zerofloor = !this.zerofloor
-        } else if(num === '0'){
+        if (num === '1') {
+          this.zerofloor = true
+        } else if (num === '0'){
           this.zerofloor = false
         }
       },
-      drowDisable: function () {
-        var tab = gsap
-        tab.set('#q, #w, #q1, #w1, #q2, #w2, #q3, #w3, #q4, #w4, #q5, #w5, #q6, #w6', {fill: '93959A'})
-        tab.set('.a, .b, .c, .d, .e, .f, .g', { visibility: 'hidden' })
-        tab.set('#line1, #line2, #line3, #line4, #line5, #line6, #line7', {attr: {d: 'M2.38086 0 0'}})
-      },
+      // drowDisable: function () {
+      //   var tab = gsap
+      //   tab.set('#q, #w, #q1, #w1, #q2, #w2, #q3, #w3, #q4, #w4, #q5, #w5, #q6, #w6', {fill: '93959A'})
+      //   tab.set('.a, .b, .c, .d, .e, .f, .g', { visibility: 'hidden' })
+      //   tab.set('#line1, #line2, #line3, #line4, #line5, #line6, #line7', {attr: {d: 'M2.38086 0 0'}})
+      // },
       drov1: function () {
         this.rom1 = false
         this.rom2 = false
@@ -324,24 +330,24 @@ import { gsap } from 'gsap'
         this.rom5 = false
         this.rom6 = false
         this.rom7 = false
-        this.drowDisable()
-        let p = new Promise((resolve, reject) => {
-          var tab = gsap.timeline({})
-          tab.from('.a', {visibility: 'visible'})
-          tab.to('.a', {visibility: 'hidden'})
-          tab.from('.a', {visibility: 'visible'})
-          tab.timeScale(6.2)
-          resolve('true')
-        })
-        p.then(result => {
-          var tab = gsap.timeline({})
-          tab.to('#q', {delay: 2, fill: 'E08C5A'})
-          // tab.to('#line1', {duration: 1, attr: {d: 'L4.6188 110.994 M2.38086 0 0'}})
-          // tab.to('#w', {opacity: '0.1'})
-          tab.to('#w', {delay: 2, fill: 'E08C5A'})
-          // tab.from('#w', {opacity: '0.9'})
-          tab.timeScale(5.2)
-        })
+        // this.drowDisable()
+        // let p = new Promise((resolve, reject) => {
+        //   var tab = gsap.timeline({})
+        //   tab.from('.a', {visibility: 'visible'})
+        //   tab.to('.a', {visibility: 'hidden'})
+        //   tab.from('.a', {visibility: 'visible'})
+        //   tab.timeScale(6.2)
+        //   resolve('true')
+        // })
+        // p.then(result => {
+        //   var tab = gsap.timeline({})
+        //   tab.to('#q', {delay: 2, fill: 'E08C5A'})
+        //   // tab.to('#line1', {duration: 1, attr: {d: 'L4.6188 110.994 M2.38086 0 0'}})
+        //   // tab.to('#w', {opacity: '0.1'})
+        //   tab.to('#w', {delay: 2, fill: 'E08C5A'})
+        //   // tab.from('#w', {opacity: '0.9'})
+        //   tab.timeScale(5.2)
+        // })
       },
       drov2: function () {
         this.rom1 = false,
@@ -351,24 +357,24 @@ import { gsap } from 'gsap'
           this.rom5 = false,
           this.rom6 = false
         this.rom7 = false
-        this.drowDisable()
-        let p = new Promise((resolve, reject) => {
-          var tab = gsap.timeline({})
-          tab.from('.b', {visibility: 'visible'})
-          tab.to('.b', {visibility: 'hidden'})
-          tab.from('.b', {visibility: 'visible'})
-          tab.timeScale(6.2)
-          resolve('true')
-        })
-        p.then(result => {
-          var tab = gsap.timeline({})
-          tab.to('#q1', {delay: 2, fill: 'E08C5A'})
-          // tab.to('#line2', {duration: 1, attr: {d: 'M44.38086 1.00562L47.6188 110.994'}})
-          // tab.to('#w1', {opacity: '0.1'})
-          tab.to('#w1', {delay: 2, fill: 'E08C5A'})
-          // tab.from('#w1', {opacity: '1'})
-          tab.timeScale(5.2)
-        })
+        // this.drowDisable()
+        // let p = new Promise((resolve, reject) => {
+        //   var tab = gsap.timeline({})
+        //   tab.from('.b', {visibility: 'visible'})
+        //   tab.to('.b', {visibility: 'hidden'})
+        //   tab.from('.b', {visibility: 'visible'})
+        //   tab.timeScale(6.2)
+        //   resolve('true')
+        // })
+        // p.then(result => {
+        //   var tab = gsap.timeline({})
+        //   tab.to('#q1', {delay: 2, fill: 'E08C5A'})
+        //   // tab.to('#line2', {duration: 1, attr: {d: 'M44.38086 1.00562L47.6188 110.994'}})
+        //   // tab.to('#w1', {opacity: '0.1'})
+        //   tab.to('#w1', {delay: 2, fill: 'E08C5A'})
+        //   // tab.from('#w1', {opacity: '1'})
+        //   tab.timeScale(5.2)
+        // })
       },
       drov3: function () {
         this.rom1 = false,
@@ -378,24 +384,24 @@ import { gsap } from 'gsap'
           this.rom5 = false,
           this.rom6 = false
         this.rom7 = false
-        this.drowDisable()
-        let p = new Promise((resolve, reject) => {
-          var tab = gsap.timeline({})
-          tab.from('.c', {visibility: 'visible'})
-          tab.to('.c', {visibility: 'hidden'})
-          tab.from('.c', {visibility: 'visible'})
-          tab.timeScale(6.2)
-          resolve('true')
-        })
-        p.then(result => {
-          var tab = gsap.timeline({})
-          tab.to('#q2', {delay: 2, fill: 'E08C5A'})
-          // tab.to('#line3', {duration: 1, visibility: 'visible', attr: {d: 'M50.38086 100.00562L1.6188 1.994'}})
-          // tab.to('#w2', {opacity: '0.1'})
-          tab.to('#w2', {delay: 2, fill: 'E08C5A'})
-          // tab.from('#w2', {opacity: '1'})
-          tab.timeScale(5.2)
-        })
+        // this.drowDisable()
+        // let p = new Promise((resolve, reject) => {
+        //   var tab = gsap.timeline({})
+        //   tab.from('.c', {visibility: 'visible'})
+        //   tab.to('.c', {visibility: 'hidden'})
+        //   tab.from('.c', {visibility: 'visible'})
+        //   tab.timeScale(6.2)
+        //   resolve('true')
+        // })
+        // p.then(result => {
+        //   var tab = gsap.timeline({})
+        //   tab.to('#q2', {delay: 2, fill: 'E08C5A'})
+        //   // tab.to('#line3', {duration: 1, visibility: 'visible', attr: {d: 'M50.38086 100.00562L1.6188 1.994'}})
+        //   // tab.to('#w2', {opacity: '0.1'})
+        //   tab.to('#w2', {delay: 2, fill: 'E08C5A'})
+        //   // tab.from('#w2', {opacity: '1'})
+        //   tab.timeScale(5.2)
+        // })
       },
       drov4: function () {
         this.rom1 = false,
@@ -405,24 +411,24 @@ import { gsap } from 'gsap'
           this.rom5 = false,
           this.rom6 = false
         this.rom7 = false
-        this.drowDisable()
-        let p = new Promise((resolve, reject) => {
-          var tab = gsap.timeline({})
-          tab.from('.d', {visibility: 'visible'})
-          tab.to('.d', {visibility: 'hidden'})
-          tab.from('.d', {visibility: 'visible'})
-          tab.timeScale(6.2)
-          resolve('true')
-        })
-        p.then(result => {
-          var tab = gsap.timeline({})
-          tab.to('#q3', {delay: 2, fill: 'E08C5A'})
-          // tab.to('#line4', {duration: 1, attr: {d: 'M2.38086 110.00562L47.6188 1.994'}})
-          // tab.to('#w3', {opacity: '0.1'})
-          tab.to('#w3', {delay: 2, fill: 'E08C5A'})
-          // tab.from('#w3', {opacity: '1'})
-          tab.timeScale(5.2)
-        })
+        // this.drowDisable()
+        // let p = new Promise((resolve, reject) => {
+        //   var tab = gsap.timeline({})
+        //   tab.from('.d', {visibility: 'visible'})
+        //   tab.to('.d', {visibility: 'hidden'})
+        //   tab.from('.d', {visibility: 'visible'})
+        //   tab.timeScale(6.2)
+        //   resolve('true')
+        // })
+        // p.then(result => {
+        //   var tab = gsap.timeline({})
+        //   tab.to('#q3', {delay: 2, fill: 'E08C5A'})
+        //   // tab.to('#line4', {duration: 1, attr: {d: 'M2.38086 110.00562L47.6188 1.994'}})
+        //   // tab.to('#w3', {opacity: '0.1'})
+        //   tab.to('#w3', {delay: 2, fill: 'E08C5A'})
+        //   // tab.from('#w3', {opacity: '1'})
+        //   tab.timeScale(5.2)
+        // })
       },
       drov5: function () {
         this.rom1 = false,
@@ -432,25 +438,25 @@ import { gsap } from 'gsap'
           this.rom5 = true,
           this.rom6 = false
         this.rom7 = false
-        console.log("5")
-        this.drowDisable()
-        let p = new Promise((resolve, reject) => {
-          var tab = gsap.timeline({})
-          tab.from('.e', {visibility: 'visible'})
-          tab.to('.e', {visibility: 'hidden'})
-          tab.from('.e', {visibility: 'visible'})
-          tab.timeScale(6.2)
-          resolve('true')
-        })
-        p.then(result => {
-          var tab = gsap.timeline({})
-          tab.to('#q4', {delay: 2, fill: 'E08C5A'})
-          // tab.to('#line5', {duration: 1, attr: {d: 'M2.38086 1.00562L47.6188 110.994'}})
-          // tab.to('#w4', {opacity: '0.1'})
-          tab.to('#w4', {delay: 2, fill: 'E08C5A'})
-          // tab.from('#w4', {opacity: '1'})
-          tab.timeScale(5.2)
-        })
+        // console.log("5")
+        // this.drowDisable()
+        // let p = new Promise((resolve, reject) => {
+        //   var tab = gsap.timeline({})
+        //   tab.from('.e', {visibility: 'visible'})
+        //   tab.to('.e', {visibility: 'hidden'})
+        //   tab.from('.e', {visibility: 'visible'})
+        //   tab.timeScale(6.2)
+        //   resolve('true')
+        // })
+        // p.then(result => {
+        //   var tab = gsap.timeline({})
+        //   tab.to('#q4', {delay: 2, fill: 'E08C5A'})
+        //   // tab.to('#line5', {duration: 1, attr: {d: 'M2.38086 1.00562L47.6188 110.994'}})
+        //   // tab.to('#w4', {opacity: '0.1'})
+        //   tab.to('#w4', {delay: 2, fill: 'E08C5A'})
+        //   // tab.from('#w4', {opacity: '1'})
+        //   tab.timeScale(5.2)
+        // })
       },
       drov6: function () {
         this.rom1 = false,
@@ -460,24 +466,24 @@ import { gsap } from 'gsap'
           this.rom5 = false,
           this.rom6 = true
         this.rom7 = false
-        this.drowDisable()
-        let p = new Promise((resolve, reject) => {
-          var tab = gsap.timeline({})
-          tab.from('.f', {visibility: 'visible'})
-          tab.to('.f', {visibility: 'hidden'})
-          tab.from('.f', {visibility: 'visible'})
-          tab.timeScale(6.2)
-          resolve('true')
-        })
-        p.then(result => {
-          var tab = gsap.timeline({})
-          tab.to('#q5', {delay: 2, fill: 'E08C5A'})
-          // tab.to('#line6', {duration: 1, attr: {d: 'M47.38086 1.00562L2.6188 110.994'}})
-          // tab.to('#w5', {opacity: '0.1'})
-          tab.to('#w5', {delay: 2, fill: 'E08C5A'})
-          // tab.from('#w5', {opacity: '1'})
-          tab.timeScale(5.2)
-        })
+        // this.drowDisable()
+        // let p = new Promise((resolve, reject) => {
+        //   var tab = gsap.timeline({})
+        //   tab.from('.f', {visibility: 'visible'})
+        //   tab.to('.f', {visibility: 'hidden'})
+        //   tab.from('.f', {visibility: 'visible'})
+        //   tab.timeScale(6.2)
+        //   resolve('true')
+        // })
+        // p.then(result => {
+        //   var tab = gsap.timeline({})
+        //   tab.to('#q5', {delay: 2, fill: 'E08C5A'})
+        //   // tab.to('#line6', {duration: 1, attr: {d: 'M47.38086 1.00562L2.6188 110.994'}})
+        //   // tab.to('#w5', {opacity: '0.1'})
+        //   tab.to('#w5', {delay: 2, fill: 'E08C5A'})
+        //   // tab.from('#w5', {opacity: '1'})
+        //   tab.timeScale(5.2)
+        // })
       },
       drov7: function () {
         this.rom1 = false,
@@ -487,25 +493,25 @@ import { gsap } from 'gsap'
           this.rom5 = false,
           this.rom6 = false,
           this.rom7 = true
-        console.log("7")
-        this.drowDisable()
-        let p = new Promise((resolve, reject) => {
-          var tab = gsap.timeline({})
-          tab.from('.g', {visibility: 'visible'})
-          tab.to('.g', {visibility: 'hidden'})
-          tab.from('.g', {visibility: 'visible'})
-          tab.timeScale(6.2)
-          resolve('true')
-        })
-        p.then(result => {
-          var tab = gsap.timeline({})
-          tab.to('#q6', {delay: 2, fill: 'E08C5A'})
-          // tab.to('#line7', {duration: 1, attr: {d: 'M2.38086 110.00562L47.6188 1.994'}})
-          // tab.to('#w6', {opacity: '0.1'})
-          tab.to('#w6', {delay: 2, fill: 'E08C5A'})
-          // tab.from('#w6', {opacity: '1'})
-          tab.timeScale(5.2)
-        })
+        // console.log("7")
+        // this.drowDisable()
+        // let p = new Promise((resolve, reject) => {
+        //   var tab = gsap.timeline({})
+        //   tab.from('.g', {visibility: 'visible'})
+        //   tab.to('.g', {visibility: 'hidden'})
+        //   tab.from('.g', {visibility: 'visible'})
+        //   tab.timeScale(6.2)
+        //   resolve('true')
+        // })
+        // p.then(result => {
+        //   var tab = gsap.timeline({})
+        //   tab.to('#q6', {delay: 2, fill: 'E08C5A'})
+        //   // tab.to('#line7', {duration: 1, attr: {d: 'M2.38086 110.00562L47.6188 1.994'}})
+        //   // tab.to('#w6', {opacity: '0.1'})
+        //   tab.to('#w6', {delay: 2, fill: 'E08C5A'})
+        //   // tab.from('#w6', {opacity: '1'})
+        //   tab.timeScale(5.2)
+        // })
       }
     }
   }
@@ -517,13 +523,13 @@ import { gsap } from 'gsap'
     left: 20%;
   }
   .navfloor {
-    background-color: #2E2E30;
+    background-color: #2e2e30;
     position: absolute;
     left: 24%;
-    margin-top: 8%;
+    margin-top: 11%;
     z-index: 10000;
     padding: 20px;
-    width: 40vh;
+    width: 30%;
   }
 
   .navfloor > .listfloor {
@@ -557,10 +563,10 @@ import { gsap } from 'gsap'
     color: #E08C5A;
   }
 
-  .Svg {
-    min-width: 3vh;
-    max-width: 7vh;
-  }
+  /*.Svg {*/
+    /*min-width: 3vh;*/
+    /*max-width: 7vh;*/
+  /*}*/
 
   .wrapper {
     position: absolute;
@@ -598,28 +604,28 @@ import { gsap } from 'gsap'
   }
 
   .eye1, .eye4 {
-    height: 26vh;
-    width: 25vh;
+    height: 200px;
+    width: 240px;
   }
 
   .eye2, .eye3, .eye5, .eye6, .eye7 {
-    height: 10vh;
+    height: 100px;
   }
 
   .eye7, .eye3 {
-    width: 29vh;
+    width: 236px;
   }
 
   .eye2 {
-    width: 19vh;
+    width: 190px;
   }
 
   .eye5 {
-    width: 15vh;
+    width: 150px;
   }
 
   .eye6 {
-    width: 12vh;
+    width: 114px;
   }
 
   @media (max-width: 1196px) {
@@ -629,36 +635,44 @@ import { gsap } from 'gsap'
       left: 20%;
     }
     .eye1, .eye4 {
-      height: 20vh;
-      width: 19vh;
+      height: 187px;
+      width: 190px;
     }
 
     .eye2, .eye3, .eye5, .eye6, .eye7 {
-      height: 10vh;
+      height: 100px;
     }
 
     .eye7, .eye3 {
-      width: 27vh;
+      width: 209px;
     }
 
     .eye2 {
-      width: 18vh;
+      width: 180px;
     }
 
     .eye5 {
-      width: 11vh;
+      width: 110px;
     }
 
     .eye6 {
-      width: 10vh;
+      width: 100px;
     }
   }
 
   @media (max-width: 990px) {
-
+    .navfloor {
+      background-color: #2e2e30;
+      position: absolute;
+      left: 24%;
+      margin-top: 11%;
+      z-index: 10000;
+      padding: 20px;
+      width: 40%;
+    }
     .eye1, .eye4 {
-      height: 16vh;
-      width: 16vh;
+      height: 160px;
+      width: 96px;
     }
 
     .eye2, .eye3, .eye5, .eye6, .eye7 {
@@ -666,25 +680,25 @@ import { gsap } from 'gsap'
     }
 
     .eye7, .eye3 {
-      width: 18vh;
+      width: 180px;
     }
 
     .eye2 {
-      width: 11vh;
+      width: 110px;
     }
 
     .eye5 {
-      width: 9vh;
+      width: 90px;
     }
 
     .eye6 {
-      width: 9vh;
+      width: 90px;
     }
   }
 
   @media (max-width: 766px) {
     .wrapper {
-      padding-top: 11%;
+      padding-top: 10%;
     }
     .FCflor {
       padding-top: 13%;
@@ -697,28 +711,37 @@ import { gsap } from 'gsap'
     }
 
     .eye1, .eye4 {
-      height: 12vh;
-      width: 11vh;
+      height: 120px;
+      width: 85px;
     }
 
     .eye2, .eye3, .eye5, .eye6, .eye7 {
-      height: 8vh;
+      height: 80px;
     }
 
     .eye7, .eye3 {
-      width: 13vh;
+      width: 130px;
     }
 
     .eye2 {
-      width: 10vh;
+      width: 100px;
     }
 
     .eye5 {
-      width: 7vh;
+      width: 70px;
     }
 
     .eye6 {
-      width: 6vh;
+      width: 60px;
+    }
+    .navfloor {
+      background-color: #2e2e30;
+      position: absolute;
+      left: 24%;
+      margin-top: 11%;
+      z-index: 10000;
+      padding: 20px;
+      width: 50%;
     }
   }
 
@@ -814,7 +837,7 @@ import { gsap } from 'gsap'
   }
 
   .Rotator {
-    display: none;
+    display: none !important;
   }
 
   .Ffloor {
@@ -878,11 +901,12 @@ import { gsap } from 'gsap'
     .FF {
       margin-top: 3%;
       position: absolute;
+      z-index: 200;
       left: 9%;
     }
 
     .Rotator {
-      display: none;
+      display: none !important;
     }
 
     #forth-features {
@@ -923,7 +947,7 @@ import { gsap } from 'gsap'
 
     .Rotator {
       position: absolute;
-      padding-top: 33%;
+      /*padding-top: 33%;*/
       display: block;
     }
 

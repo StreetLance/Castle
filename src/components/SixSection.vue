@@ -7,15 +7,13 @@
         <div class="col col-xl-6">
           <div class="main"><img  class="twetytwenty2" src="../statics/2021.svg" alt=""></div>
           <div class="main2 " align="left">
-            <span class="text-white"><h4>Our Vision:</h4></span>
+            <span class="text-white"><h4>{{$t('section6.H')}}</h4></span>
             <hr align="left">
-            <span><p>This luxurious manor is located in the second district of Vienna, directly opposite Augarten Park along Obere Augartenstrasse 40. The house was built back in the 18th century by the noble family of Grassalkovich. The current reconstruction plans are really impressive. According to the project, until 2021 Palace will have its own indoor pool, wellness area with a sauna, fitness room, private gym, two additional terraces, numerous halls and bedrooms, home theatre, security and staff rooms and its own wine cellar.
-</p>
-              <p>As a matter of fact, besides the architectural solutions for the restoration and reconstruction of the entire palace, full project includes a detailed interior design for each room, accompanied by the selection of furniture and sanitary products as well as a full package of lighting and electric plans. These facts emphasize the uniqueness of this object in the Austrian real estate market. Grassalkovich Palace is a pure luxury.
-</p></span>
+            <span ><p>{{$t('section6.content1')}}</p>
+              <p>{{$t('section6.content2')}}</p></span>
             <hr align="left">
-            <span><p class="ref2 text-white">Developer: <span
-              class="text-grey lite-text"><a href="https://tiroxgroup.com/" class="text-grey lite-text">Tirox Group GmbH</a></span></p></span>
+            <span><p class="ref2 text-white">{{$t('section6.info1')}} <span
+              class="text-grey lite-text"><a href="https://tiroxgroup.com/" class="text-grey lite-text">{{$t('section6.info2')}}</a></span></p></span>
 <!--            <span><p class="ref2 text-white">Architect: <span class="text-grey lite-text">Architectur Buro Andreas Pacher</span></p></span>-->
 <!--            <span><p class="ref2 text-white mt-0">Interior Design: <span class="text-grey lite-text"> Andreas Pacher | Igor Petrychenko</span></p></span>-->
           </div>
@@ -39,12 +37,12 @@
     /*position: relative;*/
     /*top: 5%;*/
     /*right: 0%;*/
-    width: 80vh;
+    width: 75vh;
   }
 
   .fix {
     position: absolute;
-    padding-top: 13%;
+    /*padding-top: 10%;*/
     right: 0;
     /*max-height: 100vh;*/
     /*width: 49%;*/

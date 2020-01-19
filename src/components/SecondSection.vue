@@ -6,28 +6,29 @@
           <img  src="../statics/The_New_Chapter.svg" alt="The_New_Chapter" class="pt-5 mt-5 TNC">
         <br>
           <div class="data pl-4-new pt-tabs">
-            <span class="text-white "><p class="text-left">Addresse</p></span>
-            <span class="text-grey"><p class="text-left fw-300 pb-5-new">Obere AugartenstraBe 40, 1020 Vienna,Austria</p></span>
+            <span class="text-white " v-html="$t('section2.Addresse')"></span>
+            <span class="text-grey" v-html="$t('section2.Totalarea')"></span>
             <div id="right-border" >
-              <span class="text-white"><p class="text-left ">Total area: <span class="text-grey fw-300">1487 m<sup>2</sup></span></p></span>
-              <span class="text-white"><p class="text-left  mb-2">Style: <span class="text-grey fw-300">Classicism</span></p></span>
-              <span class="text-white"><p class="text-left ">Number of floors: <span class="text-grey fw-300">5</span></p></span>
-              <span class="text-white"><p class="text-left">Bedrooms: <span class="text-grey fw-300">7</span></p></span>
+              <span class="text-white" v-html="$t('section2.Style')"></span>
+              <span class="text-white" v-html="$t('section2.Numberoffloors')"></span>
+              <span class="text-white" v-html="$t('section2.Bedrooms')"></span>
+              <span class="text-white" v-html="$t('section2.Firstbuilding')"></span>
               <div class="row">
                 <div class="col mt-2">
-                  <span class="text-white"><p class="text-left fw-300 mb-2">First building:<span class="text-grey fw-300"> 1777</span></p></span>
-                  <span class="text-white"><p class="text-left fw-300 mb-2">Rebuild into the Place:<span class="text-grey fw-300"> 1794</span></p></span>
-                  <span class="text-white"><p class="text-left fw-300 mb-2"><span class="text-grey fw-300">Architects:</span> Franz Duschinger / Ernest Koch</p></span>
-                  <span class="text-white"><p class="text-left fw-300 mb-2">First owner:<span class="text-grey fw-300"> Prince Anton Grassalkovich II</span></p></span>
-                  <span class="text-white"><p class="text-left fw-300 mb-2"><span class="text-grey fw-300">1975:</span> purchased by Vienna by City of Vienna</p></span>
-                  <span class="text-white"><p class="text-left fw-300 mb-2"><span class="text-grey fw-300">1991:</span> last major restoration</p></span>
-                  <span class="text-white"><p class="text-left fw-300 mb-2">since 1991: office of the Vienna City Tourism Association</p></span>
-                  <span class="text-white"><p class="text-left fw-300 mb-2"><span class="text-grey fw-300">2021: Exclusive Estate</span></p></span>
+                  <span class="text-white" v-html="$t('section2.RebuildintothePlace')"></span>
+                  <span class="text-white" v-html="$t('section2.Architects')"></span>
+                  <span class="text-white" v-html="$t('section2.Firstowner')"></span>
+                  <span class="text-white" v-html="$t('section2.Vienna')"></span>
+                  <span class="text-white" v-html="$t('section2.major')"></span>
+                  <span class="text-white" v-html="$t('section2.since')"></span>
+                  <span class="text-white" v-html="$t('section2.Exclusive')"></span>
+                  <span class="text-white" v-html="$t('section2.Summer')"></span>
                 </div>
               </div>
-              <span class="text-grey"><p class="text-left fw-300 mt-4">Summer 2021 - Autumn 2021</p></span></div>
-            <span class="text-white "><p class="text-left mt-4">Prise</p></span>
-            <span class="text-grey"><p class="text-left pt-0">Upon request | <a href="mailto:office@tiroxgroup.com" class="color-mail ">office@tiroxgroup.com</a></p></span>
+              <!--<span class="text-grey" v-html="$t('section2.Prise')"></span>-->
+              </div>
+            <span class="text-white " v-html="$t('section2.Prise')"></span>
+            <span class="text-grey" > <p class="text-left pt-0">{{$t('section2.Uponrequest')}}  <a href="mailto:office@tiroxgroup.com" class="color-mail ">office@tiroxgroup.com</a></p></span>
             <hr class="section2">
           </div>
         </div>

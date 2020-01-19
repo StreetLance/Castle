@@ -1,5 +1,7 @@
-import enUS from './en-us'
+import enUS from './en/index'
+import ge from './ge/index'
 
 export default {
-  'en-us': enUS
+  'en': enUS,
+  'ge': ge
 }

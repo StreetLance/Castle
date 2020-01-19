@@ -4,7 +4,7 @@
     <div class="container">
       <div class="contacts">
         <div class="row modifitext d-flex align-items-center">
-          <div class="col-10 col-md-2 text-special ">CONTACTS:</div>
+          <div class="col-10 col-md-2 text-special ">{{$t('footer.CONTACTS')}}</div>
           <div class="col-9">
             <div class="d-flex flex-wrap flex-lg-nowrap flex-column flex-xl-row justify-content-start justify-content-lg-between  ">
               <div class="text-white"><a href="tel:+4314130000" class="text-white">+43 1 413 0000</a></div>
@@ -12,7 +12,6 @@
               <div class="text-white"> Tuchlauben 7a/Top 7 1010 Vienna</div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -20,10 +19,10 @@
     <div class="container">
       <div class="AfterContacts">
         <div class="row modifitext2 text-grey">
-          <div class="col-sm-4">Impressum</div>
-          <div class="col-sm-4 child2 ">Datenschutz</div>
+          <div class="col-sm-4">{{$t('footer.Impressum')}}</div>
+          <div class="col-sm-4 child2 ">{{$t('footer.Datenschutz')}}</div>
           <!--<div class="col"></div>-->
-          <div class="col child4" align="right"><p>All rights reserved</p></div>
+          <div class="col child4" align="right"><p>{{$t('footer.rights')}}</p></div>
         </div>
       </div></div>
   </section>

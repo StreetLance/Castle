@@ -22,17 +22,17 @@
            data-target=".placebo">
         <!-- Links -->
         <div class="row navbar-nav smooth-scroll w-100 justify-around items-center text-center">
-          <div class="col"><a class="nav-link fw-300 text-white" @click="facts">Data/Facts</a></div>
+          <div class="col"><a class="nav-link fw-300 text-white" @click="facts">{{ $t('main.facts') }}</a></div>
           <hr class="separator">
-          <div class="col"><a class="nav-link fw-300 text-white" @click="Gallery">Gallery</a></div>
+          <div class="col"><a class="nav-link fw-300 text-white" @click="Gallery">{{ $t('main.Gallery') }}</a></div>
           <hr class="separator">
-          <div class="col"><a class="nav-link fw-300  text-white" @click="Floor">Plans Floorplans</a></div>
+          <div class="col"><a class="nav-link fw-300  text-white" @click="Floor">{{ $t('main.Floorplans') }} </a></div>
           <hr class="separator">
-          <div class="col"><a class="nav-link fw-300 text-white" @click="Information">Information</a></div>
+          <div class="col"><a class="nav-link fw-300 text-white" @click="Information">{{ $t('main.Information') }}</a></div>
           <hr class="separator">
-          <div class="col"><a class="nav-link fw-300 text-white" @click="Location">Location</a></div>
+          <div class="col"><a class="nav-link fw-300 text-white" @click="Location">{{ $t('main.Location') }}</a></div>
           <hr class="separator">
-          <div class="col locale"><a class="nav-link fw-300 text-white">English</a></div>
+          <div class="col locale"><a class="nav-link fw-300 text-white">{{ $t('main.English') }}</a></div>
           <hr class="separator locale">
           <div class="col"></div>
         </div>
@@ -42,7 +42,7 @@
                                                                                                    data-target="#exampleModalCenter">
           <img class="p-l" src="../statics/grayKey.svg" align="left">
         </a>
-          <span class="login">Log in</span>
+          <span class="login">{{ $t('main.Login') }}</span>
         </div>
         <div v-else @mouseout="mousehower" class=" d-flex justify-end padding-right-fix"><a class="nav-link "
                                                                                             data-toggle="modal"
@@ -59,29 +59,29 @@
       <div class="modal-dialog modal-dialog-centered d-flex justify-center" role="document">
         <div class="modal-content">
           <img src="../statics/Key2.svg">
-          <h5 class="text-black text-center">Want to know more?</h5>
+          <h5 class="text-black text-center">{{ $t('modal.WTKM') }}</h5>
           <form class="text-center pt-0 pb-3 pl-5" action="#!">
-            <label class="text-dark">Login: </label><input type="email" class="form-control" placeholder="Login">
+            <label class="text-dark">{{ $t('modal.Login') }}</label><input type="email" class="form-control" placeholder="Login">
 
-            <label class="text-dark">Password: </label><input type="email" class="form-control" placeholder="Password">
+            <label class="text-dark">{{ $t('modal.Password') }} </label><input type="email" class="form-control" placeholder="Password">
           </form>
-          <p id="popuptext" class="text-black  text-center">Do not have one? Please contact us:</p>
+          <p id="popuptext" class="text-black  text-center">{{ $t('modal.contactus') }}</p>
           <div class="jumbotron bg-gray">
             <span id="popuptext2" class="text-black ">
-              <span class="psl"><a href="https://tiroxgroup.com/" class="text-black">TIROX GmbH</a></span><br>
-              Tuchlauben 7a/7<br>
-              1010 Wien<br>
-              <a href="tel:+4314130000" class="text-black">Telefon: +43 1 413 0000</a><br>
-              E-Mail:<span><a href="mailto:office@tiroxgroup.com " class="text-black">office@tiroxgroup.com</a> </span><br>
+              <span class="psl"><a href="https://tiroxgroup.com/" class="text-black">{{ $t('modal.cont1') }}</a></span><br>
+              {{ $t('modal.cont2') }}<br>
+              {{ $t('modal.cont3') }}<br>
+              <a href="tel:+4314130000" class="text-black">{{ $t('modal.cont4') }} +43 1 413 0000</a><br>
+              {{ $t('modal.cont5') }}<span><a href="mailto:office@tiroxgroup.com " class="text-black">office@tiroxgroup.com</a> </span><br>
             </span>
           </div>
-          <button id="btn" class="btn  my-4 waves-effect  smoll-button" type="button" data-dismiss="modal">Send code
+          <button id="btn" class="btn  my-4 waves-effect  smoll-button" type="button" data-dismiss="modal">{{ $t('modal.cont6') }}
           </button>
         </div>
       </div>
     </div>
     <ul class="language" v-show="showlang">
-      <li @click="languege('ru')"><a>ru</a></li>
+      <li @click="languege('ge')"><a>ge</a></li>
       <li @click="languege('en')"><a>en</a></li>
     </ul>
   </nav>
@@ -93,6 +93,7 @@
   import {gsap} from 'gsap'
 
   gsap.registerPlugin(ScrollToPlugin)
+  import { Quasar } from 'quasar'
   export default {
     data() {
       return {
@@ -109,6 +110,11 @@
       },
       languege: function (value) {
         this.lang = value
+        this.$i18n.locale = value
+        // set quasar's language too!!
+        import(`quasar/lang/${value}`).then(language =>
+          {this.$q.lang.set(language.default)
+        console.log(this.$q.lang.isoName) })
         this.show()
       },
       mousehower: function () {
