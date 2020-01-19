@@ -3,36 +3,38 @@
     <div class="container d-flex justify-content-center ">
       <div class="FF" align="left" @click="selectshevrone=!selectshevrone">
         <img class="Ffloor" :src="getfloor" alt="">
-        <svg  class="ml-2 mt-3" width="19" height="11" viewBox="0 0 19 11" fill="none"
+        <svg class="ml-2 mt-3" width="19" height="11" viewBox="0 0 19 11" fill="none"
              xmlns="http://www.w3.org/2000/svg">
           <path d="M1.5 1.5L9.5 8.5L17.5 1.5" stroke="#E08C5A" stroke-width="3"/>
         </svg>
       </div>
       <div class="navfloor" :class="{showing: selectshevrone}">
         <ul class="listfloor">
-          <li ><span :class="{special: nav}"  @click="selectnav('0')">
+          <li><span :class="{textstspecial: FF }" @click="selectnav('0')">
             {{$t('section4.nav1')}}
             <svg class="shev" width="20" height="23" viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M17 11H3C1.89543 11 1 11.8954 1 13V20C1 21.1046 1.89543 22 3 22H17C18.1046 22 19 21.1046 19 20V13C19 11.8954 18.1046 11 17 11Z"
-                stroke="#6B6B6D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                :stroke="colorsvg1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               <path
                 d="M5 10.9999V6.99991C4.99876 5.75996 5.45828 4.56378 6.28938 3.64358C7.12047 2.72338 8.26383 2.14481 9.49751 2.0202C10.7312 1.89558 11.9671 2.23381 12.9655 2.96922C13.9638 3.70463 14.6533 4.78476 14.9 5.99991"
-                stroke="#6B6B6D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg></span>
+                :stroke="colorsvg1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
           </li>
-          <li @mouseover="nav=!nav" @onmouseout="nav=!nav" @click="selectnav('1')"><span>{{$t('section4.nav2')}}
+          <li @mouseover="nav=!nav" @onmouseout="nav=!nav" @click="selectnav('1')"><span :class="{textstspecial: GF }">{{$t('section4.nav2')}}
             <svg class="block" width="20" height="23" viewBox="0 0 20 23" fill="none"
                  xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M17 11H3C1.89543 11 1 11.8954 1 13V20C1 21.1046 1.89543 22 3 22H17C18.1046 22 19 21.1046 19 20V13C19 11.8954 18.1046 11 17 11Z"
-                stroke="#6B6B6D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                :stroke="colorsvg2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               <path
                 d="M5 10.9999V6.99991C4.99876 5.75996 5.45828 4.56378 6.28938 3.64358C7.12047 2.72338 8.26383 2.14481 9.49751 2.0202C10.7312 1.89558 11.9671 2.23381 12.9655 2.96922C13.9638 3.70463 14.6533 4.78476 14.9 5.99991"
-                stroke="#6B6B6D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg></span>
+                :stroke="colorsvg2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
           </li>
-          <li @mouseover="nav=!nav" @onmouseout="nav=!nav" ><span :class="{special: nav}"><a
+          <li @mouseover="nav=!nav" @onmouseout="nav=!nav"><span :class="{special: nav }"><a
             class="nav-link "
             data-toggle="modal"
             data-target="#exampleModalCenter">{{$t('section4.nav3')}}
@@ -43,9 +45,10 @@
               <path
                 d="M5 10V6C5 4.67392 5.52678 3.40215 6.46447 2.46447C7.40215 1.52678 8.67392 1 10 1C11.3261 1 12.5979 1.52678 13.5355 2.46447C14.4732 3.40215 15 4.67392 15 6V10"
                 stroke="#6B6B6D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg></a></span>
+            </svg></a>
+          </span>
           </li>
-          <li @mouseover="nav=!nav" @onmouseout="nav=!nav" ><span :class="{special: nav}"><a
+          <li @mouseover="nav=!nav" @onmouseout="nav=!nav"><span :class="{special: nav}"><a
             class="nav-link "
             data-toggle="modal"
             data-target="#exampleModalCenter">
@@ -57,7 +60,8 @@
               <path
                 d="M5 10V6C5 4.67392 5.52678 3.40215 6.46447 2.46447C7.40215 1.52678 8.67392 1 10 1C11.3261 1 12.5979 1.52678 13.5355 2.46447C14.4732 3.40215 15 4.67392 15 6V10"
                 stroke="#6B6B6D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg></a></span>
+            </svg></a>
+          </span>
           </li>
           <li @mouseover="nav=!nav" @onmouseout="nav=!nav"><span :class="{special: nav}"><a
             class="nav-link "
@@ -71,162 +75,92 @@
               <path
                 d="M5 10V6C5 4.67392 5.52678 3.40215 6.46447 2.46447C7.40215 1.52678 8.67392 1 10 1C11.3261 1 12.5979 1.52678 13.5355 2.46447C14.4732 3.40215 15 4.67392 15 6V10"
                 stroke="#6B6B6D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg></a></span>
+            </svg></a>
+          </span>
           </li>
         </ul>
       </div>
-      <img src="../statics/Rotator.svg" alt="" class="Rotator d-flex justify-content-center align-items-center">
       <div id="castle" class="d-flex justify-content-center align-items-center">
+        <img src="../statics/Rotator.svg" alt="" class="Rotator d-flex justify-content-center align-items-center">
         <img class="FCflor d-flex align-items-center " :src="getchertej" alt="" :class="{fixfloor: zerofloor}">
-        <div  class="wrapper mobile-secret" :class="{showing: zerofloor}">
+        <div class="wrapper mobile-secret" :class="{showing: zerofloor}">
           <div class="eye1 d-flex justify-content-center align-items-center" @click="drov1">
-            <svg class="Svg" width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path id="q"
-                    d="M52.0056 28.346L52.5159 27.5L52.0056 26.6541C51.925 26.5198 49.8438 23.1628 45.8154 19.8059C40.4578 15.3479 34.1333 12.9846 27.5537 12.9846C20.9741 12.9846 14.6362 15.3479 9.25171 19.8059C5.19653 23.1628 3.10181 26.5064 3.00781 26.6541L2.48413 27.5L3.00781 28.346C3.10181 28.4937 5.19653 31.8372 9.25171 35.1807C14.6362 39.6387 20.9741 42.002 27.5537 42.002C34.1467 42.002 40.4578 39.6387 45.8154 35.1807C49.8438 31.8372 51.9116 28.4802 52.0056 28.346ZM43.667 32.7771C38.8464 36.7651 33.4216 38.7793 27.5537 38.7793C21.6858 38.7793 16.2341 36.7517 11.3867 32.7771C8.87573 30.7092 7.17041 28.6279 6.33789 27.5C7.17041 26.3721 8.87573 24.2908 11.3867 22.2229C16.2476 18.2349 21.6858 16.2207 27.5537 16.2207C33.4216 16.2207 38.8464 18.2349 43.667 22.2229C46.1646 24.2908 47.8564 26.3855 48.6755 27.5C47.8564 28.6279 46.1646 30.7227 43.667 32.7771Z"
-                    fill="#93959A"/>
-              <path id="w"
-                    d="M27.5 17.8186C22.1558 17.8186 17.8186 22.1558 17.8186 27.5C17.8186 32.8442 22.1558 37.1814 27.5 37.1814C32.8442 37.1814 37.1814 32.8442 37.1814 27.5C37.1814 22.1558 32.8442 17.8186 27.5 17.8186ZM27.5 33.9587C23.9416 33.9587 21.0413 31.0583 21.0413 27.5C21.0413 23.9416 23.9416 21.0413 27.5 21.0413C31.0583 21.0413 33.9587 23.9416 33.9587 27.5C33.9587 31.0583 31.0583 33.9587 27.5 33.9587Z"
-                    fill="#93959A"/>
-              <path class="a" d="M3.22266 3.22266H9.94995V0H0V9.8291H3.22266V3.22266Z" fill="#E08C5A"/>
-              <path class="a" d="M45.05 0V3.22266H51.7773V9.8291H55V0H45.05Z" fill="#E08C5A"/>
-              <path class="a" d="M3.22266 45.1709H0V55H9.94995V51.7773H3.22266V45.1709Z" fill="#E08C5A"/>
-              <path class="a" d="M51.7773 51.7773H45.05V55H55V45.1709H51.7773V51.7773Z" fill="#E08C5A"/>
-            </svg>
-            <svg id="svgLine1" visibility="hidden" vi width="50" height="112" viewBox="0 0 50 112" fill="none"
-                 xmlns="http://www.w3.org/2000/svg">
-              <path x="10" id="line1" stroke="#E08C5A" stroke-width="3" stroke-dasharray="4 4"/>
-            </svg>
-            <button id="btn" class="btn  my-4 waves-effect eyeBtn1  smoll-button" type="button" data-dismiss="modal">
-              Send code
-            </button>
+            <div >
+              <img v-if="Eye1" @mouseover="howereye1" src="../statics/Eye.svg">
+              <img v-else @mouseout="howereye1" src="../statics/hower_eye.svg">
+              <button id="btn" class="btn  my-4 waves-effect eyeBtn1  smoll-button" type="button" data-dismiss="modal">
+                Send code
+              </button>
+            </div>
+            <div></div>
+
           </div>
           <div class="eye2 d-flex justify-content-center align-items-center" @click="drov2">
-            <svg id="Svg2" width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path id="q1"
-                    d="M52.0056 28.346L52.5159 27.5L52.0056 26.6541C51.925 26.5198 49.8438 23.1628 45.8154 19.8059C40.4578 15.3479 34.1333 12.9846 27.5537 12.9846C20.9741 12.9846 14.6362 15.3479 9.25171 19.8059C5.19653 23.1628 3.10181 26.5064 3.00781 26.6541L2.48413 27.5L3.00781 28.346C3.10181 28.4937 5.19653 31.8372 9.25171 35.1807C14.6362 39.6387 20.9741 42.002 27.5537 42.002C34.1467 42.002 40.4578 39.6387 45.8154 35.1807C49.8438 31.8372 51.9116 28.4802 52.0056 28.346ZM43.667 32.7771C38.8464 36.7651 33.4216 38.7793 27.5537 38.7793C21.6858 38.7793 16.2341 36.7517 11.3867 32.7771C8.87573 30.7092 7.17041 28.6279 6.33789 27.5C7.17041 26.3721 8.87573 24.2908 11.3867 22.2229C16.2476 18.2349 21.6858 16.2207 27.5537 16.2207C33.4216 16.2207 38.8464 18.2349 43.667 22.2229C46.1646 24.2908 47.8564 26.3855 48.6755 27.5C47.8564 28.6279 46.1646 30.7227 43.667 32.7771Z"
-                    fill="#93959A"/>
-              <path id="w1"
-                    d="M27.5 17.8186C22.1558 17.8186 17.8186 22.1558 17.8186 27.5C17.8186 32.8442 22.1558 37.1814 27.5 37.1814C32.8442 37.1814 37.1814 32.8442 37.1814 27.5C37.1814 22.1558 32.8442 17.8186 27.5 17.8186ZM27.5 33.9587C23.9416 33.9587 21.0413 31.0583 21.0413 27.5C21.0413 23.9416 23.9416 21.0413 27.5 21.0413C31.0583 21.0413 33.9587 23.9416 33.9587 27.5C33.9587 31.0583 31.0583 33.9587 27.5 33.9587Z"
-                    fill="#93959A"/>
-              <path class="b" d="M3.22266 3.22266H9.94995V0H0V9.8291H3.22266V3.22266Z" fill="#E08C5A"/>
-              <path class="b" d="M45.05 0V3.22266H51.7773V9.8291H55V0H45.05Z" fill="#E08C5A"/>
-              <path class="b" d="M3.22266 45.1709H0V55H9.94995V51.7773H3.22266V45.1709Z" fill="#E08C5A"/>
-              <path class="b" d="M51.7773 51.7773H45.05V55H55V45.1709H51.7773V51.7773Z" fill="#E08C5A"/>
-            </svg>
-            <svg id="svgLine2" visibility="hidden" width="70" height="162" viewBox="0 0 50 112" fill="none"
-                 xmlns="http://www.w3.org/2000/svg">
-              <path id="line2" stroke="#E08C5A" stroke-width="3" stroke-dasharray="4 4"/>
-            </svg>
-            <button id="btn" class="btn  my-4 waves-effect eyeBtn2  smoll-button" type="button" data-dismiss="modal">
-              Send code
-            </button>
+            <div>
+              <img v-if="Eye2" @mouseover="howereye2" src="../statics/Eye.svg">
+              <img v-else @mouseout="howereye2" src="../statics/hower_eye.svg">
+              <button id="btn" class="btn  my-4 waves-effect eyeBtn2  smoll-button" type="button" data-dismiss="modal">
+                Send code
+              </button>
+            </div>
+            <div></div>
+
           </div>
           <div class="eye3 d-flex justify-content-center align-items-center" @click="drov3">
-            <svg class="Svg" width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path id="q2"
-                    d="M52.0056 28.346L52.5159 27.5L52.0056 26.6541C51.925 26.5198 49.8438 23.1628 45.8154 19.8059C40.4578 15.3479 34.1333 12.9846 27.5537 12.9846C20.9741 12.9846 14.6362 15.3479 9.25171 19.8059C5.19653 23.1628 3.10181 26.5064 3.00781 26.6541L2.48413 27.5L3.00781 28.346C3.10181 28.4937 5.19653 31.8372 9.25171 35.1807C14.6362 39.6387 20.9741 42.002 27.5537 42.002C34.1467 42.002 40.4578 39.6387 45.8154 35.1807C49.8438 31.8372 51.9116 28.4802 52.0056 28.346ZM43.667 32.7771C38.8464 36.7651 33.4216 38.7793 27.5537 38.7793C21.6858 38.7793 16.2341 36.7517 11.3867 32.7771C8.87573 30.7092 7.17041 28.6279 6.33789 27.5C7.17041 26.3721 8.87573 24.2908 11.3867 22.2229C16.2476 18.2349 21.6858 16.2207 27.5537 16.2207C33.4216 16.2207 38.8464 18.2349 43.667 22.2229C46.1646 24.2908 47.8564 26.3855 48.6755 27.5C47.8564 28.6279 46.1646 30.7227 43.667 32.7771Z"
-                    fill="#93959A"/>
-              <path id="w2"
-                    d="M27.5 17.8186C22.1558 17.8186 17.8186 22.1558 17.8186 27.5C17.8186 32.8442 22.1558 37.1814 27.5 37.1814C32.8442 37.1814 37.1814 32.8442 37.1814 27.5C37.1814 22.1558 32.8442 17.8186 27.5 17.8186ZM27.5 33.9587C23.9416 33.9587 21.0413 31.0583 21.0413 27.5C21.0413 23.9416 23.9416 21.0413 27.5 21.0413C31.0583 21.0413 33.9587 23.9416 33.9587 27.5C33.9587 31.0583 31.0583 33.9587 27.5 33.9587Z"
-                    fill="#93959A"/>
-              <path class="c" d="M3.22266 3.22266H9.94995V0H0V9.8291H3.22266V3.22266Z" fill="#E08C5A"/>
-              <path class="c" d="M45.05 0V3.22266H51.7773V9.8291H55V0H45.05Z" fill="#E08C5A"/>
-              <path class="c" d="M3.22266 45.1709H0V55H9.94995V51.7773H3.22266V45.1709Z" fill="#E08C5A"/>
-              <path class="c" d="M51.7773 51.7773H45.05V55H55V45.1709H51.7773V51.7773Z" fill="#E08C5A"/>
-            </svg>
-            <svg id="svgLine3" visibility="hidden" width="50" height="112" viewBox="0 0 50 112" fill="none"
-                 xmlns="http://www.w3.org/2000/svg">
-              <path id="line3" stroke="#E08C5A" stroke-width="3" stroke-dasharray="4 4"/>
-            </svg>
-            <button id="btn" class="btn  my-4 waves-effect eyeBtn3  smoll-button" type="button" data-dismiss="modal">
-              Send code
-            </button>
+            <div>
+              <img v-if="Eye3" @mouseover="howereye3" src="../statics/Eye.svg">
+              <img v-else @mouseout="howereye3" src="../statics/hower_eye.svg">
+              <button id="btn" class="btn  my-4 waves-effect eyeBtn3  smoll-button" type="button" data-dismiss="modal">
+                Send code
+              </button>
+            </div>
+            <div></div>
+
           </div>
           <div class="eye4 d-flex justify-content-center align-items-center" @click="drov4">
-            <svg class="Svg" width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path id="q3"
-                    d="M52.0056 28.346L52.5159 27.5L52.0056 26.6541C51.925 26.5198 49.8438 23.1628 45.8154 19.8059C40.4578 15.3479 34.1333 12.9846 27.5537 12.9846C20.9741 12.9846 14.6362 15.3479 9.25171 19.8059C5.19653 23.1628 3.10181 26.5064 3.00781 26.6541L2.48413 27.5L3.00781 28.346C3.10181 28.4937 5.19653 31.8372 9.25171 35.1807C14.6362 39.6387 20.9741 42.002 27.5537 42.002C34.1467 42.002 40.4578 39.6387 45.8154 35.1807C49.8438 31.8372 51.9116 28.4802 52.0056 28.346ZM43.667 32.7771C38.8464 36.7651 33.4216 38.7793 27.5537 38.7793C21.6858 38.7793 16.2341 36.7517 11.3867 32.7771C8.87573 30.7092 7.17041 28.6279 6.33789 27.5C7.17041 26.3721 8.87573 24.2908 11.3867 22.2229C16.2476 18.2349 21.6858 16.2207 27.5537 16.2207C33.4216 16.2207 38.8464 18.2349 43.667 22.2229C46.1646 24.2908 47.8564 26.3855 48.6755 27.5C47.8564 28.6279 46.1646 30.7227 43.667 32.7771Z"
-                    fill="#93959A"/>
-              <path id="w3"
-                    d="M27.5 17.8186C22.1558 17.8186 17.8186 22.1558 17.8186 27.5C17.8186 32.8442 22.1558 37.1814 27.5 37.1814C32.8442 37.1814 37.1814 32.8442 37.1814 27.5C37.1814 22.1558 32.8442 17.8186 27.5 17.8186ZM27.5 33.9587C23.9416 33.9587 21.0413 31.0583 21.0413 27.5C21.0413 23.9416 23.9416 21.0413 27.5 21.0413C31.0583 21.0413 33.9587 23.9416 33.9587 27.5C33.9587 31.0583 31.0583 33.9587 27.5 33.9587Z"
-                    fill="#93959A"/>
-              <path class="d" d="M3.22266 3.22266H9.94995V0H0V9.8291H3.22266V3.22266Z" fill="#E08C5A"/>
-              <path class="d" d="M45.05 0V3.22266H51.7773V9.8291H55V0H45.05Z" fill="#E08C5A"/>
-              <path class="d" d="M3.22266 45.1709H0V55H9.94995V51.7773H3.22266V45.1709Z" fill="#E08C5A"/>
-              <path class="d" d="M51.7773 51.7773H45.05V55H55V45.1709H51.7773V51.7773Z" fill="#E08C5A"/>
-            </svg>
-            <svg id="svgLine4" visibility="hidden" width="50" height="112" viewBox="0 0 50 112" fill="none"
-                 xmlns="http://www.w3.org/2000/svg">
-              <path id="line4" stroke="#E08C5A" stroke-width="3" stroke-dasharray="4 4"/>
-            </svg>
-            <button id="btn" class="btn  my-4 waves-effect eyeBtn4  smoll-button" type="button" data-dismiss="modal">
-              Send code
-            </button>
+            <div>
+              <img v-if="Eye4" @mouseover="howereye4" src="../statics/Eye.svg">
+              <img v-else @mouseout="howereye4" src="../statics/hower_eye.svg">
+              <button id="btn" class="btn  my-4 waves-effect eyeBtn4  smoll-button" type="button" data-dismiss="modal">
+                Send code
+              </button>
+            </div>
+            <div></div>
+
           </div>
           <div class="eye5 d-flex justify-content-center align-items-center" @click="drov5">
-            <svg class="Svg" width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path id="q4"
-                    d="M52.0056 28.346L52.5159 27.5L52.0056 26.6541C51.925 26.5198 49.8438 23.1628 45.8154 19.8059C40.4578 15.3479 34.1333 12.9846 27.5537 12.9846C20.9741 12.9846 14.6362 15.3479 9.25171 19.8059C5.19653 23.1628 3.10181 26.5064 3.00781 26.6541L2.48413 27.5L3.00781 28.346C3.10181 28.4937 5.19653 31.8372 9.25171 35.1807C14.6362 39.6387 20.9741 42.002 27.5537 42.002C34.1467 42.002 40.4578 39.6387 45.8154 35.1807C49.8438 31.8372 51.9116 28.4802 52.0056 28.346ZM43.667 32.7771C38.8464 36.7651 33.4216 38.7793 27.5537 38.7793C21.6858 38.7793 16.2341 36.7517 11.3867 32.7771C8.87573 30.7092 7.17041 28.6279 6.33789 27.5C7.17041 26.3721 8.87573 24.2908 11.3867 22.2229C16.2476 18.2349 21.6858 16.2207 27.5537 16.2207C33.4216 16.2207 38.8464 18.2349 43.667 22.2229C46.1646 24.2908 47.8564 26.3855 48.6755 27.5C47.8564 28.6279 46.1646 30.7227 43.667 32.7771Z"
-                    fill="#93959A"/>
-              <path id="w4"
-                    d="M27.5 17.8186C22.1558 17.8186 17.8186 22.1558 17.8186 27.5C17.8186 32.8442 22.1558 37.1814 27.5 37.1814C32.8442 37.1814 37.1814 32.8442 37.1814 27.5C37.1814 22.1558 32.8442 17.8186 27.5 17.8186ZM27.5 33.9587C23.9416 33.9587 21.0413 31.0583 21.0413 27.5C21.0413 23.9416 23.9416 21.0413 27.5 21.0413C31.0583 21.0413 33.9587 23.9416 33.9587 27.5C33.9587 31.0583 31.0583 33.9587 27.5 33.9587Z"
-                    fill="#93959A"/>
-              <path class="e" d="M3.22266 3.22266H9.94995V0H0V9.8291H3.22266V3.22266Z" fill="#E08C5A"/>
-              <path class="e" d="M45.05 0V3.22266H51.7773V9.8291H55V0H45.05Z" fill="#E08C5A"/>
-              <path class="e" d="M3.22266 45.1709H0V55H9.94995V51.7773H3.22266V45.1709Z" fill="#E08C5A"/>
-              <path class="e" d="M51.7773 51.7773H45.05V55H55V45.1709H51.7773V51.7773Z" fill="#E08C5A"/>
-            </svg>
-            <svg id="svgLine5" visibility="hidden" width="50" height="112" viewBox="0 0 50 112" fill="none"
-                 xmlns="http://www.w3.org/2000/svg">
-              <path id="line5" stroke="#E08C5A" stroke-width="3" stroke-dasharray="4 4"/>
-            </svg>
-            <button id="btn" class="btn  my-4 waves-effect eyeBtn5  smoll-button" type="button" data-dismiss="modal">
-              Send code
-            </button>
+            <div>
+              <img v-if="Eye5" @mouseover="howereye5" src="../statics/Eye.svg">
+              <img v-else @mouseout="howereye5" src="../statics/hower_eye.svg">
+              <button id="btn" class="btn  my-4 waves-effect eyeBtn5  smoll-button" type="button" data-dismiss="modal">
+                Send code
+              </button>
+            </div>
+            <div></div>
+
           </div>
           <div class="eye6 d-flex justify-content-center align-items-center" @click="drov6">
-            <svg class="Svg" width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path id="q5"
-                    d="M52.0056 28.346L52.5159 27.5L52.0056 26.6541C51.925 26.5198 49.8438 23.1628 45.8154 19.8059C40.4578 15.3479 34.1333 12.9846 27.5537 12.9846C20.9741 12.9846 14.6362 15.3479 9.25171 19.8059C5.19653 23.1628 3.10181 26.5064 3.00781 26.6541L2.48413 27.5L3.00781 28.346C3.10181 28.4937 5.19653 31.8372 9.25171 35.1807C14.6362 39.6387 20.9741 42.002 27.5537 42.002C34.1467 42.002 40.4578 39.6387 45.8154 35.1807C49.8438 31.8372 51.9116 28.4802 52.0056 28.346ZM43.667 32.7771C38.8464 36.7651 33.4216 38.7793 27.5537 38.7793C21.6858 38.7793 16.2341 36.7517 11.3867 32.7771C8.87573 30.7092 7.17041 28.6279 6.33789 27.5C7.17041 26.3721 8.87573 24.2908 11.3867 22.2229C16.2476 18.2349 21.6858 16.2207 27.5537 16.2207C33.4216 16.2207 38.8464 18.2349 43.667 22.2229C46.1646 24.2908 47.8564 26.3855 48.6755 27.5C47.8564 28.6279 46.1646 30.7227 43.667 32.7771Z"
-                    fill="#93959A"/>
-              <path id="w5"
-                    d="M27.5 17.8186C22.1558 17.8186 17.8186 22.1558 17.8186 27.5C17.8186 32.8442 22.1558 37.1814 27.5 37.1814C32.8442 37.1814 37.1814 32.8442 37.1814 27.5C37.1814 22.1558 32.8442 17.8186 27.5 17.8186ZM27.5 33.9587C23.9416 33.9587 21.0413 31.0583 21.0413 27.5C21.0413 23.9416 23.9416 21.0413 27.5 21.0413C31.0583 21.0413 33.9587 23.9416 33.9587 27.5C33.9587 31.0583 31.0583 33.9587 27.5 33.9587Z"
-                    fill="#93959A"/>
-              <path class="f" d="M3.22266 3.22266H9.94995V0H0V9.8291H3.22266V3.22266Z" fill="#E08C5A"/>
-              <path class="f" d="M45.05 0V3.22266H51.7773V9.8291H55V0H45.05Z" fill="#E08C5A"/>
-              <path class="f" d="M3.22266 45.1709H0V55H9.94995V51.7773H3.22266V45.1709Z" fill="#E08C5A"/>
-              <path class="f" d="M51.7773 51.7773H45.05V55H55V45.1709H51.7773V51.7773Z" fill="#E08C5A"/>
-            </svg>
-            <svg id="svgLine6" visibility="hidden" width="50" height="112" viewBox="0 0 50 112" fill="none"
-                 xmlns="http://www.w3.org/2000/svg">
-              <path id="line6" stroke="#E08C5A" stroke-width="3" stroke-dasharray="4 4"/>
-            </svg>
-            <button id="btn" class="btn  my-4 waves-effect eyeBtn6  smoll-button" type="button" data-dismiss="modal">
-              Send code
-            </button>
+            <div>
+              <img v-if="Eye6" @mouseover="howereye6" src="../statics/Eye.svg">
+              <img v-else @mouseout="howereye6" src="../statics/hower_eye.svg">
+              <button id="btn"  class="btn  my-4 waves-effect eyeBtn6  smoll-button" type="button" data-dismiss="modal">
+                Send code
+              </button>
+            </div>
+            <div></div>
           </div>
           <div class="eye7 d-flex justify-content-center align-items-center" @click="drov7">
-            <svg class="Svg" width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path id="q6"
-                    d="M52.0056 28.346L52.5159 27.5L52.0056 26.6541C51.925 26.5198 49.8438 23.1628 45.8154 19.8059C40.4578 15.3479 34.1333 12.9846 27.5537 12.9846C20.9741 12.9846 14.6362 15.3479 9.25171 19.8059C5.19653 23.1628 3.10181 26.5064 3.00781 26.6541L2.48413 27.5L3.00781 28.346C3.10181 28.4937 5.19653 31.8372 9.25171 35.1807C14.6362 39.6387 20.9741 42.002 27.5537 42.002C34.1467 42.002 40.4578 39.6387 45.8154 35.1807C49.8438 31.8372 51.9116 28.4802 52.0056 28.346ZM43.667 32.7771C38.8464 36.7651 33.4216 38.7793 27.5537 38.7793C21.6858 38.7793 16.2341 36.7517 11.3867 32.7771C8.87573 30.7092 7.17041 28.6279 6.33789 27.5C7.17041 26.3721 8.87573 24.2908 11.3867 22.2229C16.2476 18.2349 21.6858 16.2207 27.5537 16.2207C33.4216 16.2207 38.8464 18.2349 43.667 22.2229C46.1646 24.2908 47.8564 26.3855 48.6755 27.5C47.8564 28.6279 46.1646 30.7227 43.667 32.7771Z"
-                    fill="#93959A"/>
-              <path id="w6"
-                    d="M27.5 17.8186C22.1558 17.8186 17.8186 22.1558 17.8186 27.5C17.8186 32.8442 22.1558 37.1814 27.5 37.1814C32.8442 37.1814 37.1814 32.8442 37.1814 27.5C37.1814 22.1558 32.8442 17.8186 27.5 17.8186ZM27.5 33.9587C23.9416 33.9587 21.0413 31.0583 21.0413 27.5C21.0413 23.9416 23.9416 21.0413 27.5 21.0413C31.0583 21.0413 33.9587 23.9416 33.9587 27.5C33.9587 31.0583 31.0583 33.9587 27.5 33.9587Z"
-                    fill="#93959A"/>
-              <path class="g" d="M3.22266 3.22266H9.94995V0H0V9.8291H3.22266V3.22266Z" fill="#E08C5A"/>
-              <path class="g" d="M45.05 0V3.22266H51.7773V9.8291H55V0H45.05Z" fill="#E08C5A"/>
-              <path class="g" d="M3.22266 45.1709H0V55H9.94995V51.7773H3.22266V45.1709Z" fill="#E08C5A"/>
-              <path class="g" d="M51.7773 51.7773H45.05V55H55V45.1709H51.7773V51.7773Z" fill="#E08C5A"/>
-            </svg>
-            <svg id="svgLine7" visibility="hidden" width="50" height="112" viewBox="0 0 50 112" fill="none"
-                 xmlns="http://www.w3.org/2000/svg">
-              <path id="line7" stroke="#E08C5A" stroke-width="3" stroke-dasharray="4 4"/>
-            </svg>
-            <button id="btn" class="btn  my-4 waves-effect eyeBtn  smoll-button" type="button" data-dismiss="modal">
-              Dining Room
-            </button>
+            <div>
+              <img v-if="Eye7" @mouseover="howereye7"  src="../statics/Eye.svg">
+            <img v-else  @mouseout="howereye7"  src="../statics/hower_eye.svg">
+              <button id="btn" class="btn  my-4 waves-effect eyeBtn  smoll-button" type="button" data-dismiss="modal">
+                Dining Room
+              </button>
+            </div>
+            <div></div>
+
           </div>
-        </div >
+        </div>
       </div>
     </div>
     <div class="row mt-tab mobile-secret" :class="{showing: zerofloor}">
@@ -241,7 +175,8 @@
                                    :class="{textstspecial: rom3}" v-html="$t('section4.room4')"></p></span>
       </div>
       <div class="col">
-        <span class="text-grey"><p class="text-left fw-300 mb-0" :class="{textstspecial: rom7}" v-html="$t('section4.room5')"></p></span>
+        <span class="text-grey"><p class="text-left fw-300 mb-0" :class="{textstspecial: rom7}"
+                                   v-html="$t('section4.room5')"></p></span>
         <span class="text-grey"><p class="text-left fw-300 mb-0"
                                    :class="{textstspecial: rom7}" v-html="$t('section4.room6')"></p></span>
         <span class="text-grey"><p class="text-left fw-300 mb-0"
@@ -254,7 +189,8 @@
                                    :class="{textstspecial: rom2}" v-html="$t('section4.room9')"></p></span>
         <span class="text-grey"><p class="text-left fw-300 mb-0"
                                    :class="{textstspecial: rom2}" v-html="$t('section4.room10')"></p></span>
-        <span class="text-grey"><p class="text-left fw-300 mb-0" :class="{textstspecial: rom2}" v-html="$t('section4.room11')"></p></span>
+        <span class="text-grey"><p class="text-left fw-300 mb-0" :class="{textstspecial: rom2}"
+                                   v-html="$t('section4.room11')"></p></span>
         <span class="text-grey"><p class="text-left fw-300 mb-0"
                                    :class="{textstspecial: rom2}" v-html="$t('section4.room12')"></p></span>
       </div>
@@ -273,7 +209,7 @@
 </template>
 
 <script>
-// import { gsap } from 'gsap'
+  // import { gsap } from 'gsap'
 
   export default {
     // name: 'ComponentName',
@@ -287,32 +223,77 @@
         rom6: false,
         rom7: false,
         nav: false,
+        Eye1: true,
+        Eye2: true,
+        Eye3: true,
+        Eye4: true,
+        Eye5: true,
+        Eye6: true,
+        Eye7: true,
         selected: false,
+        colorsvg1: '#E08C5A',
+        colorsvg2: '#6B6B6D',
+        FF: true,
+        GF: false,
         selectshevrone: true,
         zerofloor: false,
-        floor: [{ '0': '../statics/First_floor.svg', '1': '../statics/ground_floor.svg' }],
+        floor: [{'0': '../statics/First_floor.svg', '1': '../statics/ground_floor.svg'}],
         getfloor: '../statics/First_floor.svg',
-        chertej: [{ '0': '../statics/Chert22.jpg', '1': '../statics/scema_0floor .svg' }],
+        chertej: [{'0': '../statics/Chert22.jpg', '1': '../statics/scema_0floor .svg'}],
         getchertej: '../statics/Chert22.jpg'
       }
     },
     methods: {
+      howereye1:function(){
+      this.Eye1 = !this.Eye1
+        },
+      howereye2:function(){
+        this.Eye2 = !this.Eye2
+      },
+      howereye3:function(){
+        this.Eye3 = !this.Eye3
+      },
+      howereye4:function(){
+        this.Eye4 = !this.Eye4
+      },
+      howereye5:function(){
+        this.Eye5 = !this.Eye5
+      },
+      howereye6:function(){
+        this.Eye6 = !this.Eye6
+      },
+      howereye7:function(){
+        this.Eye7 = !this.Eye7
+      },
+
+
       anyclick: function () {
         let target = event.target // где был клик?
-        if( target.className === 'Ffloor'){
-          this.selectshevrone = false
-        }else {
+        if (target.className === 'Ffloor') {
+          if (this.selectshevrone === false) {
+            this.selectshevrone = false
+          } else if (this.selectshevrone === true) {
+            this.selectshevrone = true
+          }
+        } else {
           this.selectshevrone = true
         }
       },
       selectnav: function (num) {
-          this.selected = true
-              this.getfloor = this.floor[0][num]
-              this.getchertej = this.chertej[0][num]
+        this.getfloor = this.floor[0][num]
+        this.getchertej = this.chertej[0][num]
         this.selectshevrone = true
         if (num === '1') {
+          this.colorsvg2 = '#E08C5A'
+          this.colorsvg1 = '#6B6B6D'
+          this.FF = false
+          this.GF = true
           this.zerofloor = true
-        } else if (num === '0'){
+        } else if (num === '0') {
+          this.colorsvg2 = '#6B6B6D'
+          this.colorsvg1 = '#E08C5A'
+          this.FF = true
+          this.GF = false
           this.zerofloor = false
         }
       },
@@ -519,9 +500,11 @@
 <style scoped>
   .FF {
     margin-top: 4.6rem;
+    cursor: pointer;
     position: absolute;
     left: 20%;
   }
+
   .navfloor {
     background-color: #2e2e30;
     position: absolute;
@@ -546,6 +529,7 @@
 
   .navfloor > .listfloor > li > span {
     display: flex;
+    cursor: pointer;
     justify-content: space-between;
     text-align: left;
     padding: 20px 2px 20px 2px;
@@ -564,8 +548,8 @@
   }
 
   /*.Svg {*/
-    /*min-width: 3vh;*/
-    /*max-width: 7vh;*/
+  /*min-width: 3vh;*/
+  /*max-width: 7vh;*/
   /*}*/
 
   .wrapper {
@@ -634,6 +618,7 @@
       position: absolute;
       left: 20%;
     }
+
     .eye1, .eye4 {
       height: 187px;
       width: 190px;
@@ -670,6 +655,7 @@
       padding: 20px;
       width: 40%;
     }
+
     .eye1, .eye4 {
       height: 160px;
       width: 96px;
@@ -697,9 +683,14 @@
   }
 
   @media (max-width: 766px) {
+    .fixfloor[data-v-7bec2358] {
+      width: 80vh;
+    }
+
     .wrapper {
       padding-top: 10%;
     }
+
     .FCflor {
       padding-top: 13%;
       height: 100%;
@@ -734,6 +725,7 @@
     .eye6 {
       width: 60px;
     }
+
     .navfloor {
       background-color: #2e2e30;
       position: absolute;
@@ -878,7 +870,6 @@
   }
 
 
-
   img {
     border: none;
   }
@@ -927,7 +918,18 @@
     }
   }
 
+  @media (max-width: 660px) {
+    .fixfloor[data-v-7bec2358][data-v-7bec2358] {
+      width: 63vh;
+    }
+  }
+
   @media (max-width: 600px) {
+    .Rotator {
+      display: block !important;
+      align-items: center;
+    }
+
     .eye1, .eye2, .eye3, .eye4, .eye5, .eye6, .eye7 {
       display: none;
     }
@@ -955,10 +957,12 @@
       display: none;
     }
   }
-  .showing{
+
+  .showing {
     display: none;
   }
-  .fixfloor{
-    width: 100vh;
+
+  .fixfloor {
+    width: 94vh;
   }
 </style>

@@ -52,7 +52,7 @@ export default {
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 31px;
     letter-spacing: 0.2em;
   }
   .text-special{

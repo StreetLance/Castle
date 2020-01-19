@@ -9,6 +9,7 @@ export default {
     Information: 'Information',
     Location: 'Ort',
     English: 'Englisch',
+    German: 'German',
     Login: 'Einloggen '
   },
   modal: {
@@ -49,7 +50,7 @@ export default {
     room5:'Dining room 11.14 m<sup>2</sup>',
     room6:'Staff kitchen 14.50 m<sup>2</sup>',
     room7:'Kitchen 31.96 m<sup>2</sup>',
-    room18:'Hall 156.45 m<sup>2</sup>',
+    room8:'Hall 156.45 m<sup>2</sup>',
     room9:'Lobby 29.35 m<sup>2</sup>',
     room10:'Office 27.95 m<sup>2</sup>',
     room11:'Utility room 6.09 m<sup>2</sup>',

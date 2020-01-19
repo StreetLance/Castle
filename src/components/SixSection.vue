@@ -1,6 +1,6 @@
 <template>
-  <section id="six-features" class="text-center">
-    <div class="fix" align="right">
+  <section id="six-features" class="text-center d-flex justify-content-between align-items-center">
+    <div class="fix d-flex justify-content-end align-items-center" align="right">
       <img align="right" class="castle2" src="../statics/Chertejnew1.png" alt=""></div>
     <div class="container ">
       <div class="row w-100 ">
@@ -37,7 +37,7 @@
     /*position: relative;*/
     /*top: 5%;*/
     /*right: 0%;*/
-    width: 75vh;
+    width: 100%;
   }
 
   .fix {
@@ -45,8 +45,8 @@
     /*padding-top: 10%;*/
     right: 0;
     /*max-height: 100vh;*/
-    /*width: 49%;*/
-    /*margin-right: 0;*/
+    width: 50%;
+    height: 100vh;
   }
 
   .lite-text {

@@ -1,10 +1,10 @@
 <template>
   <!--Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar " :class="{bgstyle : bg}" >
-    <div class="row items-center w-30 pl-4">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar d-flex align-items-between " :class="{bgstyle : bg}" >
+    <div class="row items-center w-30 pl-4 ">
       <a href="#info"><img class="logos" src="../statics/Header_Logo.svg"></a>
-      <div class="pl-3 pt-3 lang"><p>{{lang}}<img src="../statics/larng_shewron.svg" class=" d-flex justify-center fl"
-                                                  alt="" @click="show"></p>
+      <div class="pl-3 pt-3 lang"><p @click="show">{{lang}}<img src="../statics/larng_shewron.svg" class=" d-flex justify-center fl"
+                                                  alt="" ></p>
       </div>
     </div>
     <div class="container ">
@@ -32,9 +32,11 @@
           <hr class="separator">
           <div class="col"><a class="nav-link fw-300 text-white" @click="Location">{{ $t('main.Location') }}</a></div>
           <hr class="separator">
-          <div class="col locale"><a class="nav-link fw-300 text-white">{{ $t('main.English') }}</a></div>
+          <div class="col locale fw-300 text-white">Language:
+            <a class=" fw-300 text-white mt-2 ml-2" :class="{textstspecial: en}"  @click="languege('en')"> {{ $t('main.English') }} |</a>
+            <a class=" fw-300 text-white ml-2" :class="{textstspecial: ge}" @click="languege('ge')"> {{ $t('main.German') }}</a>
+          </div>
           <hr class="separator locale">
-          <div class="col"></div>
         </div>
         <!-- Links -->
         <div v-if="hower" @mouseover="mousehower" class=" d-flex justify-end padding-right-fix"><a class="nav-link "
@@ -101,7 +103,9 @@
         showlang: false,
         hower: true,
         collaps: false,
-        bg: false
+        bg: false,
+        en: true,
+        ge: false
       }
     },
     methods: {
@@ -109,12 +113,20 @@
         this.showlang = !this.showlang
       },
       languege: function (value) {
+        this.bg =false
         this.lang = value
         this.$i18n.locale = value
         // set quasar's language too!!
         import(`quasar/lang/${value}`).then(language =>
           {this.$q.lang.set(language.default)
-        console.log(this.$q.lang.isoName) })
+        })
+        if(value === 'en'){
+          this.en= true
+          this.ge= false
+        }else if(value === 'ge'){
+          this.en= false
+          this.ge= true
+        }
         this.show()
       },
       mousehower: function () {
@@ -151,7 +163,9 @@
   .nav-link:hover {
     color: #E08C5A !important;
   }
-
+.textstspecial{
+  color: #E08C5A !important;
+}
   .login {
     display: none;
   }
@@ -180,8 +194,9 @@
   .language {
     color: white;
     position: absolute;
-    top: 10%;
-    left: 10%;
+    cursor: pointer;
+    top: 60px;
+    left: 110px;
   }
 
   .fl {
@@ -306,22 +321,31 @@
     font-size: 16px;
     line-height: 20px;
   }
+  .lang {
+    cursor: pointer;
+  }
 @media (max-width: 1000px) {
   .bgstyle {
     /*background: #201e1f;*/
-    padding-bottom: 141px;
+    padding-bottom: 100px !important;
+  }
+  .language {
+   display: none;
   }
 }
   @media (max-width: 769px) {
     .lang {
       position: absolute;
+      cursor: pointer;
       top: 20px;
       left: 35%;
     }
-
+    .lang>p{
+      cursor: pointer;
+    }
     .bgstyle {
       /*background: #201e1f;*/
-      padding-bottom: 141px;
+      padding-bottom: 100px;
     }
 
     .locale {
@@ -359,7 +383,7 @@
   }
 
   .w-30 {
-    width: 20% !important;
+    width: 22% !important;
   }
 
   @media (min-width: 700px) {
@@ -368,6 +392,7 @@
       /*padding-bottom: 141px;*/
       -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
       transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+      background-color: #201e1f;
     }
 
     .navbar.scrolling-navbar:hover {
@@ -380,7 +405,7 @@
 
   }
 
-  @media (max-width: 988px) {
+  @media (max-width: 990px) {
     .navbar-toggler {
       position: fixed;
       right: 0;
@@ -390,6 +415,7 @@
     .lang {
       position: absolute;
       top: 20px;
+      cursor: pointer;
       left: 35%;
       display: none;
     }
@@ -409,7 +435,7 @@
     float: left;
   }
 
-  @media (max-width: 978px) {
+  @media (max-width: 992px) {
     .padding-right-fix {
       /*height: 100vh;*/
       position: relative;
@@ -424,11 +450,32 @@
       height: 0.2px;
       width: 100%;
     }
+    .locale {
+      display: block;
+    }
   }
-
-  @media (min-width: 600px) {
+  @media (max-width: 887px) {
+    .pl-6 {
+      padding-left: 14rem ;
+    }
+    .separator {
+      background-color: white;
+      height: 0.2px;
+      width: 100%;
+    }
+    .navbar:not(.top-nav-collapse) {
+      background: #201e1f;
+    }
+  }
+  @media (max-width: 600px) {
+    .pl-6 {
+      padding-left: 4rem !important;
+    }
     .bgstyle {
-      /*padding-bottom: 141px;}*/
+      padding-bottom: 141px !important;
+    }
+    .navbar:not(.top-nav-collapse) {
+      background: #201e1f;
     }
   }
 
