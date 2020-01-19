@@ -1,6 +1,6 @@
 <template>
   <!--Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar " :class="{bgstyle: bg}">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar " :class="{bgstyle : bg}" >
     <div class="row items-center w-30 pl-4">
       <a href="#info"><img class="logos" src="../statics/Header_Logo.svg"></a>
       <div class="pl-3 pt-3 lang"><p>{{lang}}<img src="../statics/larng_shewron.svg" class=" d-flex justify-center fl"
@@ -14,13 +14,12 @@
       <!-- Collapse button -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
               aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation"
-              @click="clickcollaps"
-      >
+              @click="clickcollaps" >
         <span class="navbar-toggler-icon"></span>
       </button>
       <!-- Collapsible content -->
-      <div class="collapse navbar-collapse justify-center pl-6" id="basicExampleNav" data-toggle="collapse"
-           data-target=".navbar-collapse">
+      <div class="collapse navbar-collapse justify-center pl-6" :class="{placebo : collaps , collapse : !collaps}" id="basicExampleNav" data-toggle="collapse"
+           data-target=".placebo">
         <!-- Links -->
         <div class="row navbar-nav smooth-scroll w-100 justify-around items-center text-center">
           <div class="col"><a class="nav-link fw-300 text-white" @click="facts">Data/Facts</a></div>
@@ -89,19 +88,18 @@
 
   <!--/.Navbar-->
 </template>
-
 <script>
   import {ScrollToPlugin} from 'gsap/ScrollToPlugin'
   import {gsap} from 'gsap'
 
   gsap.registerPlugin(ScrollToPlugin)
   export default {
-    // name: 'ComponentName',
     data() {
       return {
         lang: 'en',
         showlang: false,
         hower: true,
+        collaps: false,
         bg: false
       }
     },
@@ -117,21 +115,27 @@
         this.hower = !this.hower
       },
       clickcollaps: function () {
+        this.collaps = true
         this.bg = !this.bg
       },
       facts: function () {
+        this.bg =false
         gsap.to(window, {duration: 2, scrollTo: "#best-features"})
       },
       Gallery: function () {
+        this.bg =false
         gsap.to(window, {duration: 2, scrollTo: "#seond-features"});
       },
       Floor: function () {
+        this.bg =false
         gsap.to(window, {duration: 2, scrollTo: "#forth-features"});
       },
       Information: function () {
+        this.bg =false
         gsap.to(window, {duration: 2, scrollTo: "#six-features"});
       },
       Location: function () {
+        this.bg =false
         gsap.to(window, {duration: 2, scrollTo: "#fifth-features"});
       }
     }

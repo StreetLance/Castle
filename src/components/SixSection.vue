@@ -44,7 +44,7 @@
 
   .fix {
     position: absolute;
-    padding-top: 17%;
+    padding-top: 13%;
     right: 0;
     /*max-height: 100vh;*/
     /*width: 49%;*/
