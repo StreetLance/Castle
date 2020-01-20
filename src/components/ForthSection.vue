@@ -683,9 +683,9 @@
   }
 
   @media (max-width: 766px) {
-    .fixfloor[data-v-7bec2358] {
-      width: 80vh;
-    }
+    /*.fixfloor[data-v-7bec2358] {*/
+      /*width: 60vh;*/
+    /*}*/
 
     .wrapper {
       padding-top: 10%;
@@ -883,12 +883,20 @@
     background-size: cover;
   }
 
+@media (max-width: 794px ) {
+  .fixfloor {
+    max-width: 700px;
+  }
+}
   @media (max-width: 702px) {
     .Ffloor {
       height: 100%;
       width: 70%;
     }
-
+    .fixfloor {
+      width: 63vh;
+      max-width: 500px;
+    }
     .FF {
       margin-top: 3%;
       position: absolute;
@@ -918,12 +926,22 @@
     }
   }
 
+
+@media (max-width: 1024px) {
+  .fixfloor {
+    max-width: 1005px !important;
+  }
+  @media (max-width: 768px) {
+    .fixfloor {
+      max-width: 765px !important;
+    }
+  }
   @media (max-width: 660px) {
-    .fixfloor[data-v-7bec2358][data-v-7bec2358] {
+    .fixfloor {
       width: 63vh;
     }
   }
-
+}
   @media (max-width: 600px) {
     .Rotator {
       display: block !important;
@@ -956,13 +974,32 @@
     .mobile-secret {
       display: none;
     }
+    .fixfloor {
+      width: 70vh;
+      max-width: 505px !important;
+    }
   }
+  @media(max-width: 500px) {
+    .showing {
+      display: none;
+    }
 
+    .fixfloor {
+      width: 60vh;
+      max-width: 427px !important;
+    }
+  }
+  @media(max-width: 400px){
+    .fixfloor {
+      width: 160px;
+      max-width: 313px !important;
+    }
+  }
   .showing {
     display: none;
   }
 
   .fixfloor {
-    width: 94vh;
+    width: 100vh;
   }
 </style>
