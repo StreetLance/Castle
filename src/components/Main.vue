@@ -7,7 +7,7 @@
                                                   alt="" ></p>
       </div>
     </div>
-    <div class="container ">
+    <div class="container  d-flex justify-content-center">
 
       <!-- Navbar brand -->
 
@@ -33,24 +33,28 @@
           <div class="col"><a class="nav-link fw-300 text-white" @click="Location">{{ $t('main.Location') }}</a></div>
           <hr class="separator">
           <div class="col locale fw-300 text-white">Language:
-            <a class=" fw-300 text-white mt-2 ml-2" :class="{textstspecial: en}"  @click="languege('en')"> {{ $t('main.English') }} |</a>
-            <a class=" fw-300 text-white ml-2" :class="{textstspecial: ge}" @click="languege('ge')"> {{ $t('main.German') }}</a>
+            <a class=" fw-300 text-white mt-2 ml-2" :class="{textstspecial: en}"  @click="languege('en')"> {{ $t('main.English') }}</a> |
+            <a class=" fw-300 text-white ml-2" :class="{textstspecial: ge}" @click="languege('ge')">{{ $t('main.German') }}</a>
           </div>
           <hr class="separator locale">
+          <div class="col locale fw-300 text-white">
+            <div v-if="hower" @mouseover="mousehower" class=" d-flex justify-end padding-right-fix mobile-screen">
+              <a class="nav-link " data-toggle="modal" data-target="#exampleModalCenter"><img class="p-l" src="../statics/grayKey.svg" align="left"></a>
+              <span class="login">{{ $t('main.Login') }}</span>
+            </div>
+            <div v-else @mouseout="mousehower" class=" d-flex justify-end padding-right-fix mobile-screen" >
+              <a class="nav-link " data-toggle="modal" data-target="#exampleModalCenter"><img class="p-l" src="../statics/Key2.svg"></a>
+              <span class="login">Log in</span>
+            </div>
+          </div>
         </div>
         <!-- Links -->
-        <div v-if="hower" @mouseover="mousehower" class=" d-flex justify-end padding-right-fix"><a class="nav-link "
-                                                                                                   data-toggle="modal"
-                                                                                                   data-target="#exampleModalCenter">
-          <img class="p-l" src="../statics/grayKey.svg" align="left">
-        </a>
+        <div v-if="hower" @mouseover="mousehower" class=" d-flex justify-end padding-right-fix full-skreen">
+          <a class="nav-link " data-toggle="modal" data-target="#exampleModalCenter"><img class="p-l" src="../statics/grayKey.svg" align="left"></a>
           <span class="login">{{ $t('main.Login') }}</span>
         </div>
-        <div v-else @mouseout="mousehower" class=" d-flex justify-end padding-right-fix"><a class="nav-link "
-                                                                                            data-toggle="modal"
-                                                                                            data-target="#exampleModalCenter">
-          <img class="p-l" src="../statics/Key2.svg">
-        </a>
+        <div v-else @mouseout="mousehower" class=" d-flex justify-end padding-right-fix full-skreen" >
+          <a class="nav-link " data-toggle="modal" data-target="#exampleModalCenter"><img class="p-l" src="../statics/Key2.svg"></a>
           <span class="login">Log in</span>
         </div>
       </div>
@@ -160,6 +164,12 @@
   }
 </script>
 <style scoped>
+  .mobile-screen{
+    display: none;
+  }
+  .full-skreen{
+    display: block;
+  }
   .nav-link:hover {
     color: #E08C5A !important;
   }
@@ -327,7 +337,7 @@
 @media (max-width: 1000px) {
   .bgstyle {
     /*background: #201e1f;*/
-    padding-bottom: 100px !important;
+    /*padding-bottom: 100px !important;*/
   }
   .language {
    display: none;
@@ -345,32 +355,19 @@
     }
     .bgstyle {
       /*background: #201e1f;*/
-      padding-bottom: 100px;
+      /*padding-bottom: 100px;*/
     }
 
     .locale {
       display: block;
     }
 
-    .login {
-      display: block;
-      position: relative;
-      top: 35px;
-      right: 10px;
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 20px;
-      /* identical to box height */
-      text-align: center;
-      color: #FBFBFE;
-    }
+
 
     .p-l {
       position: relative;
-      bottom: 30px;
-      left: 55px;
+      /*bottom: 30px;*/
+      /*left: 55px;*/
     }
   }
 
@@ -406,6 +403,18 @@
   }
 
   @media (max-width: 990px) {
+    .login {
+      display: block;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      padding-top: 45px;
+      /* identical to box height */
+      text-align: center;
+      color: #FBFBFE;
+    }
     .navbar-toggler {
       position: fixed;
       right: 0;
@@ -435,16 +444,27 @@
     float: left;
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 990px) {
     .padding-right-fix {
       /*height: 100vh;*/
       position: relative;
-      right: 45%;
-      top: 60px;
+      padding: 44px 0 44px 0;
+      /*right: 45%;*/
+      /*top: 60px;*/
+    }
+    .mobile-screen{
+      display: block !important;
+    }
+    .full-skreen{
+      display: none !important;
     }
   }
 
   @media (max-width: 978px) {
+    .container{
+      margin-left: 10%;
+    }
+
     .separator {
       background-color: white;
       height: 0.2px;
@@ -455,6 +475,9 @@
     }
   }
   @media (max-width: 887px) {
+    .container{
+       margin-left: 10%;
+    }
     .pl-6 {
       padding-left: 14rem ;
     }
@@ -468,11 +491,14 @@
     }
   }
   @media (max-width: 600px) {
+    .container{
+      margin-left: 0;
+    }
     .pl-6 {
       padding-left: 4rem !important;
     }
     .bgstyle {
-      padding-bottom: 141px !important;
+      /*padding-bottom: 141px !important;*/
     }
     .navbar:not(.top-nav-collapse) {
       background: #201e1f;
