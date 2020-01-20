@@ -33,8 +33,8 @@
           <div class="col"><a class="nav-link fw-300 text-white" @click="Location">{{ $t('main.Location') }}</a></div>
           <hr class="separator">
           <div class="col locale fw-300 text-white">Language:
-            <a class=" fw-300 text-white mt-2 ml-2" :class="{textstspecial: en}"  @click="languege('en')"> {{ $t('main.English') }}</a> |
-            <a class=" fw-300 text-white ml-2" :class="{textstspecial: ge}" @click="languege('ge')">{{ $t('main.German') }}</a>
+            <a class=" fw-300 text-white mt-2 ml-2" :class="{textstspecial: en}"  @click="languege('en-us')"> {{ $t('main.English') }}</a> |
+            <a class=" fw-300 text-white ml-2" :class="{textstspecial: ge}" @click="languege('de')">{{ $t('main.German') }}</a>
           </div>
           <hr class="separator locale">
           <div class="col locale fw-300 text-white">
@@ -87,8 +87,8 @@
       </div>
     </div>
     <ul class="language" v-show="showlang">
-      <li @click="languege('ge')"><a>ge</a></li>
-      <li @click="languege('en')"><a>en</a></li>
+      <li @click="languege('de')"><a>de</a></li>
+      <li @click="languege('en-us')"><a>en</a></li>
     </ul>
   </nav>
 
@@ -97,7 +97,10 @@
 <script>
   import {ScrollToPlugin} from 'gsap/ScrollToPlugin'
   import {gsap} from 'gsap'
-
+  import languages from 'quasar/lang/index.json'
+  const appLanguages = languages.filter(lang =>
+    [ 'de', 'en' ].includes(lang.isoName)
+  )
   gsap.registerPlugin(ScrollToPlugin)
   import { Quasar } from 'quasar'
   export default {
@@ -118,16 +121,18 @@
       },
       languege: function (value) {
         this.bg =false
-        this.lang = value
+
         this.$i18n.locale = value
         // set quasar's language too!!
         import(`quasar/lang/${value}`).then(language =>
           {this.$q.lang.set(language.default)
         })
-        if(value === 'en'){
+        if(value === 'en-us'){
+          this.lang = 'en'
           this.en= true
           this.ge= false
-        }else if(value === 'ge'){
+        }else if(value === 'de'){
+          this.lang = 'de'
           this.en= false
           this.ge= true
         }

@@ -6,8 +6,8 @@
       enter-active-class="animated fadeInLeft"
       leave-active-class="animated fadeOutLeft"
     >
-<div class="Gallery"  v-bind:style="{ backgroundImage: 'url(\''+ geturl +'\')'}"  v-show="show">
-  <div @click="show=!show"  class="closer">
+<div class="Gallery"  v-bind:style="{ backgroundImage: 'url(\''+ geturl +'\')'}"  v-show="show" @click="show=false">
+  <div @click="show=false"  class="closer">
     <svg  width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg" >
     <path d="M10.6068 31.8201L31.82 10.6069" stroke="black" stroke-width="3" stroke-linecap="round"/>
     <path d="M10.6068 10.6064L31.82 31.8196" stroke="black" stroke-width="3" stroke-linecap="round"/>

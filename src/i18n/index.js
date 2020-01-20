@@ -1,7 +1,7 @@
-import en from './en/index'
+import en from './en-us/index'
 import ge from './ge/index'
 
 export default {
   'en': en,
-  'ge': ge
+  'de': ge
 }
