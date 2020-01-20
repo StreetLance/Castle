@@ -927,13 +927,27 @@
   }
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1030px) {
   .fixfloor {
     max-width: 1005px !important;
   }
+
+}
+  @media (max-width: 1020px) {
+    .fixfloor {
+      max-width: 900px !important;
+    }
+
+  }
+  @media (max-width: 900px) {
+    .fixfloor {
+      max-width: 800px !important;
+    }
+
+  }
   @media (max-width: 768px) {
     .fixfloor {
-      max-width: 765px !important;
+      max-width:  650px !important;
     }
   }
   @media (max-width: 660px) {
@@ -941,7 +955,6 @@
       width: 63vh;
     }
   }
-}
   @media (max-width: 600px) {
     .Rotator {
       display: block !important;
